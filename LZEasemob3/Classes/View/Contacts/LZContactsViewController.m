@@ -8,6 +8,7 @@
 
 #import "LZContactsViewController.h"
 #import "LZAddFriendViewController.h"
+#import "LZContactsViewCell.h"
 
 @interface LZContactsViewController ()
 {
@@ -82,10 +83,9 @@
     NSArray *buddyList = [[EMClient sharedClient].contactManager getContactsFromServerWithError:&error];
     if (!error) {
         KLog(@"获取成功 -- %@",buddyList);
+    }else {
+        buddyList = [[EMClient sharedClient].contactManager getContactsFromDB];
     }
-//    else {
-//        buddyList = [[EMClient sharedClient].contactManager getContactsFromDB];
-//    }
     
     [self.dataSource addObjectsFromArray:buddyList];
     
@@ -112,60 +112,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
+        LZContactsViewCell *cell = [LZContactsViewCell cellWithTableView:tableView];
+        LZContactsGrounp *model = _functionGroup[indexPath.row];
+        cell.status = model;
         if (indexPath.row == 0) {
-            NSString *CellIdentifier = @"addFriend";
-            EaseUserCell *cell = (EaseUserCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-            if (cell == nil) {
-                cell = [[EaseUserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            }
-            cell.avatarView.image = [UIImage imageNamed:@"newFriends"];
-            cell.titleLabel.text = NSLocalizedString(@"title.apply", @"Application and notification");
-            cell.avatarView.badge = self.unapplyCount;
-            return cell;
-        }
-        
-        NSString *CellIdentifier = @"commonCell";
-        EaseUserCell *cell = (EaseUserCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[EaseUserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-        
-        if (indexPath.row == 1) {
-            cell.avatarView.image = [UIImage imageNamed:@"EaseUIResource.bundle/group"];
-            cell.titleLabel.text = NSLocalizedString(@"title.group", @"Group");
-        }
-        else if (indexPath.row == 2) {
-            cell.avatarView.image = [UIImage imageNamed:@"EaseUIResource.bundle/group"];
-            cell.titleLabel.text = NSLocalizedString(@"title.chatroomlist",@"chatroom list");
-        }
-        else if (indexPath.row == 3) {
-            cell.avatarView.image = [UIImage imageNamed:@"EaseUIResource.bundle/group"];
-            cell.titleLabel.text = NSLocalizedString(@"title.robotlist",@"robot list");
+            cell.badge = self.unapplyCount;
         }
         return cell;
-    }
-    else{
-        NSString *CellIdentifier = [EaseUserCell cellIdentifierWithModel:nil];
-        EaseUserCell *cell = (EaseUserCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil) {
-            cell = [[EaseUserCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        }
-        cell.titleLabel.text = self.dataSource[indexPath.row];
-        cell.indexPath = indexPath;
-//        cell.delegate = self;
-
-        
-//        NSArray *userSection = [self.dataArray objectAtIndex:(indexPath.section - 1)];
-//        EaseUserModel *model = [userSection objectAtIndex:indexPath.row];
-//        UserProfileEntity *profileEntity = [[UserProfileManager sharedInstance] getUserProfileByUsername:model.buddy];
-//        if (profileEntity) {
-//            model.avatarURLPath = profileEntity.imageUrl;
-//            model.nickname = profileEntity.nickname == nil ? profileEntity.username : profileEntity.nickname;
-//        }
-//        cell.indexPath = indexPath;
-//        cell.delegate = self;
-//        cell.model = model;
-        
+    }else {
+        LZContactsViewCell *cell = [LZContactsViewCell cellWithTableView:tableView];
+        NSArray *array = [_data objectAtIndex:indexPath.section - 1];
+        [array objectAtIndex:indexPath.row];
+        cell.buddy = [array objectAtIndex:indexPath.row];
         return cell;
     }
 }
@@ -178,13 +136,8 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (section == 0)
-    {
-        return 0;
-    }
-    else{
-        return 22;
-    }
+    if (section == 0) return 0;
+    return 22;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -213,7 +166,46 @@
     return YES;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *array = [_data objectAtIndex:indexPath.section - 1];
+        NSString *buddy = [array objectAtIndex:indexPath.row];
+        EMError *error = [[EMClient sharedClient].contactManager deleteContact:buddy];
+        
+        if (!error) {
+           [[EMClient sharedClient].chatManager deleteConversation:buddy deleteMessages:YES];
+//           [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        }
+        else{
+            [tableView reloadData];
+        }
+    }
+}
 
+#pragma mark - 被好友删除之后回调
+- (void)didReceiveDeletedFromUsername:(NSString *)aUsername
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        EMError *error = nil;
+        NSArray *userlist = [[EMClient sharedClient].contactManager getContactsFromServerWithError:&error];
+        if (!error) {
+            [_dataSource removeAllObjects];
+            KLog(@"被人删除获取用户列表 -- %@",userlist);
+            [_dataSource addObjectsFromArray:userlist];
+            _data = [LZContactsDataHelper getFriendListDataBy:_dataSource];
+            _section = [LZContactsDataHelper getFriendListSectionBy:_data];
+            KLog(@"%@",_dataSource);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }else{
+            KLog(@"被人删除获取用户列表失败 -- %@",error);
+        }
+    });
+}
+
+#pragma mark - 懒加载
 - (NSMutableArray *)functionGroup
 {
     if (_functionGroup == nil){
