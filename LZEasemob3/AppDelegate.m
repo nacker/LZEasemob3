@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LZTabBarController.h"
+#import "LZLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,9 +18,59 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    LZTabBarController *tabBarVC = [[LZTabBarController alloc] init];
+    self.window.rootViewController = tabBarVC;
+    
+//    [self chooseRootViewControllerWithVersion];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
+//- (void)chooseRootViewControllerWithVersion
+//{
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(switchRootViewController:) name:KSwitchRootViewControllerNotification object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(goToLoginViewController:) name:KGoToLoginViewControllerNotification object:nil];
+//    
+//    [self switchRootViewController:nil];
+//}
+//
+//- (void)switchRootViewController:(NSNotification *)note
+//{
+//    NSString *userName = [[EMClient sharedClient] currentUsername];
+//    if (userName.length) {
+//        LZTabBarController *tabBarVC = [[LZTabBarController alloc] init];
+//        self.window.rootViewController = tabBarVC;
+//    }else {
+//        //        LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
+//        //        self.window.rootViewController = loginVC;
+//        
+//        [self goToLoginViewController:note];
+//    }
+//    
+//    //    User *user = [LZUserTool getUser];
+//    //    KLog(@"%@",user.token);
+//    //    if (user.token.length) {
+//    //        LZTabBarController *tabBarVC = [[LZTabBarController alloc] init];
+//    //        self.window.rootViewController = tabBarVC;
+//    //    }else{
+//    //        LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
+//    //        LZNavigationController *nav = [[LZNavigationController alloc] initWithRootViewController:loginVC];
+//    //        self.window.rootViewController = nav;
+//    //    }
+//}
+
+- (void)goToLoginViewController:(NSNotification *)note
+{
+    LZLoginViewController *loginVC = [[LZLoginViewController alloc] init];
+    self.window.rootViewController = loginVC;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

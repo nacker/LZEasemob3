@@ -6,10 +6,53 @@
 //  Copyright © 2016年 帶頭二哥 QQ:648959. All rights reserved.
 //
 
+#ifdef __OBJC__
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//#ifdef __OBJC__
+//    #import <UIKit/UIKit.h>
+//    #import <Foundation/Foundation.h>
+//
+//
+//
+//#define DEMO_CALL 1
+//
+//#endif
+
+
+#import "EMSDKFull.h"
+#import "EaseUI.h"
+
+#import "LZCategory.h"
+
+
+#pragma mark - -------------------------常用宏-------------------------
+// 1.颜色
+#define KColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define KRGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+// 2.随机色
+#define KRandomColor KColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 3.是否为iOS7
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+// 4.是否为4inch
+#define KfourInch ([UIScreen mainScreen].bounds.size.height == 568)
+
+// 5.屏幕尺寸
+#define KScreenW [UIScreen mainScreen].bounds.size.width
+#define KScreenH [UIScreen mainScreen].bounds.size.height
+
+// 6.自定义Log
+#ifdef DEBUG
+#define KLog(...) NSLog(__VA_ARGS__)
+#else
+#define KLog(...)
+#endif
+
+#define IOS_VERSION [[UIDevice currentDevice] systemVersion]>=9.0
 
 #endif /* PrefixHeader_pch */
+#endif
