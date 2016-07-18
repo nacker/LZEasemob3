@@ -10,6 +10,7 @@
 #import "LZAddFriendViewController.h"
 #import "LZContactsViewCell.h"
 #import "LZChatViewController.h"
+#import "LZApplyViewController.h"
 
 @interface LZContactsViewController ()
 {
@@ -51,7 +52,7 @@
 
 - (void)setupNavItem
 {
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"addContact" highImage:@"addContact" target:self action:@selector(addContactAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:self action:@selector(addContactAction)];
 }
 
 - (void)setTableView{
@@ -132,11 +133,28 @@
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *array = [_data objectAtIndex:indexPath.section - 1];
-    NSString *buddy = [array objectAtIndex:indexPath.row];
-    LZChatViewController *chatVc = [[LZChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
-    chatVc.title = buddy;
-    [self.navigationController pushViewController:chatVc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+        
+        switch (indexPath.row) {
+            case 0:
+                [self.navigationController pushViewController:[LZApplyViewController shareController] animated:YES];
+                break;
+                
+            case 1:
+//                [self.navigationController pushViewController:[[LZGroupViewController alloc] init] animated:YES];
+                
+                break;
+        }
+        
+        
+    }else {
+        NSArray *array = [_data objectAtIndex:indexPath.section - 1];
+        NSString *buddy = [array objectAtIndex:indexPath.row];
+        LZChatViewController *chatVc = [[LZChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
+        chatVc.title = buddy;
+        [self.navigationController pushViewController:chatVc animated:YES];
+    }
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView

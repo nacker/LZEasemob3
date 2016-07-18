@@ -354,6 +354,10 @@
 		629999971D3D087C005B2914 /* LZConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999961D3D087C005B2914 /* LZConversationCell.m */; };
 		6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999A1D3D08D0005B2914 /* LZBadgeView.m */; };
 		6299999E1D3D0A41005B2914 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999D1D3D0A41005B2914 /* NSDate+Extension.m */; };
+		629999A11D3D1422005B2914 /* LZAddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A01D3D1422005B2914 /* LZAddFriendCell.m */; };
+		629999A51D3D1517005B2914 /* EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A41D3D1517005B2914 /* EMAlertView.m */; };
+		629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A81D3D1706005B2914 /* LZApplyViewController.m */; };
+		629999AC1D3D175A005B2914 /* LZApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -946,6 +950,14 @@
 		6299999A1D3D08D0005B2914 /* LZBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBadgeView.m; sourceTree = "<group>"; };
 		6299999C1D3D0A41005B2914 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		6299999D1D3D0A41005B2914 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		6299999F1D3D1422005B2914 /* LZAddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAddFriendCell.h; sourceTree = "<group>"; };
+		629999A01D3D1422005B2914 /* LZAddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAddFriendCell.m; sourceTree = "<group>"; };
+		629999A31D3D1517005B2914 /* EMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAlertView.h; sourceTree = "<group>"; };
+		629999A41D3D1517005B2914 /* EMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAlertView.m; sourceTree = "<group>"; };
+		629999A71D3D1706005B2914 /* LZApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyViewController.h; sourceTree = "<group>"; };
+		629999A81D3D1706005B2914 /* LZApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyViewController.m; sourceTree = "<group>"; };
+		629999AA1D3D175A005B2914 /* LZApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyFriendCell.h; sourceTree = "<group>"; };
+		629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyFriendCell.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1133,6 +1145,7 @@
 				6299994F1D3CD25D005B2914 /* LZContactsViewCell.h */,
 				629999501D3CD25D005B2914 /* LZContactsViewCell.m */,
 				6299993C1D3CC3C3005B2914 /* FriendApply */,
+				629999A61D3D16EF005B2914 /* Apply */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -2039,6 +2052,7 @@
 		629998161D3CB21A005B2914 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				629999A21D3D14F1005B2914 /* AlertView */,
 				629999981D3D08B9005B2914 /* BadgeView */,
 				6299981F1D3CB23D005B2914 /* TextView */,
 				629998171D3CB237005B2914 /* ActionSheet */,
@@ -2273,6 +2287,8 @@
 			children = (
 				6299993D1D3CC3E4005B2914 /* LZAddFriendViewController.h */,
 				6299993E1D3CC3E4005B2914 /* LZAddFriendViewController.m */,
+				6299999F1D3D1422005B2914 /* LZAddFriendCell.h */,
+				629999A01D3D1422005B2914 /* LZAddFriendCell.m */,
 			);
 			path = FriendApply;
 			sourceTree = "<group>";
@@ -2320,6 +2336,26 @@
 				6299999A1D3D08D0005B2914 /* LZBadgeView.m */,
 			);
 			path = BadgeView;
+			sourceTree = "<group>";
+		};
+		629999A21D3D14F1005B2914 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				629999A31D3D1517005B2914 /* EMAlertView.h */,
+				629999A41D3D1517005B2914 /* EMAlertView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		629999A61D3D16EF005B2914 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				629999A71D3D1706005B2914 /* LZApplyViewController.h */,
+				629999A81D3D1706005B2914 /* LZApplyViewController.m */,
+				629999AA1D3D175A005B2914 /* LZApplyFriendCell.h */,
+				629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */,
+			);
+			path = Apply;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2411,6 +2447,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 62998FF71D3C818F005B2914;
 			productRefGroup = 629990011D3C818F005B2914 /* Products */;
@@ -2686,6 +2723,7 @@
 				6299971A1D3C887D005B2914 /* EaseLocationViewController.m in Sources */,
 				629996FC1D3C887D005B2914 /* PSTCollectionViewCell.m in Sources */,
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
+				629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */,
 				629997301D3C887D005B2914 /* EaseFaceView.m in Sources */,
 				629997C51D3CA72F005B2914 /* NSString+MLLabel.m in Sources */,
 				629997121D3C887D005B2914 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
@@ -2724,8 +2762,10 @@
 				629997991D3CA62F005B2914 /* LZMomentsSendViewController.m in Sources */,
 				629998221D3CB23D005B2914 /* LZTextView.m in Sources */,
 				629997141D3C887D005B2914 /* EaseEmoji.m in Sources */,
+				629999AC1D3D175A005B2914 /* LZApplyFriendCell.m in Sources */,
 				629997341D3C887D005B2914 /* EaseConversationCell.m in Sources */,
 				629990541D3C84C9005B2914 /* LZNavigationController.m in Sources */,
+				629999A11D3D1422005B2914 /* LZAddFriendCell.m in Sources */,
 				629997041D3C887D005B2914 /* PSTGridLayoutItem.m in Sources */,
 				6299978E1D3CA62F005B2914 /* LZMomentsOriginalView.m in Sources */,
 				629997CF1D3CA878005B2914 /* UIImageView+Extension.m in Sources */,
@@ -2750,6 +2790,7 @@
 				6299905A1D3C8525005B2914 /* UIImage+Extension.m in Sources */,
 				629998101D3CB1F1005B2914 /* TZImagePickerController.m in Sources */,
 				6299979A1D3CA62F005B2914 /* MomentsPublishPictureCell.m in Sources */,
+				629999A51D3D1517005B2914 /* EMAlertView.m in Sources */,
 				629997021D3C887D005B2914 /* PSTCollectionViewUpdateItem.m in Sources */,
 				6299971D1D3C887D005B2914 /* EaseUsersListViewController.m in Sources */,
 				629997D51D3CAAFA005B2914 /* UIView+Extension.m in Sources */,
