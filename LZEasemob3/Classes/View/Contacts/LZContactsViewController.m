@@ -9,6 +9,7 @@
 #import "LZContactsViewController.h"
 #import "LZAddFriendViewController.h"
 #import "LZContactsViewCell.h"
+#import "LZChatViewController.h"
 
 @interface LZContactsViewController ()
 {
@@ -122,13 +123,21 @@
     }else {
         LZContactsViewCell *cell = [LZContactsViewCell cellWithTableView:tableView];
         NSArray *array = [_data objectAtIndex:indexPath.section - 1];
-        [array objectAtIndex:indexPath.row];
         cell.buddy = [array objectAtIndex:indexPath.row];
         return cell;
     }
 }
 
 #pragma mark - Table view delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *array = [_data objectAtIndex:indexPath.section - 1];
+    NSString *buddy = [array objectAtIndex:indexPath.row];
+    LZChatViewController *chatVc = [[LZChatViewController alloc] initWithConversationChatter:buddy conversationType:EMConversationTypeChat];
+    chatVc.title = buddy;
+    [self.navigationController pushViewController:chatVc animated:YES];
+}
+
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
     return self.section;
@@ -160,9 +169,7 @@
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        return NO;
-    }
+    if (indexPath.section == 0) return NO;
     return YES;
 }
 

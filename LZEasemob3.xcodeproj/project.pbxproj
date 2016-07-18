@@ -349,6 +349,7 @@
 		6299998A1D3CD38B005B2914 /* icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6299996D1D3CD38B005B2914 /* icon2.jpg */; };
 		6299998B1D3CD38B005B2914 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6299996E1D3CD38B005B2914 /* icon3.jpg */; };
 		6299998C1D3CD38B005B2914 /* icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6299996F1D3CD38B005B2914 /* icon4.jpg */; };
+		6299998F1D3CDE81005B2914 /* LZChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299998E1D3CDE81005B2914 /* LZChatHelper.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -931,6 +932,8 @@
 		6299996D1D3CD38B005B2914 /* icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon2.jpg; sourceTree = "<group>"; };
 		6299996E1D3CD38B005B2914 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
 		6299996F1D3CD38B005B2914 /* icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon4.jpg; sourceTree = "<group>"; };
+		6299998D1D3CDE81005B2914 /* LZChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatHelper.h; sourceTree = "<group>"; };
+		6299998E1D3CDE81005B2914 /* LZChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatHelper.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1230,6 +1233,8 @@
 				629999471D3CCFD0005B2914 /* LZUIHelper.m */,
 				629999481D3CCFD0005B2914 /* LZContactsDataHelper.h */,
 				629999491D3CCFD0005B2914 /* LZContactsDataHelper.m */,
+				6299998D1D3CDE81005B2914 /* LZChatHelper.h */,
+				6299998E1D3CDE81005B2914 /* LZChatHelper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2634,6 +2639,7 @@
 				629996CC1D3C887D005B2914 /* MBProgressHUD+Add.m in Sources */,
 				6299972A1D3C887D005B2914 /* EaseBubbleView+Voice.m in Sources */,
 				629997291D3C887D005B2914 /* EaseBubbleView+Video.m in Sources */,
+				6299998F1D3CDE81005B2914 /* LZChatHelper.m in Sources */,
 				6299982B1D3CB3BE005B2914 /* UIButton+Extension.m in Sources */,
 				629997111D3C887D005B2914 /* EaseChineseToPinyin.m in Sources */,
 				629997281D3C887D005B2914 /* EaseBubbleView+Text.m in Sources */,
