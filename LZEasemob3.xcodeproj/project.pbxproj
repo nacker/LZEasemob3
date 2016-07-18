@@ -133,6 +133,8 @@
 		629997451D3C89F4005B2914 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 629997441D3C89F4005B2914 /* libstdc++.6.0.9.tbd */; };
 		629997471D3C89FB005B2914 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 629997461D3C89FB005B2914 /* libsqlite3.tbd */; };
 		629997491D3C8A02005B2914 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 629997481D3C8A02005B2914 /* libiconv.tbd */; };
+		6299974D1D3C95B7005B2914 /* LZChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299974C1D3C95B7005B2914 /* LZChatViewController.m */; };
+		629997501D3C97B9005B2914 /* LZNotificationWorkstation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */; };
 		A0FB8919EBB224CCC66C699D /* libPods-LZEasemob3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CE7E8BDBB68F1814911164 /* libPods-LZEasemob3.a */; };
 /* End PBXBuildFile section */
 
@@ -451,6 +453,10 @@
 		629997441D3C89F4005B2914 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		629997461D3C89FB005B2914 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		629997481D3C8A02005B2914 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		6299974B1D3C95B7005B2914 /* LZChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatViewController.h; sourceTree = "<group>"; };
+		6299974C1D3C95B7005B2914 /* LZChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatViewController.m; sourceTree = "<group>"; };
+		6299974E1D3C97B9005B2914 /* LZNotificationWorkstation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNotificationWorkstation.h; sourceTree = "<group>"; };
+		6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNotificationWorkstation.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -544,6 +550,8 @@
 				6299900F1D3C818F005B2914 /* Assets.xcassets */,
 				629990141D3C818F005B2914 /* Info.plist */,
 				629990041D3C818F005B2914 /* main.m */,
+				6299974E1D3C97B9005B2914 /* LZNotificationWorkstation.h */,
+				6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */,
 				629990361D3C81DC005B2914 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
@@ -609,6 +617,8 @@
 		6299903B1D3C825C005B2914 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				6299974B1D3C95B7005B2914 /* LZChatViewController.h */,
+				6299974C1D3C95B7005B2914 /* LZChatViewController.m */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1477,6 +1487,7 @@
 				629996C81D3C887D005B2914 /* wav.mm in Sources */,
 				6299972D1D3C887D005B2914 /* EaseChatToolbarItem.m in Sources */,
 				629996F61D3C887D005B2914 /* UIImage+EMWebP.m in Sources */,
+				629997501D3C97B9005B2914 /* LZNotificationWorkstation.m in Sources */,
 				629990081D3C818F005B2914 /* AppDelegate.m in Sources */,
 				629997231D3C887D005B2914 /* EaseMessageTimeCell.m in Sources */,
 				629997031D3C887D005B2914 /* PSTGridLayoutInfo.m in Sources */,
@@ -1546,6 +1557,7 @@
 				629996EB1D3C887D005B2914 /* EMSDWebImageCompat.m in Sources */,
 				629997251D3C887D005B2914 /* EaseBubbleView+Gif.m in Sources */,
 				6299971F1D3C887D005B2914 /* EaseUserCell.m in Sources */,
+				6299974D1D3C95B7005B2914 /* LZChatViewController.m in Sources */,
 				629997171D3C887D005B2914 /* EaseEmotionManager.m in Sources */,
 				629997091D3C887D005B2914 /* EaseConversationModel.m in Sources */,
 				629996F81D3C887D005B2914 /* UIImageView+EMWebCache.m in Sources */,

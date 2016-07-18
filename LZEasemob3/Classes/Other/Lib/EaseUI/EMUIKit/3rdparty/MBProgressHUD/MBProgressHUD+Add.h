@@ -11,5 +11,13 @@
 + (void)showError:(NSString *)error toView:(UIView *)view;
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;
 
-+ (MBProgressHUD *)showMessag:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view;
+
++ (void)showSuccess:(NSString *)success;
++ (void)showError:(NSString *)error;
+
++ (MBProgressHUD *)showMessage:(NSString *)message;
+
++ (void)hideHUDForView:(UIView *)view;
++ (void)hideHUD;
 @end

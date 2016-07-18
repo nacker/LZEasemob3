@@ -10,21 +10,20 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-//#ifdef __OBJC__
-//    #import <UIKit/UIKit.h>
-//    #import <Foundation/Foundation.h>
-//
-//
-//
-//#define DEMO_CALL 1
-//
-//#endif
 
-
+#pragma mark - -------------------------第三方-------------------------
 #import "EMSDKFull.h"
 #import "EaseUI.h"
+#import "EMClient.h"
+#import "EMClientDelegate.h"
 
+#import "MBProgressHUD+Add.h"
+
+
+
+#pragma mark - -------------------------分类工具类-------------------------
 #import "LZCategory.h"
+#import "LZNotificationWorkstation.h"
 
 
 #pragma mark - -------------------------常用宏-------------------------
