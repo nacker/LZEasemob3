@@ -1719,6 +1719,8 @@
 				629997641D3CA62F005B2914 /* LZMomentsCell.m */,
 				629997651D3CA62F005B2914 /* LZMomentsOriginalView.h */,
 				629997661D3CA62F005B2914 /* LZMomentsOriginalView.m */,
+				629997861D3CA62F005B2914 /* UIScrollView+HeaderView.h */,
+				629997871D3CA62F005B2914 /* UIScrollView+HeaderView.m */,
 				629997561D3CA62F005B2914 /* CommentView */,
 				629997601D3CA62F005B2914 /* HeadView */,
 				629997691D3CA62F005B2914 /* OperationMenu */,
@@ -1726,8 +1728,6 @@
 				629997711D3CA62F005B2914 /* Refresh */,
 				629997781D3CA62F005B2914 /* TakePictures */,
 				629997831D3CA62F005B2914 /* TimeLine */,
-				629997861D3CA62F005B2914 /* UIScrollView+HeaderView.h */,
-				629997871D3CA62F005B2914 /* UIScrollView+HeaderView.m */,
 			);
 			path = Moments;
 			sourceTree = "<group>";

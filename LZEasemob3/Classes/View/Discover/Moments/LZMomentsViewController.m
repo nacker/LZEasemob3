@@ -60,14 +60,13 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
         _refreshHeader = [LZMomentsRefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
         _refreshHeader.scrollView = self.tableView;
         __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
-        __weak typeof(self) weakSelf = self;
+        typeof(self) __weak weakSelf = self;
         [_refreshHeader setRefreshingBlock:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                weakSelf.dataArray = [[weakSelf creatModelsWithCount:10] mutableCopy];
                 [weakHeader endRefreshing];
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [weakSelf.tableView reloadData];
-//                });
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf.tableView reloadData];
+                });
             });
         }];
         [self.tableView.superview addSubview:_refreshHeader];
@@ -77,22 +76,17 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.edgesForExtendedLayout = UIRectEdgeTop;
-    if (iOS7) {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     [self setupNavBar];
     [self setupTableView];
     [self setupHeadView];
     [self setupNewData];
     [self setupFooterRefresh];
-    // 测试用
-//    [self setupYYFPSLabel];
     
 #pragma mark - cell的点击展开
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moreButtonClick:) name:LZMoreButtonClickedNotification object:nil];
-    
     
     // 键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
@@ -105,18 +99,6 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     model.isOpening = !model.isOpening;
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
-
-#pragma mark - 测试用
-//- (void)setupYYFPSLabel
-//{
-//    _fpsLabel = [YYFPSLabel new];
-//    [_fpsLabel sizeToFit];
-//    _fpsLabel.bottom = self.view.height - 12;
-//    _fpsLabel.left = 12;
-//    _fpsLabel.alpha = 0;
-//    [self.tableView.superview addSubview:_fpsLabel];
-//    [_fpsLabel bringSubviewToFront:self.tableView.superview];
-//}
 
 #pragma mark - setupNavBar
 - (void)setupNavBar
@@ -185,19 +167,13 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     typeof(self) __weak weakSelf = self;
     
     LZMomentsHeaderView *headerView = [[LZMomentsHeaderView alloc] init];
-    
-//    if (UIDeviceOrientationIsPortrait(UIDeviceOrientationLandscapeLeft | UIDeviceOrientationLandscapeRight)) {
-//        headerView.frame = CGRectMake(0, 0, self.view.width, 200);
-//    }else{
-         headerView.frame = CGRectMake(0, 0, self.view.width, 260);
-//    }
+    headerView.frame = CGRectMake(0, 0, self.view.width, 260);
     [headerView setIconButtonClick:^{
         LZMomentsTimeLineViewController *vc = [[LZMomentsTimeLineViewController alloc] init];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
     self.headerView = headerView;
     self.tableView.tableHeaderView = headerView;
-    
 //    [self.tableView addScrollViewHeaderWithImage:[UIImage imageNamed:@"AlbumHeaderBackgrounImage.jpg"] target:self];
 }
 
