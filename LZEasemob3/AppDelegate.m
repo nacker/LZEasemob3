@@ -26,10 +26,6 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     [self setupEMSDK];
-    
-//    LZTabBarController *tabBarVC = [[LZTabBarController alloc] init];
-//    self.window.rootViewController = tabBarVC;
-    
     [self chooseRootViewControllerWithVersion];
     
     [self.window makeKeyAndVisible];

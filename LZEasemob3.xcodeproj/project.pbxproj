@@ -314,6 +314,11 @@
 		629999391D3CB83F005B2914 /* tabbarBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629998C91D3CB83F005B2914 /* tabbarBackground@2x.png */; };
 		6299993A1D3CB83F005B2914 /* tabbarSelectBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 629998CA1D3CB83F005B2914 /* tabbarSelectBg.png */; };
 		6299993B1D3CB83F005B2914 /* tabbarSelectBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629998CB1D3CB83F005B2914 /* tabbarSelectBg@2x.png */; };
+		6299993F1D3CC3E4005B2914 /* LZAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299993E1D3CC3E4005B2914 /* LZAddFriendViewController.m */; };
+		629999451D3CC467005B2914 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999441D3CC467005B2914 /* UIBarButtonItem+Extension.m */; };
+		6299994A1D3CCFD0005B2914 /* LZUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999471D3CCFD0005B2914 /* LZUIHelper.m */; };
+		6299994B1D3CCFD0005B2914 /* LZContactsDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999491D3CCFD0005B2914 /* LZContactsDataHelper.m */; };
+		6299994E1D3CD006005B2914 /* LZContactsGrounp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299994D1D3CD006005B2914 /* LZContactsGrounp.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -855,6 +860,16 @@
 		629998C91D3CB83F005B2914 /* tabbarBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBackground@2x.png"; sourceTree = "<group>"; };
 		629998CA1D3CB83F005B2914 /* tabbarSelectBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarSelectBg.png; sourceTree = "<group>"; };
 		629998CB1D3CB83F005B2914 /* tabbarSelectBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarSelectBg@2x.png"; sourceTree = "<group>"; };
+		6299993D1D3CC3E4005B2914 /* LZAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAddFriendViewController.h; sourceTree = "<group>"; };
+		6299993E1D3CC3E4005B2914 /* LZAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAddFriendViewController.m; sourceTree = "<group>"; };
+		629999431D3CC467005B2914 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		629999441D3CC467005B2914 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		629999461D3CCFD0005B2914 /* LZUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUIHelper.h; sourceTree = "<group>"; };
+		629999471D3CCFD0005B2914 /* LZUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUIHelper.m; sourceTree = "<group>"; };
+		629999481D3CCFD0005B2914 /* LZContactsDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZContactsDataHelper.h; sourceTree = "<group>"; };
+		629999491D3CCFD0005B2914 /* LZContactsDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZContactsDataHelper.m; sourceTree = "<group>"; };
+		6299994C1D3CD006005B2914 /* LZContactsGrounp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZContactsGrounp.h; sourceTree = "<group>"; };
+		6299994D1D3CD006005B2914 /* LZContactsGrounp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZContactsGrounp.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -994,8 +1009,8 @@
 			children = (
 				629990391D3C825C005B2914 /* Model */,
 				6299903A1D3C825C005B2914 /* View */,
-				629990411D3C825C005B2914 /* ViewModel */,
 				629990421D3C8368005B2914 /* Other */,
+				629990411D3C825C005B2914 /* ViewModel */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1003,6 +1018,8 @@
 		629990391D3C825C005B2914 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6299994C1D3CD006005B2914 /* LZContactsGrounp.h */,
+				6299994D1D3CD006005B2914 /* LZContactsGrounp.m */,
 				629997A31D3CA6AE005B2914 /* Moments */,
 			);
 			path = Model;
@@ -1037,6 +1054,7 @@
 			children = (
 				6299904C1D3C8485005B2914 /* LZContactsViewController.h */,
 				6299904D1D3C8485005B2914 /* LZContactsViewController.m */,
+				6299993C1D3CC3C3005B2914 /* FriendApply */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -1123,6 +1141,8 @@
 				6299982A1D3CB3BE005B2914 /* UIButton+Extension.m */,
 				6299982C1D3CB506005B2914 /* NSString+Extension.h */,
 				6299982D1D3CB506005B2914 /* NSString+Extension.m */,
+				629999431D3CC467005B2914 /* UIBarButtonItem+Extension.h */,
+				629999441D3CC467005B2914 /* UIBarButtonItem+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1143,6 +1163,10 @@
 			children = (
 				629997D61D3CAB5E005B2914 /* LZDataBaseTool.h */,
 				629997D71D3CAB5E005B2914 /* LZDataBaseTool.m */,
+				629999461D3CCFD0005B2914 /* LZUIHelper.h */,
+				629999471D3CCFD0005B2914 /* LZUIHelper.m */,
+				629999481D3CCFD0005B2914 /* LZContactsDataHelper.h */,
+				629999491D3CCFD0005B2914 /* LZContactsDataHelper.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2156,6 +2180,15 @@
 			path = tabbar;
 			sourceTree = "<group>";
 		};
+		6299993C1D3CC3C3005B2914 /* FriendApply */ = {
+			isa = PBXGroup;
+			children = (
+				6299993D1D3CC3E4005B2914 /* LZAddFriendViewController.h */,
+				6299993E1D3CC3E4005B2914 /* LZAddFriendViewController.m */,
+			);
+			path = FriendApply;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2480,6 +2513,7 @@
 				6299904E1D3C8485005B2914 /* LZContactsViewController.m in Sources */,
 				629997911D3CA62F005B2914 /* LZMomentsPictureCell.m in Sources */,
 				629990481D3C844B005B2914 /* LZTabBarController.m in Sources */,
+				6299994E1D3CD006005B2914 /* LZContactsGrounp.m in Sources */,
 				629996E61D3C887D005B2914 /* MWTapDetectingImageView.m in Sources */,
 				629997C91D3CA72F005B2914 /* NSString+MLExpression.m in Sources */,
 				6299904B1D3C8471005B2914 /* LZConversationViewController.m in Sources */,
@@ -2514,6 +2548,7 @@
 				629997211D3C887D005B2914 /* EaseCustomMessageCell.m in Sources */,
 				6299980F1D3CB1F1005B2914 /* TZImageManager.m in Sources */,
 				629990511D3C8499005B2914 /* LZMeViewController.m in Sources */,
+				629999451D3CC467005B2914 /* UIBarButtonItem+Extension.m in Sources */,
 				629997941D3CA62F005B2914 /* LZMomentsRefreshFooter.m in Sources */,
 				6299971C1D3C887D005B2914 /* EaseRefreshTableViewController.m in Sources */,
 				6299972B1D3C887D005B2914 /* EaseBubbleView.m in Sources */,
@@ -2537,6 +2572,7 @@
 				629996C11D3C887D005B2914 /* EMAudioRecorderUtil.m in Sources */,
 				629996E41D3C887D005B2914 /* MWPhoto.m in Sources */,
 				629990051D3C818F005B2914 /* main.m in Sources */,
+				6299994B1D3CCFD0005B2914 /* LZContactsDataHelper.m in Sources */,
 				6299972C1D3C887D005B2914 /* EaseChatToolbar.m in Sources */,
 				629997CC1D3CA72F005B2914 /* MLLinkLabel.m in Sources */,
 				629997921D3CA62F005B2914 /* LZPhotoContainerView.m in Sources */,
@@ -2562,6 +2598,7 @@
 				629997241D3C887D005B2914 /* EaseBubbleView+File.m in Sources */,
 				629998131D3CB1F1005B2914 /* TZPhotoPreviewController.m in Sources */,
 				629997191D3C887D005B2914 /* EaseConversationListViewController.m in Sources */,
+				6299994A1D3CCFD0005B2914 /* LZUIHelper.m in Sources */,
 				629996E31D3C887D005B2914 /* MWGridViewController.m in Sources */,
 				629997881D3CA62F005B2914 /* LZMomentsCellCommentBgView.m in Sources */,
 				629997051D3C887D005B2914 /* PSTGridLayoutRow.m in Sources */,
@@ -2581,6 +2618,7 @@
 				6299978B1D3CA62F005B2914 /* LZMomentsCellLikeHeaderFooterView.m in Sources */,
 				629997D21D3CAAD1005B2914 /* UIView+gesture.m in Sources */,
 				6299970C1D3C887D005B2914 /* NSDate+Category.m in Sources */,
+				6299993F1D3CC3E4005B2914 /* LZAddFriendViewController.m in Sources */,
 				629998111D3CB1F1005B2914 /* TZPhotoPickerController.m in Sources */,
 				629997C61D3CA72F005B2914 /* MLExpressionManager.m in Sources */,
 				6299970D1D3C887D005B2914 /* NSDateFormatter+Category.m in Sources */,

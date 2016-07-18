@@ -17,5 +17,6 @@
 #import "UIColor+Extension.h"
 #import "UIButton+Extension.h"
 #import "NSString+Extension.h"
+#import "UIBarButtonItem+Extension.h"
 
 #endif /* LZCategory_h */

@@ -110,7 +110,7 @@
         KLog(@"注册失败%@", error.description);
         [MBProgressHUD showError:@"注册失败"];
     } else {
-        [MBProgressHUD showError:@"注册成功"];
+        [MBProgressHUD showSuccess:@"注册成功"];
         
         KLog(@"注册成功%@", error.description);
     }
