@@ -35,7 +35,6 @@
 
 #import "NSDate+Category.h"
 #import "NSString+Valid.h"
-#import "UIImageView+EMWebCache.h"
 #import "UIViewController+HUD.h"
 #import "UIViewController+DismissKeyboard.h"
 #import "EaseLocalDefine.h"

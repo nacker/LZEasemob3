@@ -10,7 +10,7 @@
 #import "MWCommon.h"
 #import "MWPhotoBrowser.h"
 #import "MWPhotoBrowserPrivate.h"
-#import "EMSDImageCache.h"
+//#import "EMSDImageCache.h"
 #import "EaseLocalDefine.h"
 
 #define PADDING                  10
@@ -98,7 +98,7 @@
     _pagingScrollView.delegate = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self releaseAllUnderlyingPhotos:NO];
-    [[EMSDImageCache sharedImageCache] clearMemory]; // clear memory
+    [[SDImageCache sharedImageCache] clearMemory]; // clear memory
 }
 
 - (void)releaseAllUnderlyingPhotos:(BOOL)preserveCurrent {

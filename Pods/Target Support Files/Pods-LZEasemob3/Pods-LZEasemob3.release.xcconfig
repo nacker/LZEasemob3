@@ -1,5 +1,7 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FMDB" "${PODS_ROOT}/Headers/Public/MJExtension" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/Masonry"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FMDB" -isystem "${PODS_ROOT}/Headers/Public/MJExtension" -isystem "${PODS_ROOT}/Headers/Public/MJRefresh" -isystem "${PODS_ROOT}/Headers/Public/Masonry"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"FMDB" -l"MJExtension" -l"MJRefresh" -l"Masonry" -l"sqlite3" -framework "Foundation" -framework "UIKit"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/FMDB.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJExtension.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/MJRefresh.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Masonry.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/ReactiveCocoa.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/Result.framework/Headers" -iquote "$CONFIGURATION_BUILD_DIR/SDWebImage.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "FMDB" -framework "MJExtension" -framework "MJRefresh" -framework "Masonry" -framework "ReactiveCocoa" -framework "Result" -framework "SDWebImage"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-LZEasemob3
 PODS_ROOT = ${SRCROOT}/Pods

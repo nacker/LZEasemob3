@@ -10,5 +10,12 @@
 #define LZCategory_h
 
 #import "UIImage+Extension.h"
+#import "UILabel+Extension.h"
+#import "UIImageView+Extension.h"
+#import "UIView+gesture.h"
+#import "UIView+Extension.h"
+#import "UIColor+Extension.h"
+#import "UIButton+Extension.h"
+#import "NSString+Extension.h"
 
 #endif /* LZCategory_h */

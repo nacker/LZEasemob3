@@ -11,7 +11,7 @@
  */
 
 #import "EaseMessageReadManager.h"
-#import "UIImageView+EMWebCache.h"
+//#import "UIImageView+EMWebCache.h"
 #import "EMCDDeviceManager.h"
 
 #define IMAGE_MAX_SIZE_5k 5120*2880

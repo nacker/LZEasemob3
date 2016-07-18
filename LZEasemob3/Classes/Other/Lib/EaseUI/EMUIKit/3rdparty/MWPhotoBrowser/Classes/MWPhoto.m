@@ -8,16 +8,17 @@
 
 #import "MWPhoto.h"
 #import "MWPhotoBrowser.h"
-#import "EMSDWebImageDecoder.h"
-#import "EMSDWebImageManager.h"
-#import "EMSDWebImageOperation.h"
+//#import "EMSDWebImageDecoder.h"
+//#import "EMSDWebImageManager.h"
+//#import "EMSDWebImageOperation.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface MWPhoto () {
 
     BOOL _loadingInProgress;
-    id <EMSDWebImageOperation> _webImageOperation;
-        
+//    id <EMSDWebImageOperation> _webImageOperation;
+    id <SDWebImageOperation> _webImageOperation;
+    
 }
 
 - (void)imageLoadingComplete;
@@ -154,7 +155,7 @@
             
             // Load async from web (using SDWebImage)
             @try {
-                EMSDWebImageManager *manager = [EMSDWebImageManager sharedManager];
+                SDWebImageManager *manager = [SDWebImageManager sharedManager];
                 _webImageOperation = [manager downloadImageWithURL:_photoURL
                                                            options:0
                                                           progress:^(NSInteger receivedSize, NSInteger expectedSize) {
@@ -166,7 +167,7 @@
                                                                   [[NSNotificationCenter defaultCenter] postNotificationName:MWPHOTO_PROGRESS_NOTIFICATION object:dict];
                                                               }
                                                           }
-                                                         completed:^(UIImage *image, NSError *error, EMSDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                                                         completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                                                              if (error) {
                                                                  MWLog(@"SDWebImage failed to download image: %@", error);
                                                              }

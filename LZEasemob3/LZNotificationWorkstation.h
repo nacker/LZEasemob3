@@ -62,3 +62,10 @@ extern NSString *const KBillingDetailsContainerViewDidSelectBtnKey;
 
 #pragma mark -Contacts
 extern NSString *const KRefurbishContactsViewControllerNotification;
+
+
+extern NSString *const PhotoPickerPhotoTakeDoneNotification;
+
+/** 点击朋友圈全文的通知 */
+extern NSString * const LZMoreButtonClickedNotification;
+extern NSString * const LZMoreButtonClickedNotificationKey;

@@ -23,7 +23,7 @@
 #import "EaseEmoji.h"
 #import "EaseEmotionEscape.h"
 #import "EaseCustomMessageCell.h"
-#import "UIImage+EMGIF.h"
+#import "UIImage+GIF.h"
 #import "EaseLocalDefine.h"
 #import "EaseSDKHelper.h"
 

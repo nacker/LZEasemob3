@@ -61,3 +61,9 @@ NSString *const KBillingDetailsContainerViewDidSelectBtnKey = @"KBillingDetailsC
 
 #pragma mark -Contacts
 NSString *const KRefurbishContactsViewControllerNotification = @"KRefurbishContactsViewControllerNotification";
+
+NSString *const PhotoPickerPhotoTakeDoneNotification = @"PhotoPickerPhotoTakeDoneNotification";
+
+/** 点击朋友圈全文的通知 */
+NSString *const LZMoreButtonClickedNotification = @"LZMoreButtonClickedNotification";
+NSString *const LZMoreButtonClickedNotificationKey = @"LZMoreButtonClickedNotificationKey";

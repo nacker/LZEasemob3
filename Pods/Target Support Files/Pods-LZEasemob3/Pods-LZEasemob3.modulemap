@@ -1,0 +1,6 @@
+framework module Pods_LZEasemob3 {
+  umbrella header "Pods-LZEasemob3-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,7 @@
 //
 
 #import "LZDiscoverViewController.h"
+#import "LZMomentsViewController.h"
 
 @interface LZDiscoverViewController ()
 
@@ -41,6 +42,8 @@ static NSString * const CellIdentifier = @"DiscoverIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    KLog(@"朋友圈");
+    
+    LZMomentsViewController *vc = [[LZMomentsViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end
