@@ -135,6 +135,7 @@
 		629997491D3C8A02005B2914 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 629997481D3C8A02005B2914 /* libiconv.tbd */; };
 		6299974D1D3C95B7005B2914 /* LZChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299974C1D3C95B7005B2914 /* LZChatViewController.m */; };
 		629997501D3C97B9005B2914 /* LZNotificationWorkstation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */; };
+		629997541D3CA33F005B2914 /* LZDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997531D3CA33F005B2914 /* LZDiscoverViewController.m */; };
 		A0FB8919EBB224CCC66C699D /* libPods-LZEasemob3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CE7E8BDBB68F1814911164 /* libPods-LZEasemob3.a */; };
 /* End PBXBuildFile section */
 
@@ -457,6 +458,8 @@
 		6299974C1D3C95B7005B2914 /* LZChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatViewController.m; sourceTree = "<group>"; };
 		6299974E1D3C97B9005B2914 /* LZNotificationWorkstation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZNotificationWorkstation.h; sourceTree = "<group>"; };
 		6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZNotificationWorkstation.m; sourceTree = "<group>"; };
+		629997521D3CA33F005B2914 /* LZDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZDiscoverViewController.h; sourceTree = "<group>"; };
+		629997531D3CA33F005B2914 /* LZDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZDiscoverViewController.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -608,6 +611,7 @@
 				6299903B1D3C825C005B2914 /* Chat */,
 				6299903C1D3C825C005B2914 /* Contacts */,
 				6299903D1D3C825C005B2914 /* Conversation */,
+				629997511D3CA316005B2914 /* Discover */,
 				6299903F1D3C825C005B2914 /* Main */,
 				629990401D3C825C005B2914 /* Me */,
 			);
@@ -1291,6 +1295,15 @@
 			path = LZEasemob3;
 			sourceTree = "<group>";
 		};
+		629997511D3CA316005B2914 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				629997521D3CA33F005B2914 /* LZDiscoverViewController.h */,
+				629997531D3CA33F005B2914 /* LZDiscoverViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1545,6 +1558,7 @@
 				6299970C1D3C887D005B2914 /* NSDate+Category.m in Sources */,
 				6299970D1D3C887D005B2914 /* NSDateFormatter+Category.m in Sources */,
 				629997161D3C887D005B2914 /* EaseEmotionEscape.m in Sources */,
+				629997541D3CA33F005B2914 /* LZDiscoverViewController.m in Sources */,
 				629996FA1D3C887D005B2914 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				629996C01D3C887D005B2914 /* EMAudioPlayerUtil.m in Sources */,
 				629997151D3C887D005B2914 /* EaseEmojiEmoticons.m in Sources */,
