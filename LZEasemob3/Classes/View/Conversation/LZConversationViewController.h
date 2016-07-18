@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZConversationViewController : UIViewController
+@interface LZConversationViewController : UITableViewController
+
++ (instancetype)shareController;
 
 @end

@@ -55,6 +55,7 @@
 }
 
 - (void)setTableView{
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.sectionIndexColor = [UIColor lightGrayColor];
 //    self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];

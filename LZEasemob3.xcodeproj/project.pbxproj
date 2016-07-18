@@ -350,6 +350,10 @@
 		6299998B1D3CD38B005B2914 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6299996E1D3CD38B005B2914 /* icon3.jpg */; };
 		6299998C1D3CD38B005B2914 /* icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6299996F1D3CD38B005B2914 /* icon4.jpg */; };
 		6299998F1D3CDE81005B2914 /* LZChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299998E1D3CDE81005B2914 /* LZChatHelper.m */; };
+		629999941D3D076A005B2914 /* LZTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999931D3D076A005B2914 /* LZTimeTool.m */; };
+		629999971D3D087C005B2914 /* LZConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999961D3D087C005B2914 /* LZConversationCell.m */; };
+		6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999A1D3D08D0005B2914 /* LZBadgeView.m */; };
+		6299999E1D3D0A41005B2914 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999D1D3D0A41005B2914 /* NSDate+Extension.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -934,6 +938,14 @@
 		6299996F1D3CD38B005B2914 /* icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon4.jpg; sourceTree = "<group>"; };
 		6299998D1D3CDE81005B2914 /* LZChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatHelper.h; sourceTree = "<group>"; };
 		6299998E1D3CDE81005B2914 /* LZChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatHelper.m; sourceTree = "<group>"; };
+		629999921D3D076A005B2914 /* LZTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTimeTool.h; sourceTree = "<group>"; };
+		629999931D3D076A005B2914 /* LZTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTimeTool.m; sourceTree = "<group>"; };
+		629999951D3D087C005B2914 /* LZConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConversationCell.h; sourceTree = "<group>"; };
+		629999961D3D087C005B2914 /* LZConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZConversationCell.m; sourceTree = "<group>"; };
+		629999991D3D08D0005B2914 /* LZBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBadgeView.h; sourceTree = "<group>"; };
+		6299999A1D3D08D0005B2914 /* LZBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBadgeView.m; sourceTree = "<group>"; };
+		6299999C1D3D0A41005B2914 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		6299999D1D3D0A41005B2914 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1130,6 +1142,8 @@
 			children = (
 				629990491D3C8471005B2914 /* LZConversationViewController.h */,
 				6299904A1D3C8471005B2914 /* LZConversationViewController.m */,
+				629999951D3D087C005B2914 /* LZConversationCell.h */,
+				629999961D3D087C005B2914 /* LZConversationCell.m */,
 			);
 			path = Conversation;
 			sourceTree = "<group>";
@@ -1209,6 +1223,8 @@
 				6299982D1D3CB506005B2914 /* NSString+Extension.m */,
 				629999431D3CC467005B2914 /* UIBarButtonItem+Extension.h */,
 				629999441D3CC467005B2914 /* UIBarButtonItem+Extension.m */,
+				6299999C1D3D0A41005B2914 /* NSDate+Extension.h */,
+				6299999D1D3D0A41005B2914 /* NSDate+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1235,6 +1251,8 @@
 				629999491D3CCFD0005B2914 /* LZContactsDataHelper.m */,
 				6299998D1D3CDE81005B2914 /* LZChatHelper.h */,
 				6299998E1D3CDE81005B2914 /* LZChatHelper.m */,
+				629999921D3D076A005B2914 /* LZTimeTool.h */,
+				629999931D3D076A005B2914 /* LZTimeTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2021,6 +2039,7 @@
 		629998161D3CB21A005B2914 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				629999981D3D08B9005B2914 /* BadgeView */,
 				6299981F1D3CB23D005B2914 /* TextView */,
 				629998171D3CB237005B2914 /* ActionSheet */,
 			);
@@ -2292,6 +2311,15 @@
 				6299996F1D3CD38B005B2914 /* icon4.jpg */,
 			);
 			path = cell_icons;
+			sourceTree = "<group>";
+		};
+		629999981D3D08B9005B2914 /* BadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				629999991D3D08D0005B2914 /* LZBadgeView.h */,
+				6299999A1D3D08D0005B2914 /* LZBadgeView.m */,
+			);
+			path = BadgeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2647,11 +2675,13 @@
 				629997321D3C887D005B2914 /* EaseChatBarMoreView.m in Sources */,
 				6299904E1D3C8485005B2914 /* LZContactsViewController.m in Sources */,
 				629997911D3CA62F005B2914 /* LZMomentsPictureCell.m in Sources */,
+				629999941D3D076A005B2914 /* LZTimeTool.m in Sources */,
 				629990481D3C844B005B2914 /* LZTabBarController.m in Sources */,
 				6299994E1D3CD006005B2914 /* LZContactsGrounp.m in Sources */,
 				629996E61D3C887D005B2914 /* MWTapDetectingImageView.m in Sources */,
 				629997C91D3CA72F005B2914 /* NSString+MLExpression.m in Sources */,
 				6299904B1D3C8471005B2914 /* LZConversationViewController.m in Sources */,
+				6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */,
 				629997A61D3CA6AE005B2914 /* LZMoments.m in Sources */,
 				6299971A1D3C887D005B2914 /* EaseLocationViewController.m in Sources */,
 				629996FC1D3C887D005B2914 /* PSTCollectionViewCell.m in Sources */,
@@ -2726,6 +2756,7 @@
 				6299979B1D3CA62F005B2914 /* LZMomentsTimeLineViewController.m in Sources */,
 				629996C41D3C887D005B2914 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				629997CB1D3CA72F005B2914 /* MLLabel.m in Sources */,
+				629999971D3D087C005B2914 /* LZConversationCell.m in Sources */,
 				6299982E1D3CB506005B2914 /* NSString+Extension.m in Sources */,
 				629998151D3CB1F1005B2914 /* UIView+Layout.m in Sources */,
 				629997011D3C887D005B2914 /* PSTCollectionViewLayout.m in Sources */,
@@ -2748,6 +2779,7 @@
 				629996FD1D3C887D005B2914 /* PSTCollectionViewController.m in Sources */,
 				629997A91D3CA6F8005B2914 /* UILabel+Extension.m in Sources */,
 				629997D81D3CAB5E005B2914 /* LZDataBaseTool.m in Sources */,
+				6299999E1D3D0A41005B2914 /* NSDate+Extension.m in Sources */,
 				6299971B1D3C887D005B2914 /* EaseMessageViewController.m in Sources */,
 				629997971D3CA62F005B2914 /* DFPlainGridImageView.m in Sources */,
 				629996C21D3C887D005B2914 /* EMCDDeviceManager+Media.m in Sources */,

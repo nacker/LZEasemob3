@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self addChildViewController:[[LZConversationViewController alloc] init] title:@"微信" imageName:@"tabbar_mainframe"];
+    [self addChildViewController:[LZConversationViewController shareController] title:@"微信" imageName:@"tabbar_mainframe"];
     [self addChildViewController:[[LZContactsViewController alloc] init] title:@"通讯录" imageName:@"tabbar_contacts"];
     [self addChildViewController:[[LZDiscoverViewController alloc] init] title:@"发现" imageName:@"tabbar_discover"];
     [self addChildViewController:[[LZMeViewController alloc] init] title:@"我" imageName:@"tabbar_me"];

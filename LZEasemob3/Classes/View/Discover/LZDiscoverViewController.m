@@ -23,6 +23,7 @@ static NSString * const CellIdentifier = @"DiscoverIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.tableView.rowHeight = 60;
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
