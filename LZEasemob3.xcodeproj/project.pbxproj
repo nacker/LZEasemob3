@@ -360,6 +360,7 @@
 		629999AC1D3D175A005B2914 /* LZApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */; };
 		629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999BB1D3DEC19005B2914 /* InfoPlist.strings */; };
 		629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999C11D3DEC74005B2914 /* Localizable.strings */; };
+		629999C61D3E0E1F005B2914 /* LZChatRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999C51D3E0E1F005B2914 /* LZChatRefreshHeader.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -964,6 +965,8 @@
 		629999BC1D3DEC22005B2914 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		629999C01D3DEC74005B2914 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		629999C21D3DEC82005B2914 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		629999C41D3E0E1F005B2914 /* LZChatRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatRefreshHeader.h; sourceTree = "<group>"; };
+		629999C51D3E0E1F005B2914 /* LZChatRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatRefreshHeader.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1141,6 +1144,7 @@
 			children = (
 				6299974B1D3C95B7005B2914 /* LZChatViewController.h */,
 				6299974C1D3C95B7005B2914 /* LZChatViewController.m */,
+				629999C31D3E0E0A005B2914 /* Refresh */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -2366,6 +2370,15 @@
 			path = Apply;
 			sourceTree = "<group>";
 		};
+		629999C31D3E0E0A005B2914 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				629999C41D3E0E1F005B2914 /* LZChatRefreshHeader.h */,
+				629999C51D3E0E1F005B2914 /* LZChatRefreshHeader.m */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2780,6 +2793,7 @@
 				6299978E1D3CA62F005B2914 /* LZMomentsOriginalView.m in Sources */,
 				629997CF1D3CA878005B2914 /* UIImageView+Extension.m in Sources */,
 				629997331D3C887D005B2914 /* EaseRecordView.m in Sources */,
+				629999C61D3E0E1F005B2914 /* LZChatRefreshHeader.m in Sources */,
 				629998281D3CB2AF005B2914 /* UIColor+Extension.m in Sources */,
 				629998251D3CB264005B2914 /* LZMomentsSendViewModel.m in Sources */,
 				629997CA1D3CA72F005B2914 /* MLLabelLayoutManager.m in Sources */,

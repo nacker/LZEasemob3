@@ -12,7 +12,7 @@
 #import "LZChatViewController.h"
 #import "LZApplyViewController.h"
 
-@interface LZContactsViewController ()
+@interface LZContactsViewController ()<EMContactManagerDelegate>
 {
     NSIndexPath *_currentLongPressIndex;
 }
@@ -42,6 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
     
     [self setupNavItem];
     
@@ -201,6 +202,8 @@
         if (!error) {
            [[EMClient sharedClient].chatManager deleteConversation:buddy deleteMessages:YES];
 //           [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+            [self reloadDataSource];
+            [tableView reloadData];
         }
         else{
             [tableView reloadData];
@@ -230,6 +233,32 @@
         }
     });
 }
+
+#pragma mark - 好友申请处理结果回调
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B同意后，用户A会收到这个回调
+ */
+- (void)didReceiveAgreedFromUsername:(NSString *)aUsername
+{
+    KLog(@"%@",aUsername);
+    [self reloadDataSource];
+    
+    [self.tableView reloadData];
+}
+
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B拒绝后，用户A会收到这个回调
+ */
+- (void)didReceiveDeclinedFromUsername:(NSString *)aUsername
+{
+    KLog(@"%@",aUsername);
+//    NSString *message = [NSString stringWithFormat:@"%@ 拒绝了你的好友请求",aUsername];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友添加消息" message:message delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+//    [alert show];
+}
+
 
 #pragma mark - 懒加载
 - (NSMutableArray *)functionGroup
@@ -262,5 +291,11 @@
         self.section = [NSMutableArray array];
     }
     return _section;
+}
+
+- (void)dealloc
+{
+    //移除好友回调
+    [[EMClient sharedClient].contactManager removeDelegate:self];
 }
 @end

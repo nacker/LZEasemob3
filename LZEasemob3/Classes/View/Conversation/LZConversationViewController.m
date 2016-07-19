@@ -49,7 +49,7 @@ static LZConversationViewController *controller = nil;
     //登录接口相关的代理
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
     //联系人模块代理
-    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
+//    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
     //消息，聊天
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     
@@ -181,9 +181,9 @@ static LZConversationViewController *controller = nil;
                                        message:(NSString *)aMessage
 {
     NSLog(@"%@,%@",aUsername,aMessage);
-    self.buddyUsername = aUsername;
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友添加请求" message:aMessage delegate:self cancelButtonTitle:@"拒绝" otherButtonTitles:@"同意", nil];
-    [alert show];
+//    self.buddyUsername = aUsername;
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友添加请求" message:aMessage delegate:self cancelButtonTitle:@"拒绝" otherButtonTitles:@"同意", nil];
+//    [alert show];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -207,35 +207,12 @@ static LZConversationViewController *controller = nil;
     }
 }
 
-#pragma mark - 好友申请处理结果回调
-/*!
- @method
- @brief 用户A发送加用户B为好友的申请，用户B同意后，用户A会收到这个回调
- */
-- (void)didReceiveAgreedFromUsername:(NSString *)aUsername
-{
-    NSLog(@"%@",aUsername);
-    NSString *message = [NSString stringWithFormat:@"%@ 同意了你的好友请求",aUsername];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友添加消息" message:message delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-    [alert show];
-}
 
-/*!
- @method
- @brief 用户A发送加用户B为好友的申请，用户B拒绝后，用户A会收到这个回调
- */
-- (void)didReceiveDeclinedFromUsername:(NSString *)aUsername
-{
-    NSLog(@"%@",aUsername);
-    NSString *message = [NSString stringWithFormat:@"%@ 拒绝了你的好友请求",aUsername];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"好友添加消息" message:message delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-    [alert show];
-}
 
 - (void)dealloc
 {
     [[EMClient sharedClient] removeDelegate:self];
-    [[EMClient sharedClient].contactManager removeDelegate:self];
+//    [[EMClient sharedClient].contactManager removeDelegate:self];
     [[EMClient sharedClient].chatManager removeDelegate:self];
 }
 

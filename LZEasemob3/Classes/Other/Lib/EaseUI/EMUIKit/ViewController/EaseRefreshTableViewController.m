@@ -11,10 +11,10 @@
  */
 
 #import "EaseRefreshTableViewController.h"
-
+#import "LZChatRefreshHeader.h"
 #import "MJRefresh.h"
 
-@interface EaseRefreshTableViewController ()
+@interface EaseRefreshTableViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, readonly) UITableViewStyle style;
 
@@ -55,11 +55,6 @@
     _showTableBlankView = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - setter
 
 - (void)setShowRefreshHeader:(BOOL)showRefreshHeader
@@ -68,17 +63,20 @@
         _showRefreshHeader = showRefreshHeader;
         if (_showRefreshHeader) {
             __weak EaseRefreshTableViewController *weakSelf = self;
-            self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-                [weakSelf tableViewDidTriggerHeaderRefresh];
-                [weakSelf.tableView.mj_header beginRefreshing];
-            }];
-            //            header.updatedTimeHidden = YES;
+            weakSelf.tableView.mj_header = [LZChatRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
         }
         else{
-            //            [self.tableView removeHeader];
+//            [self.tableView removeHeader];
         }
     }
 }
+
+- (void)loadData
+{
+    [self tableViewDidTriggerHeaderRefresh];
+    [self.tableView.mj_header beginRefreshing];
+}
+
 
 - (void)setShowRefreshFooter:(BOOL)showRefreshFooter
 {
@@ -200,4 +198,9 @@
     });
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.view endEditing:YES];
+}
 @end
