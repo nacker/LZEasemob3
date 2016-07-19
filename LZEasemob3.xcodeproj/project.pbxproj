@@ -358,6 +358,8 @@
 		629999A51D3D1517005B2914 /* EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A41D3D1517005B2914 /* EMAlertView.m */; };
 		629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A81D3D1706005B2914 /* LZApplyViewController.m */; };
 		629999AC1D3D175A005B2914 /* LZApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */; };
+		629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999BB1D3DEC19005B2914 /* InfoPlist.strings */; };
+		629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999C11D3DEC74005B2914 /* Localizable.strings */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -958,6 +960,10 @@
 		629999A81D3D1706005B2914 /* LZApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyViewController.m; sourceTree = "<group>"; };
 		629999AA1D3D175A005B2914 /* LZApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyFriendCell.h; sourceTree = "<group>"; };
 		629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyFriendCell.m; sourceTree = "<group>"; };
+		629999BA1D3DEC19005B2914 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		629999BC1D3DEC22005B2914 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		629999C01D3DEC74005B2914 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		629999C21D3DEC82005B2914 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1070,6 +1076,8 @@
 				6299974E1D3C97B9005B2914 /* LZNotificationWorkstation.h */,
 				6299974F1D3C97B9005B2914 /* LZNotificationWorkstation.m */,
 				629990361D3C81DC005B2914 /* PrefixHeader.pch */,
+				629999BB1D3DEC19005B2914 /* InfoPlist.strings */,
+				629999C11D3DEC74005B2914 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2493,6 +2501,7 @@
 				629998EA1D3CB83F005B2914 /* chat_receiver_audio_playing000@2x.png in Resources */,
 				629997FE1D3CB1F1005B2914 /* MMVideoPreviewPlayHL@2x.png in Resources */,
 				629998F41D3CB83F005B2914 /* chat_sender_audio_playing_003@2x.png in Resources */,
+				629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */,
 				629998D81D3CB83F005B2914 /* call_silence.png in Resources */,
 				629998021D3CB1F1005B2914 /* photo_number_icon@2x.png in Resources */,
 				629998FC1D3CB83F005B2914 /* icon_010.gif in Resources */,
@@ -2528,6 +2537,7 @@
 				629999331D3CB83F005B2914 /* tabbar_contactsHL@2x.png in Resources */,
 				6299993B1D3CB83F005B2914 /* tabbarSelectBg@2x.png in Resources */,
 				629999001D3CB83F005B2914 /* icon_013.gif in Resources */,
+				629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */,
 				6299993A1D3CB83F005B2914 /* tabbarSelectBg.png in Resources */,
 				629998D71D3CB83F005B2914 /* call_out_h@2x.png in Resources */,
 				6299992F1D3CB83F005B2914 /* tabbar_chatsHL@2x.png in Resources */,
@@ -2888,6 +2898,27 @@
 			targetProxy = 629990251D3C818F005B2914 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		629999BB1D3DEC19005B2914 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				629999BA1D3DEC19005B2914 /* en */,
+				629999BC1D3DEC22005B2914 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		629999C11D3DEC74005B2914 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				629999C01D3DEC74005B2914 /* en */,
+				629999C21D3DEC82005B2914 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6299902B1D3C818F005B2914 /* Debug */ = {
