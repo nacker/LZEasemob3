@@ -98,15 +98,10 @@
 /* !自动登录返回结果 @param aError 错误信息*/
 - (void)didAutoLoginWithError:(EMError *)aError {
     KLog(@"#####%d, %@", aError.code, aError.errorDescription);
-    
     if (!aError) {//自动登录没有错误
-        
-        //        [self switchToMainTabBarVC];
-        
+
     } else {
-        
-        NSLog(@"%@",aError);
-        
+        KLog(@"%@",aError);
     }
 }
 
@@ -127,19 +122,19 @@
 /* 当前登录账号在其它设备登录时会接收到该回调 */
 - (void)didLoginFromOtherDevice
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"onceToKen"];
-    LZLoginViewController * loginVC = [[LZLoginViewController alloc] init];
-    //    loginVC.string = @"异地登录";
-    self.window.rootViewController = loginVC;
+    [self didGoToLoginVC];
 }
 
 /* 当前登录账号已经被从服务器端删除时会收到该回调 */
 - (void)didRemovedFromServer
 {
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"onceToKen"];
-    LZLoginViewController * loginVC = [[LZLoginViewController alloc] init];
-    //    loginVC.string = @"账号已经注销";
-    self.window.rootViewController = loginVC;
+    [self didGoToLoginVC];
 }
 
+- (void)didGoToLoginVC
+{
+    [[EMClient sharedClient] logout:NO];
+    LZLoginViewController * loginVC = [[LZLoginViewController alloc] init];
+    self.window.rootViewController = loginVC;
+}
 @end

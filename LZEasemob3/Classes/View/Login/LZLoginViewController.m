@@ -88,6 +88,8 @@
             // 设置自动登录
             [[EMClient sharedClient].options setIsAutoLogin:YES];
             
+            [LZDataBaseTool saveToUserDefaults:self.usernamefield.text key:@"userId"];
+            
             [[NSNotificationCenter defaultCenter] postNotificationName:KSwitchRootViewControllerNotification object:nil];
             KLog(@"---登录成功");
             

@@ -107,6 +107,9 @@ static LZContactsViewController *controller = nil;
     _functionGroup = [LZUIHelper getFriensListItemsGroup];
     _data = [LZContactsDataHelper getFriendListDataBy:self.dataSource];
     _section = [LZContactsDataHelper getFriendListSectionBy:_data];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark - Table view data source

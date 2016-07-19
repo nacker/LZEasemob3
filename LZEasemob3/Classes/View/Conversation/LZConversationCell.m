@@ -121,13 +121,10 @@
 {
     _conversaion = conversaion;
     
-    NSDictionary *lastMsgExt = conversaion.latestMessage.ext;
-    
     int randomIndex = arc4random_uniform(23);
     _iconView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",randomIndex]];
     
     KLog(@"%d",conversaion.unreadMessagesCount);
-    
     _badgeView.badgeValue = [NSString stringWithFormat:@"%d",conversaion.unreadMessagesCount];
     
     _nameLabel.text = conversaion.conversationId;
@@ -141,7 +138,6 @@
     
 //    [NSString stringWithFormat:@"%@  %d   %@",conversaion.latestMessage.from,[conversaion unreadMessagesCount],[LZTool timeStr:conversaion.latestMessage.timestamp]];
     
-//    [conversaion unreadMessagesCount];
     // 获取消息体
     id body = conversaion.latestMessage.body;
 

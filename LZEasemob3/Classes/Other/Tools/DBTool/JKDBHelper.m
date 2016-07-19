@@ -45,7 +45,8 @@ static JKDBHelper *_instance = nil;
     if (!exit || !isDir) {
         [filemanage createDirectoryAtPath:docsdir withIntermediateDirectories:YES attributes:nil error:nil];
     }
-    NSString *dbpath = [docsdir stringByAppendingPathComponent:@"jkdb.sqlite"];
+    NSString *sqlName = [NSString stringWithFormat:@"%@.sqlite",[LZDataBaseTool getUserDefaultsWithKey:@"userId"]];
+    NSString *dbpath = [docsdir stringByAppendingPathComponent:sqlName];
     return dbpath;
 }
 
