@@ -24,6 +24,8 @@
 #import "UIImageView+WebCache.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "MJExtension.h"
+#import "FMDB.h"
+#import "JKDBHelper.h"
 
 #pragma mark - -------------------------分类工具类-------------------------
 #import "LZCategory.h"

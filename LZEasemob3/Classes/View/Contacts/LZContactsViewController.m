@@ -11,6 +11,9 @@
 #import "LZContactsViewCell.h"
 #import "LZChatViewController.h"
 #import "LZApplyViewController.h"
+#import "LZApplyUserModel.h"
+
+static LZContactsViewController *controller = nil;
 
 @interface LZContactsViewController ()<EMContactManagerDelegate>
 {
@@ -32,11 +35,20 @@
 
 @implementation LZContactsViewController
 
++ (instancetype)shareController
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        controller = [[self alloc] init];
+    });
+    return controller;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-//    [self reloadApplyView];
+    [self reloadDataSource];
 }
 
 - (void)viewDidLoad {
@@ -47,8 +59,6 @@
     [self setupNavItem];
     
     [self setTableView];
-    
-    [self reloadDataSource];
 }
 
 - (void)setupNavItem
@@ -79,6 +89,7 @@
 {
     [self.dataSource removeAllObjects];
     [self getDataSource];
+    [self showTabBarBadge];
 }
 
 - (void)getDataSource
@@ -140,6 +151,7 @@
         switch (indexPath.row) {
             case 0:
                 [self.navigationController pushViewController:[LZApplyViewController shareController] animated:YES];
+                [[LZApplyViewController shareController] loadDataSourceFromLocalDB];
                 break;
                 
             case 1:
@@ -201,7 +213,6 @@
         
         if (!error) {
            [[EMClient sharedClient].chatManager deleteConversation:buddy deleteMessages:YES];
-//           [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
             [self reloadDataSource];
             [tableView reloadData];
         }
@@ -242,6 +253,7 @@
 - (void)didReceiveAgreedFromUsername:(NSString *)aUsername
 {
     KLog(@"%@",aUsername);
+    
     [self reloadDataSource];
     
     [self.tableView reloadData];
@@ -259,6 +271,37 @@
 //    [alert show];
 }
 
+- (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
+                                       message:(NSString *)aMessage
+{
+    KLog(@"%@",aUsername);
+    
+    LZApplyUserModel *user = [[LZApplyUserModel alloc] init];
+    user.name = aUsername;
+    user.apply = NO;
+    [user save];
+    
+    [self showTabBarBadge];
+}
+
+- (void)showTabBarBadge
+{
+    NSInteger totalUnreadCount = [LZApplyUserModel findByCriteria:@" WHERE apply = 0 "].count;
+    
+    if (totalUnreadCount > 0) {
+        self.unapplyCount = totalUnreadCount;
+    }
+
+    if (totalUnreadCount == 0) {
+        self.tabBarItem.badgeValue = nil;
+    }else {
+        if (totalUnreadCount > 99) {
+            self.tabBarItem.badgeValue = @"99+";
+        }else {
+            self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%ld",(long)totalUnreadCount];
+        }
+    }
+}
 
 #pragma mark - 懒加载
 - (NSMutableArray *)functionGroup

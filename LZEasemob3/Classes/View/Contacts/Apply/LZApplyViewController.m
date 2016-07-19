@@ -8,10 +8,11 @@
 
 #import "LZApplyViewController.h"
 #import "LZApplyFriendCell.h"
+#import "LZApplyUserModel.h"
 
 static LZApplyViewController *controller = nil;
 
-@interface LZApplyViewController ()<LZApplyFriendCellDelegate>
+@interface LZApplyViewController ()<LZApplyFriendCellDelegate,EMContactManagerDelegate>
 
 @end
 
@@ -26,12 +27,11 @@ static LZApplyViewController *controller = nil;
     return controller;
 }
 
-- (NSMutableArray *)dataSource
+- (NSArray *)dataSource
 {
-    if (_dataSource == nil) {
-        _dataSource = [NSMutableArray array];
+    if (_dataSource == nil){
+        _dataSource = [NSArray array];
     }
-    
     return _dataSource;
 }
 
@@ -47,7 +47,8 @@ static LZApplyViewController *controller = nil;
     self.tableView.tableFooterView = [[UIView alloc] init];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self loadDataSourceFromLocalDB];
+    //注册好友回调
+    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
 }
 
 #pragma mark - Table view data source
@@ -63,13 +64,12 @@ static LZApplyViewController *controller = nil;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"ApplyFriendCell";
+    static NSString *CellIdentifier = @"LZApplyFriendCell";
     LZApplyFriendCell *cell = (LZApplyFriendCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
     if (cell == nil) {
         cell = [[LZApplyFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell.status = _dataSource[indexPath.row];
         cell.delegate = self;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     if(self.dataSource.count > indexPath.row)
@@ -104,12 +104,8 @@ static LZApplyViewController *controller = nil;
 }
 
 #pragma mark - Table view delegate
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    ApplyEntity *entity = [self.dataSource objectAtIndex:indexPath.row];
-//    return [LZApplyFriendCell heightWithContent:entity.reason];
-    
     return 60;
 }
 
@@ -119,78 +115,29 @@ static LZApplyViewController *controller = nil;
 }
 
 #pragma mark - ApplyFriendCellDelegate
+#pragma mark - 同意
 - (void)applyCellAddFriendAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row < [self.dataSource count]) {
-//        [self showHudInView:self.view hint:NSLocalizedString(@"sendingApply", @"sending apply...")];
-//        
-//        ApplyEntity *entity = [self.dataSource objectAtIndex:indexPath.row];
-//        ApplyStyle applyStyle = [entity.style intValue];
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            EMError *error;
-//            if (applyStyle == ApplyStyleGroupInvitation) {
-//                [[EMClient sharedClient].groupManager acceptInvitationFromGroup:entity.groupId inviter:entity.applicantUsername error:&error];
-//            }
-//            else if (applyStyle == ApplyStyleJoinGroup)
-//            {
-//                error = [[EMClient sharedClient].groupManager acceptJoinApplication:entity.groupId applicant:entity.applicantUsername];
-//            }
-//            else if(applyStyle == ApplyStyleFriend){
-//                error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:entity.applicantUsername];
-//            }
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self hideHud];
-//                if (!error) {
-//                    [self.dataSource removeObject:entity];
-//                    NSString *loginUsername = [[EMClient sharedClient] currentUsername];
-//                    [[InvitationManager sharedInstance] removeInvitation:entity loginUser:loginUsername];
-//                    [self.tableView reloadData];
-//                }
-//                else{
-//                    [self showHint:NSLocalizedString(@"acceptFail", @"accept failure")];
-//                }
-//            });
-//        });
-//    }
+    LZApplyUserModel *obj = _dataSource[indexPath.row];
+    EMError *error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:obj.name];
+    if (!error) {
+        KLog(@"发送同意成功");
+        
+        obj.apply = YES;
+        [obj update];
+        
+        [self.tableView reloadData];
+    }
 }
 
+#pragma mark - 拒绝
 - (void)applyCellRefuseFriendAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (indexPath.row < [self.dataSource count]) {
-//        [self showHudInView:self.view hint:NSLocalizedString(@"sendingApply", @"sending apply...")];
-//        ApplyEntity *entity = [self.dataSource objectAtIndex:indexPath.row];
-//        ApplyStyle applyStyle = [entity.style intValue];
-//        EMError *error;
-//        
-//        if (applyStyle == ApplyStyleGroupInvitation) {
-//            error = [[EMClient sharedClient].groupManager declineInvitationFromGroup:entity.groupId inviter:entity.applicantUsername reason:nil];
-//        }
-//        else if (applyStyle == ApplyStyleJoinGroup)
-//        {
-//            error = [[EMClient sharedClient].groupManager declineJoinApplication:entity.groupId applicant:entity.applicantUsername reason:nil];
-//        }
-//        else if(applyStyle == ApplyStyleFriend){
-//            [[EMClient sharedClient].contactManager declineInvitationForUsername:entity.applicantUsername];
-//        }
-//        
-//        [self hideHud];
-//        if (!error) {
-//            [self.dataSource removeObject:entity];
-//            NSString *loginUsername = [[EMClient sharedClient] currentUsername];
-//            [[InvitationManager sharedInstance] removeInvitation:entity loginUser:loginUsername];
-//            
-//            [self.tableView reloadData];
-//        }
-//        else{
-//            [self showHint:NSLocalizedString(@"rejectFail", @"reject failure")];
-//            [self.dataSource removeObject:entity];
-//            NSString *loginUsername = [[EMClient sharedClient] currentUsername];
-//            [[InvitationManager sharedInstance] removeInvitation:entity loginUser:loginUsername];
-//            
-//            [self.tableView reloadData];
-//            
-//        }
-//    }
+    LZApplyUserModel *status = _dataSource[indexPath.row];
+    EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:status.name];
+    if (!error) {
+        KLog(@"发送拒绝成功");
+    }
 }
 
 #pragma mark - public
@@ -250,23 +197,21 @@ static LZApplyViewController *controller = nil;
 
 - (void)loadDataSourceFromLocalDB
 {
-    [_dataSource removeAllObjects];
-    NSString *loginName = [self loginUsername];
-    if(loginName && [loginName length] > 0)
-    {
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSData *defalutData = [defaults objectForKey:loginName];
-        NSArray *applyArray = [NSKeyedUnarchiver unarchiveObjectWithData:defalutData];
-        [self.dataSource addObjectsFromArray:applyArray];
-        
-        [self.tableView reloadData];
-    }
+//    _dataSource = [LZApplyUserModel findByCriteria:@" WHERE apply = 0 "];
+     _dataSource = [LZApplyUserModel findAll];
+    [self.tableView reloadData];
 }
 
 - (void)clear
 {
-    [_dataSource removeAllObjects];
-    [self.tableView reloadData];
+//    [_dataSource removeAllObjects];
+//    [self.tableView reloadData];
+}
+
+- (void)dealloc
+{
+    //移除好友回调
+    [[EMClient sharedClient].contactManager removeDelegate:self];
 }
 
 @end

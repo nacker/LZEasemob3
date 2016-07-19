@@ -10,6 +10,8 @@
 
 @interface LZContactsViewController : UITableViewController
 
++ (instancetype)shareController;
+
 //好友请求变化时，更新好友请求未处理的个数
 - (void)reloadApplyView;
 

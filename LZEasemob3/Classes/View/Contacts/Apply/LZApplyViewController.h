@@ -16,10 +16,10 @@ typedef enum{
 
 @interface LZApplyViewController : UITableViewController
 {
-    NSMutableArray *_dataSource;
+    NSArray *_dataSource;
 }
 
-@property (strong, nonatomic, readonly) NSMutableArray *dataSource;
+@property (strong, nonatomic, readonly) NSArray *dataSource;
 
 + (instancetype)shareController;
 

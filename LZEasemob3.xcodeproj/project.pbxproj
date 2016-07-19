@@ -361,6 +361,9 @@
 		629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999BB1D3DEC19005B2914 /* InfoPlist.strings */; };
 		629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999C11D3DEC74005B2914 /* Localizable.strings */; };
 		629999C61D3E0E1F005B2914 /* LZChatRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999C51D3E0E1F005B2914 /* LZChatRefreshHeader.m */; };
+		629999CC1D3E1C9A005B2914 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999C91D3E1C9A005B2914 /* JKDBHelper.m */; };
+		629999CD1D3E1C9A005B2914 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CB1D3E1C9A005B2914 /* JKDBModel.m */; };
+		629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -967,6 +970,12 @@
 		629999C21D3DEC82005B2914 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		629999C41D3E0E1F005B2914 /* LZChatRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZChatRefreshHeader.h; sourceTree = "<group>"; };
 		629999C51D3E0E1F005B2914 /* LZChatRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZChatRefreshHeader.m; sourceTree = "<group>"; };
+		629999C81D3E1C9A005B2914 /* JKDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBHelper.h; sourceTree = "<group>"; };
+		629999C91D3E1C9A005B2914 /* JKDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBHelper.m; sourceTree = "<group>"; };
+		629999CA1D3E1C9A005B2914 /* JKDBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKDBModel.h; sourceTree = "<group>"; };
+		629999CB1D3E1C9A005B2914 /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
+		629999CE1D3E1E4F005B2914 /* LZApplyUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyUserModel.h; sourceTree = "<group>"; };
+		629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyUserModel.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -975,6 +984,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629997471D3C89FB005B2914 /* libsqlite3.tbd in Frameworks */,
 				629998361D3CB727005B2914 /* AssetsLibrary.framework in Frameworks */,
 				6299984E1D3CB7C4005B2914 /* Accounts.framework in Frameworks */,
 				6299984C1D3CB7B7005B2914 /* CoreData.framework in Frameworks */,
@@ -994,7 +1004,6 @@
 				629998321D3CB6AD005B2914 /* Contacts.framework in Frameworks */,
 				629998301D3CB6A1005B2914 /* MessageUI.framework in Frameworks */,
 				629997491D3C8A02005B2914 /* libiconv.tbd in Frameworks */,
-				629997471D3C89FB005B2914 /* libsqlite3.tbd in Frameworks */,
 				629997451D3C89F4005B2914 /* libstdc++.6.0.9.tbd in Frameworks */,
 				629997431D3C89E6005B2914 /* libz.tbd in Frameworks */,
 				629997411D3C89DF005B2914 /* libc++.tbd in Frameworks */,
@@ -1120,6 +1129,8 @@
 				6299994C1D3CD006005B2914 /* LZContactsGrounp.h */,
 				6299994D1D3CD006005B2914 /* LZContactsGrounp.m */,
 				629997A31D3CA6AE005B2914 /* Moments */,
+				629999CE1D3E1E4F005B2914 /* LZApplyUserModel.h */,
+				629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1278,6 +1289,7 @@
 				6299998E1D3CDE81005B2914 /* LZChatHelper.m */,
 				629999921D3D076A005B2914 /* LZTimeTool.h */,
 				629999931D3D076A005B2914 /* LZTimeTool.m */,
+				629999C71D3E1C8E005B2914 /* DBTool */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2379,6 +2391,17 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		629999C71D3E1C8E005B2914 /* DBTool */ = {
+			isa = PBXGroup;
+			children = (
+				629999C81D3E1C9A005B2914 /* JKDBHelper.h */,
+				629999C91D3E1C9A005B2914 /* JKDBHelper.m */,
+				629999CA1D3E1C9A005B2914 /* JKDBModel.h */,
+				629999CB1D3E1C9A005B2914 /* JKDBModel.m */,
+			);
+			path = DBTool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2731,6 +2754,7 @@
 				6299982B1D3CB3BE005B2914 /* UIButton+Extension.m in Sources */,
 				629997111D3C887D005B2914 /* EaseChineseToPinyin.m in Sources */,
 				629997281D3C887D005B2914 /* EaseBubbleView+Text.m in Sources */,
+				629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */,
 				629997311D3C887D005B2914 /* EaseFacialView.m in Sources */,
 				629997321D3C887D005B2914 /* EaseChatBarMoreView.m in Sources */,
 				6299904E1D3C8485005B2914 /* LZContactsViewController.m in Sources */,
@@ -2801,6 +2825,7 @@
 				629996C11D3C887D005B2914 /* EMAudioRecorderUtil.m in Sources */,
 				629996E41D3C887D005B2914 /* MWPhoto.m in Sources */,
 				629990051D3C818F005B2914 /* main.m in Sources */,
+				629999CC1D3E1C9A005B2914 /* JKDBHelper.m in Sources */,
 				6299994B1D3CCFD0005B2914 /* LZContactsDataHelper.m in Sources */,
 				6299972C1D3C887D005B2914 /* EaseChatToolbar.m in Sources */,
 				629997CC1D3CA72F005B2914 /* MLLinkLabel.m in Sources */,
@@ -2858,6 +2883,7 @@
 				629997A11D3CA647005B2914 /* LZMomentsListViewModel.m in Sources */,
 				629997161D3C887D005B2914 /* EaseEmotionEscape.m in Sources */,
 				629997541D3CA33F005B2914 /* LZDiscoverViewController.m in Sources */,
+				629999CD1D3E1C9A005B2914 /* JKDBModel.m in Sources */,
 				6299978F1D3CA62F005B2914 /* LZMomentsViewController.m in Sources */,
 				629996FA1D3C887D005B2914 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				629996C01D3C887D005B2914 /* EMAudioPlayerUtil.m in Sources */,

@@ -7,6 +7,18 @@
 //
 
 #import "LZApplyFriendCell.h"
+#import "LZApplyUserModel.h"
+
+@interface LZApplyFriendCell()
+
+@property (strong, nonatomic) UIImageView *headerImageView;//头像
+@property (strong, nonatomic) UILabel *titleLabel;//标题
+@property (strong, nonatomic) UILabel *contentLabel;//详情
+@property (strong, nonatomic) UIButton *addButton;//接受按钮
+@property (strong, nonatomic) UIButton *refuseButton;//拒绝按钮
+@property (strong, nonatomic) UIView *bottomLineView;
+
+@end
 
 @implementation LZApplyFriendCell
 
@@ -14,6 +26,8 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
 
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
         _headerImageView.backgroundColor = [UIColor clearColor];
         _headerImageView.clipsToBounds = YES;
@@ -91,16 +105,21 @@
     }
 }
 
-+ (CGFloat)heightWithContent:(NSString *)content
+- (void)setStatus:(LZApplyUserModel *)status
 {
-    if (!content || content.length == 0) {
-        return 60;
-    }
-    else{
-        CGSize size = [content sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(320 - 60 - 120, CGFLOAT_MAX) lineBreakMode:NSLineBreakByCharWrapping];
-        return size.height > 20 ? (size.height + 40) : 60;
+    _status = status;
+    
+    self.titleLabel.text = status.name;
+    int randomIndex = arc4random_uniform(23);
+    self.headerImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",randomIndex]];
+    
+    if (status.apply == 0) {
+        self.addButton.hidden = NO;
+        self.refuseButton.hidden = NO;
+    }else {
+        self.addButton.hidden = YES;
+        self.refuseButton.hidden = YES;
     }
 }
-
 
 @end

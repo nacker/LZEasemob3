@@ -10,6 +10,7 @@ pod 'FMDB'
 pod "MJRefresh"
 pod "SDWebImage"
 pod 'ReactiveCocoa'
+pod 'FMDB'
 
 end
 
