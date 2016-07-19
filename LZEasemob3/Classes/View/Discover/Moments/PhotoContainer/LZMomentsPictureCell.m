@@ -10,8 +10,6 @@
 
 @interface LZMomentsPictureCell()
 
-@property (nonatomic, strong) UIImageView *gifIconView;
-
 @end
 
 @implementation LZMomentsPictureCell

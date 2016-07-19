@@ -131,9 +131,6 @@
 		629997901D3CA62F005B2914 /* LZOperationMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299976B1D3CA62F005B2914 /* LZOperationMenu.m */; };
 		629997911D3CA62F005B2914 /* LZMomentsPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299976E1D3CA62F005B2914 /* LZMomentsPictureCell.m */; };
 		629997921D3CA62F005B2914 /* LZPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997701D3CA62F005B2914 /* LZPhotoContainerView.m */; };
-		629997931D3CA62F005B2914 /* LZBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997731D3CA62F005B2914 /* LZBaseRefreshView.m */; };
-		629997941D3CA62F005B2914 /* LZMomentsRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997751D3CA62F005B2914 /* LZMomentsRefreshFooter.m */; };
-		629997951D3CA62F005B2914 /* LZMomentsRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997771D3CA62F005B2914 /* LZMomentsRefreshHeader.m */; };
 		629997961D3CA62F005B2914 /* DFImageUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299977A1D3CA62F005B2914 /* DFImageUnitView.m */; };
 		629997971D3CA62F005B2914 /* DFPlainGridImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299977C1D3CA62F005B2914 /* DFPlainGridImageView.m */; };
 		629997981D3CA62F005B2914 /* LZMomentsDefaultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299977E1D3CA62F005B2914 /* LZMomentsDefaultsCell.m */; };
@@ -364,6 +361,12 @@
 		629999CC1D3E1C9A005B2914 /* JKDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999C91D3E1C9A005B2914 /* JKDBHelper.m */; };
 		629999CD1D3E1C9A005B2914 /* JKDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CB1D3E1C9A005B2914 /* JKDBModel.m */; };
 		629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */; };
+		629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */; };
+		629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */; };
+		629999D91D3E76B0005B2914 /* LZMomentsRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */; };
+		629999E21D3E775B005B2914 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999DC1D3E775B005B2914 /* SDBrowserImageView.m */; };
+		629999E31D3E775B005B2914 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999DE1D3E775B005B2914 /* SDPhotoBrowser.m */; };
+		629999E41D3E775B005B2914 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999E11D3E775B005B2914 /* SDWaitingView.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -678,12 +681,6 @@
 		6299976E1D3CA62F005B2914 /* LZMomentsPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsPictureCell.m; sourceTree = "<group>"; };
 		6299976F1D3CA62F005B2914 /* LZPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPhotoContainerView.h; sourceTree = "<group>"; };
 		629997701D3CA62F005B2914 /* LZPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPhotoContainerView.m; sourceTree = "<group>"; };
-		629997721D3CA62F005B2914 /* LZBaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseRefreshView.h; sourceTree = "<group>"; };
-		629997731D3CA62F005B2914 /* LZBaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseRefreshView.m; sourceTree = "<group>"; };
-		629997741D3CA62F005B2914 /* LZMomentsRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsRefreshFooter.h; sourceTree = "<group>"; };
-		629997751D3CA62F005B2914 /* LZMomentsRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsRefreshFooter.m; sourceTree = "<group>"; };
-		629997761D3CA62F005B2914 /* LZMomentsRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsRefreshHeader.h; sourceTree = "<group>"; };
-		629997771D3CA62F005B2914 /* LZMomentsRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsRefreshHeader.m; sourceTree = "<group>"; };
 		629997791D3CA62F005B2914 /* DFImageUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFImageUnitView.h; sourceTree = "<group>"; };
 		6299977A1D3CA62F005B2914 /* DFImageUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFImageUnitView.m; sourceTree = "<group>"; };
 		6299977B1D3CA62F005B2914 /* DFPlainGridImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPlainGridImageView.h; sourceTree = "<group>"; };
@@ -976,6 +973,19 @@
 		629999CB1D3E1C9A005B2914 /* JKDBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKDBModel.m; sourceTree = "<group>"; };
 		629999CE1D3E1E4F005B2914 /* LZApplyUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyUserModel.h; sourceTree = "<group>"; };
 		629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyUserModel.m; sourceTree = "<group>"; };
+		629999D11D3E74E8005B2914 /* SDBaseRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBaseRefreshView.h; sourceTree = "<group>"; };
+		629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseRefreshView.m; sourceTree = "<group>"; };
+		629999D41D3E74F7005B2914 /* SDTimeLineRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineRefreshHeader.h; sourceTree = "<group>"; };
+		629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
+		629999D71D3E76B0005B2914 /* LZMomentsRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsRefreshFooter.h; sourceTree = "<group>"; };
+		629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsRefreshFooter.m; sourceTree = "<group>"; };
+		629999DB1D3E775B005B2914 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		629999DC1D3E775B005B2914 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		629999DD1D3E775B005B2914 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		629999DE1D3E775B005B2914 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		629999DF1D3E775B005B2914 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		629999E01D3E775B005B2914 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		629999E11D3E775B005B2914 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1268,6 +1278,7 @@
 		629990441D3C8368005B2914 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				629999DA1D3E775A005B2914 /* SDPhotoBrowser */,
 				629997D91D3CB1F1005B2914 /* Album */,
 				629997AA1D3CA72F005B2914 /* MLLabel */,
 				629995991D3C887C005B2914 /* EaseUI */,
@@ -1927,12 +1938,12 @@
 		629997711D3CA62F005B2914 /* Refresh */ = {
 			isa = PBXGroup;
 			children = (
-				629997721D3CA62F005B2914 /* LZBaseRefreshView.h */,
-				629997731D3CA62F005B2914 /* LZBaseRefreshView.m */,
-				629997741D3CA62F005B2914 /* LZMomentsRefreshFooter.h */,
-				629997751D3CA62F005B2914 /* LZMomentsRefreshFooter.m */,
-				629997761D3CA62F005B2914 /* LZMomentsRefreshHeader.h */,
-				629997771D3CA62F005B2914 /* LZMomentsRefreshHeader.m */,
+				629999D11D3E74E8005B2914 /* SDBaseRefreshView.h */,
+				629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */,
+				629999D41D3E74F7005B2914 /* SDTimeLineRefreshHeader.h */,
+				629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */,
+				629999D71D3E76B0005B2914 /* LZMomentsRefreshFooter.h */,
+				629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */,
 			);
 			path = Refresh;
 			sourceTree = "<group>";
@@ -2402,6 +2413,20 @@
 			path = DBTool;
 			sourceTree = "<group>";
 		};
+		629999DA1D3E775A005B2914 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				629999DB1D3E775B005B2914 /* SDBrowserImageView.h */,
+				629999DC1D3E775B005B2914 /* SDBrowserImageView.m */,
+				629999DD1D3E775B005B2914 /* SDPhotoBrowser.h */,
+				629999DE1D3E775B005B2914 /* SDPhotoBrowser.m */,
+				629999DF1D3E775B005B2914 /* SDPhotoBrowserConfig.h */,
+				629999E01D3E775B005B2914 /* SDWaitingView.h */,
+				629999E11D3E775B005B2914 /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2772,6 +2797,7 @@
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
 				629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */,
 				629997301D3C887D005B2914 /* EaseFaceView.m in Sources */,
+				629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */,
 				629997C51D3CA72F005B2914 /* NSString+MLLabel.m in Sources */,
 				629997121D3C887D005B2914 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				629997131D3C887D005B2914 /* EaseMessageReadManager.m in Sources */,
@@ -2782,7 +2808,6 @@
 				6299972D1D3C887D005B2914 /* EaseChatToolbarItem.m in Sources */,
 				629997501D3C97B9005B2914 /* LZNotificationWorkstation.m in Sources */,
 				629990081D3C818F005B2914 /* AppDelegate.m in Sources */,
-				629997951D3CA62F005B2914 /* LZMomentsRefreshHeader.m in Sources */,
 				629997231D3C887D005B2914 /* EaseMessageTimeCell.m in Sources */,
 				629997031D3C887D005B2914 /* PSTGridLayoutInfo.m in Sources */,
 				629996E21D3C887D005B2914 /* MWGridCell.m in Sources */,
@@ -2799,7 +2824,6 @@
 				6299980F1D3CB1F1005B2914 /* TZImageManager.m in Sources */,
 				629990511D3C8499005B2914 /* LZMeViewController.m in Sources */,
 				629999451D3CC467005B2914 /* UIBarButtonItem+Extension.m in Sources */,
-				629997941D3CA62F005B2914 /* LZMomentsRefreshFooter.m in Sources */,
 				6299971C1D3C887D005B2914 /* EaseRefreshTableViewController.m in Sources */,
 				6299972B1D3C887D005B2914 /* EaseBubbleView.m in Sources */,
 				6299981E1D3CB237005B2914 /* LZActionSheet.m in Sources */,
@@ -2821,7 +2845,6 @@
 				629998281D3CB2AF005B2914 /* UIColor+Extension.m in Sources */,
 				629998251D3CB264005B2914 /* LZMomentsSendViewModel.m in Sources */,
 				629997CA1D3CA72F005B2914 /* MLLabelLayoutManager.m in Sources */,
-				629997931D3CA62F005B2914 /* LZBaseRefreshView.m in Sources */,
 				629996C11D3C887D005B2914 /* EMAudioRecorderUtil.m in Sources */,
 				629996E41D3C887D005B2914 /* MWPhoto.m in Sources */,
 				629990051D3C818F005B2914 /* main.m in Sources */,
@@ -2837,6 +2860,7 @@
 				629996CD1D3C887D005B2914 /* MBProgressHUD.m in Sources */,
 				629996E81D3C887D005B2914 /* MWZoomingScrollView.m in Sources */,
 				6299905A1D3C8525005B2914 /* UIImage+Extension.m in Sources */,
+				629999E41D3E775B005B2914 /* SDWaitingView.m in Sources */,
 				629998101D3CB1F1005B2914 /* TZImagePickerController.m in Sources */,
 				6299979A1D3CA62F005B2914 /* MomentsPublishPictureCell.m in Sources */,
 				629999A51D3D1517005B2914 /* EMAlertView.m in Sources */,
@@ -2844,6 +2868,7 @@
 				6299971D1D3C887D005B2914 /* EaseUsersListViewController.m in Sources */,
 				629997D51D3CAAFA005B2914 /* UIView+Extension.m in Sources */,
 				6299979B1D3CA62F005B2914 /* LZMomentsTimeLineViewController.m in Sources */,
+				629999E21D3E775B005B2914 /* SDBrowserImageView.m in Sources */,
 				629996C41D3C887D005B2914 /* EMCDDeviceManager+ProximitySensor.m in Sources */,
 				629997CB1D3CA72F005B2914 /* MLLabel.m in Sources */,
 				629999971D3D087C005B2914 /* LZConversationCell.m in Sources */,
@@ -2869,6 +2894,7 @@
 				629996FD1D3C887D005B2914 /* PSTCollectionViewController.m in Sources */,
 				629997A91D3CA6F8005B2914 /* UILabel+Extension.m in Sources */,
 				629997D81D3CAB5E005B2914 /* LZDataBaseTool.m in Sources */,
+				629999E31D3E775B005B2914 /* SDPhotoBrowser.m in Sources */,
 				6299999E1D3D0A41005B2914 /* NSDate+Extension.m in Sources */,
 				6299971B1D3C887D005B2914 /* EaseMessageViewController.m in Sources */,
 				629997971D3CA62F005B2914 /* DFPlainGridImageView.m in Sources */,
@@ -2880,6 +2906,8 @@
 				629998111D3CB1F1005B2914 /* TZPhotoPickerController.m in Sources */,
 				629997C61D3CA72F005B2914 /* MLExpressionManager.m in Sources */,
 				6299970D1D3C887D005B2914 /* NSDateFormatter+Category.m in Sources */,
+				629999D91D3E76B0005B2914 /* LZMomentsRefreshFooter.m in Sources */,
+				629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */,
 				629997A11D3CA647005B2914 /* LZMomentsListViewModel.m in Sources */,
 				629997161D3C887D005B2914 /* EaseEmotionEscape.m in Sources */,
 				629997541D3CA33F005B2914 /* LZDiscoverViewController.m in Sources */,

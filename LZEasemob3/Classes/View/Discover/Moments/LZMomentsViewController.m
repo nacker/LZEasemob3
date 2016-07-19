@@ -8,7 +8,7 @@
 
 #import "LZMomentsViewController.h"
 #import "LZMomentsHeaderView.h"
-#import "LZMomentsRefreshHeader.h"
+#import "SDTimeLineRefreshHeader.h"
 #import "LZMomentsRefreshFooter.h"
 #import "LZMomentsCell.h"
 #import "LZMomentsListViewModel.h"
@@ -27,13 +27,14 @@
 @interface LZMomentsViewController ()<UITableViewDataSource,UITableViewDelegate,TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LZMomentsCellDelegate,UITextFieldDelegate>//LZMomentsSendViewControllerDelegate
 @property (nonatomic, strong) LZMomentsListViewModel *statusListViewModel;
 
-@property (nonatomic, strong) LZMomentsRefreshHeader *refreshHeader;
 
 @property (nonatomic, weak) LZMomentsHeaderView *headerView;
 @end
 
 @implementation LZMomentsViewController
 {
+    SDTimeLineRefreshHeader *_refreshHeader;
+    
     CGFloat _lastScrollViewOffsetY;
     UITextField *_textField;
     CGFloat _totalKeybordHeight;
@@ -57,19 +58,21 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     
     if (!_refreshHeader.superview) {
         
-        _refreshHeader = [LZMomentsRefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
+        _refreshHeader = [SDTimeLineRefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
         _refreshHeader.scrollView = self.tableView;
-        __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
-        typeof(self) __weak weakSelf = self;
+//        __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
+        __weak typeof(self) weakSelf = self;
         [_refreshHeader setRefreshingBlock:^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [weakHeader endRefreshing];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [weakSelf.tableView reloadData];
-                });
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf setupNewData];
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [weakSelf.tableView reloadData];
+//                });
             });
         }];
         [self.tableView.superview addSubview:_refreshHeader];
+    } else {
+        [self.tableView.superview bringSubviewToFront:_refreshHeader];
     }
 }
 
@@ -83,11 +86,10 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     [self setupTableView];
     [self setupHeadView];
     [self setupNewData];
+    
     [self setupFooterRefresh];
     
-#pragma mark - cell的点击展开
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moreButtonClick:) name:LZMoreButtonClickedNotification object:nil];
-    
     // 键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardNotification:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
@@ -174,7 +176,6 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     }];
     self.headerView = headerView;
     self.tableView.tableHeaderView = headerView;
-//    [self.tableView addScrollViewHeaderWithImage:[UIImage imageNamed:@"AlbumHeaderBackgrounImage.jpg"] target:self];
 }
 
 #pragma mark - setupRefresh
@@ -198,7 +199,7 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 {
     __weak typeof(self) weakSelf = self;
     __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
-    [weakSelf.statusListViewModel  loadStatusWithCount:10 Completed:^(BOOL isSuccessed) {
+    [weakSelf.statusListViewModel  loadStatusWithCount:20 Completed:^(BOOL isSuccessed) {
         [weakHeader endRefreshing];
         [weakSelf.tableView reloadData];
     }];
@@ -217,16 +218,6 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
     if (cell.delegate == nil) {
         cell.delegate = self;
     }
-    __weak typeof(self) weakSelf = self;
-#pragma mark - cell的点击展开
-//    if (!cell.originalView.moreButtonClickedBlock) {
-//        [cell.originalView setMoreButtonClickedBlock:^(NSIndexPath *indexPath) {
-//            LZMomentsViewModel *model = self.statusListViewModel.statusList[indexPath.row];
-//            model.isOpening = !model.isOpening;
-//            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-//        }];
-//    }
-    
     if (!cell.operationButtonClick) {
         [cell setOperationButtonClick:^(NSIndexPath *indexPath) {
             

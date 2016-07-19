@@ -1,26 +1,45 @@
 //
-//  LZMomentsRefreshHeader.m
-//  LZEasemob
+//  SDTimeLineRefreshHeader.m
+//  GSD_WeiXin(wechat)
 //
-//  Created by nacker on 16/3/11.
-//  Copyright © 2016年 帶頭二哥 QQ:648959. All rights reserved.
+//  Created by gsd on 16/3/5.
+//  Copyright © 2016年 GSD. All rights reserved.
 //
 
-#import "LZMomentsRefreshHeader.h"
+/*
+ 
+ *********************************************************************************
+ *
+ * GSD_WeiXin
+ *
+ * QQ交流群: 362419100(2群) 459274049（1群已满）
+ * Email : gsdios@126.com
+ * GitHub: https://github.com/gsdios/GSD_WeiXin
+ * 新浪微博:GSD_iOS
+ *
+ * 此“高仿微信”用到了很高效方便的自动布局库SDAutoLayout（一行代码搞定自动布局）
+ * SDAutoLayout地址：https://github.com/gsdios/SDAutoLayout
+ * SDAutoLayout视频教程：http://www.letv.com/ptv/vplay/24038772.html
+ * SDAutoLayout用法示例：https://github.com/gsdios/SDAutoLayout/blob/master/README.md
+ *
+ *********************************************************************************
+ 
+ */
+
+#import "SDTimeLineRefreshHeader.h"
 
 static const CGFloat criticalY = -60.f;
 
 #define kSDTimeLineRefreshHeaderRotateAnimationKey @"RotateAnimationKey"
 
-@implementation LZMomentsRefreshHeader
-
+@implementation SDTimeLineRefreshHeader
 {
     CABasicAnimation *_rotateAnimation;
 }
 
 + (instancetype)refreshHeaderWithCenter:(CGPoint)center
 {
-    LZMomentsRefreshHeader *header = [LZMomentsRefreshHeader new];
+    SDTimeLineRefreshHeader *header = [SDTimeLineRefreshHeader new];
     header.center = center;
     return header;
 }
@@ -49,16 +68,16 @@ static const CGFloat criticalY = -60.f;
     _rotateAnimation.repeatCount = MAXFLOAT;
 }
 
-- (void)setRefreshState:(KRefreshViewState)refreshState
+- (void)setRefreshState:(SDWXRefreshViewState)refreshState
 {
     [super setRefreshState:refreshState];
     
-    if (refreshState == KRefreshViewStateRefreshing) {
+    if (refreshState == SDWXRefreshViewStateRefreshing) {
         if (self.refreshingBlock) {
             self.refreshingBlock();
         }
         [self.layer addAnimation:_rotateAnimation forKey:kSDTimeLineRefreshHeaderRotateAnimationKey];
-    } else if (refreshState == KRefreshViewStateNormal) {
+    } else if (refreshState == SDWXRefreshViewStateNormal) {
         [self.layer removeAnimationForKey:kSDTimeLineRefreshHeaderRotateAnimationKey];
         [UIView animateWithDuration:0.3 animations:^{
             self.transform = CGAffineTransformIdentity;
@@ -75,14 +94,14 @@ static const CGFloat criticalY = -60.f;
     if (y < criticalY) {
         y = criticalY;
         
-        if (self.scrollView.isDragging && self.refreshState != KRefreshViewStateWillRefresh) {
-            self.refreshState = KRefreshViewStateWillRefresh;
-        } else if (!self.scrollView.isDragging && self.refreshState == KRefreshViewStateWillRefresh) {
-            self.refreshState = KRefreshViewStateRefreshing;
+        if (self.scrollView.isDragging && self.refreshState != SDWXRefreshViewStateWillRefresh) {
+            self.refreshState = SDWXRefreshViewStateWillRefresh;
+        } else if (!self.scrollView.isDragging && self.refreshState == SDWXRefreshViewStateWillRefresh) {
+            self.refreshState = SDWXRefreshViewStateRefreshing;
         }
     }
     
-    if (self.refreshState == KRefreshViewStateRefreshing) return;
+    if (self.refreshState == SDWXRefreshViewStateRefreshing) return;
     
     CGAffineTransform transform = CGAffineTransformIdentity;
     transform = CGAffineTransformTranslate(transform, 0, -y);
@@ -98,6 +117,5 @@ static const CGFloat criticalY = -60.f;
     
     [self updateRefreshHeaderWithOffsetY:self.scrollView.contentOffset.y];
 }
-
 
 @end
