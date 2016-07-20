@@ -34,7 +34,7 @@
     [appearance setTitleTextAttributes:itemAttrs forState:UIControlStateNormal];
     
     NSMutableDictionary *highTextAttrs = [NSMutableDictionary dictionaryWithDictionary:itemAttrs];
-    highTextAttrs[NSForegroundColorAttributeName] = [UIColor redColor];
+    highTextAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [appearance setTitleTextAttributes:highTextAttrs forState:UIControlStateHighlighted];
     
     NSMutableDictionary *itemDisabledAttrs = [NSMutableDictionary dictionary];
