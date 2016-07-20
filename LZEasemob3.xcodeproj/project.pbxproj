@@ -137,7 +137,6 @@
 		629997991D3CA62F005B2914 /* LZMomentsSendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997801D3CA62F005B2914 /* LZMomentsSendViewController.m */; };
 		6299979A1D3CA62F005B2914 /* MomentsPublishPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997821D3CA62F005B2914 /* MomentsPublishPictureCell.m */; };
 		6299979B1D3CA62F005B2914 /* LZMomentsTimeLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997851D3CA62F005B2914 /* LZMomentsTimeLineViewController.m */; };
-		6299979C1D3CA62F005B2914 /* UIScrollView+HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997871D3CA62F005B2914 /* UIScrollView+HeaderView.m */; };
 		629997A11D3CA647005B2914 /* LZMomentsListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299979E1D3CA647005B2914 /* LZMomentsListViewModel.m */; };
 		629997A21D3CA647005B2914 /* LZMomentsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997A01D3CA647005B2914 /* LZMomentsViewModel.m */; };
 		629997A61D3CA6AE005B2914 /* LZMoments.m in Sources */ = {isa = PBXBuildFile; fileRef = 629997A51D3CA6AE005B2914 /* LZMoments.m */; };
@@ -689,8 +688,6 @@
 		629997821D3CA62F005B2914 /* MomentsPublishPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MomentsPublishPictureCell.m; sourceTree = "<group>"; };
 		629997841D3CA62F005B2914 /* LZMomentsTimeLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsTimeLineViewController.h; sourceTree = "<group>"; };
 		629997851D3CA62F005B2914 /* LZMomentsTimeLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsTimeLineViewController.m; sourceTree = "<group>"; };
-		629997861D3CA62F005B2914 /* UIScrollView+HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HeaderView.h"; sourceTree = "<group>"; };
-		629997871D3CA62F005B2914 /* UIScrollView+HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderView.m"; sourceTree = "<group>"; };
 		6299979D1D3CA647005B2914 /* LZMomentsListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsListViewModel.h; sourceTree = "<group>"; };
 		6299979E1D3CA647005B2914 /* LZMomentsListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsListViewModel.m; sourceTree = "<group>"; };
 		6299979F1D3CA647005B2914 /* LZMomentsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsViewModel.h; sourceTree = "<group>"; };
@@ -1863,8 +1860,6 @@
 				629997641D3CA62F005B2914 /* LZMomentsCell.m */,
 				629997651D3CA62F005B2914 /* LZMomentsOriginalView.h */,
 				629997661D3CA62F005B2914 /* LZMomentsOriginalView.m */,
-				629997861D3CA62F005B2914 /* UIScrollView+HeaderView.h */,
-				629997871D3CA62F005B2914 /* UIScrollView+HeaderView.m */,
 				629997561D3CA62F005B2914 /* CommentView */,
 				629997601D3CA62F005B2914 /* HeadView */,
 				629997691D3CA62F005B2914 /* OperationMenu */,
@@ -2736,7 +2731,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				629997181D3C887D005B2914 /* FixFopen.c in Sources */,
-				6299979C1D3CA62F005B2914 /* UIScrollView+HeaderView.m in Sources */,
 				6299980D1D3CB1F1005B2914 /* TZAssetCell.m in Sources */,
 				629996C61D3C887D005B2914 /* EMCDDeviceManagerBase.m in Sources */,
 				629997081D3C887D005B2914 /* EaseSDKHelper.m in Sources */,

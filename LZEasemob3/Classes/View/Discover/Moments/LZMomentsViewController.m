@@ -19,8 +19,6 @@
 
 #import "TZImagePickerController.h"
 #import "LZMomentsSendViewController.h"
-#import "UIScrollView+HeaderView.h"
-
 #import "LZMomentsTimeLineViewController.h"
 
 @interface LZMomentsViewController ()<UITableViewDataSource,UITableViewDelegate,TZImagePickerControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,LZMomentsCellDelegate,UITextFieldDelegate>//LZMomentsSendViewControllerDelegate
@@ -193,9 +191,11 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 {
     __weak typeof(self) weakSelf = self;
     __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
-    [weakSelf.statusListViewModel  loadStatusWithCount:20 Completed:^(BOOL isSuccessed) {
+    [weakSelf.statusListViewModel  loadStatusWithCount:10 Completed:^(BOOL isSuccessed) {
         [weakHeader endRefreshing];
-        [weakSelf.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
     }];
 }
 
