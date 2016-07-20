@@ -18,8 +18,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.navigationController.title = [[EMClient sharedClient] currentUsername];
+    self.navigationItem.title = [[EMClient sharedClient] currentUsername];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"退出" style:UIBarButtonItemStyleDone target:self action:@selector(logout)];
 }

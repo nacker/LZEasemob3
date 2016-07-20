@@ -37,7 +37,7 @@ static NSString * const CellIdentifier = @"cell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %zd", self.title, indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"帶頭二哥 QQ:648959 - %zd", indexPath.row];
     return cell;
     
 }

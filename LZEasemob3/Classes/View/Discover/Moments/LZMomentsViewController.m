@@ -265,9 +265,9 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
         [temp addObjectsFromArray:viewModel.status.commentItemsArray];
         
         LZMomentsCellCommentItemModel *commentItemModel = [LZMomentsCellCommentItemModel new];
-        commentItemModel.firstUserName = @"GSD_iOS";
+        commentItemModel.firstUserName = @"二哥";
         commentItemModel.commentString = textField.text;
-        commentItemModel.firstUserId = @"GSD_iOS";
+        commentItemModel.firstUserId = @"二哥";
         [temp addObject:commentItemModel];
         
         viewModel.status.commentItemsArray = [temp copy];
