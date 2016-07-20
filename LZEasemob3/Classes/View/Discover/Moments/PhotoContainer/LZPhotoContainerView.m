@@ -18,9 +18,8 @@ NSString *const kStatusPictureCellId = @"StatusPictureCellId";
 
 #import "LZPhotoContainerView.h"
 #import "LZMomentsPictureCell.h"
-#import "SDPhotoBrowser.h"
 
-@interface LZPhotoContainerView()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate,SDPhotoBrowserDelegate>
+@interface LZPhotoContainerView()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -81,29 +80,8 @@ NSString *const kStatusPictureCellId = @"StatusPictureCellId";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    LZMomentsPictureCell * cell = (LZMomentsPictureCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    UIView *imageView = cell.imageView;
-    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
-    browser.currentImageIndex = imageView.tag;
-    browser.sourceImagesContainerView = self;
-    browser.imageCount = self.urls.count;
-    browser.delegate = self;
-    [browser show];
+    LZMomentsPictureCell *cell = (LZMomentsPictureCell *)[collectionView cellForItemAtIndexPath:indexPath];
 }
 
-#pragma mark - SDPhotoBrowserDelegate
-- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
-{
-    NSString *imageName = self.urls[index];
-//    NSURL *url = [[NSBundle mainBundle] URLForResource:imageName withExtension:nil];
-    NSURL *url = [NSURL URLWithString:imageName];
-    return url;
-}
-
-- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
-{
-    UIImageView *imageView = self.subviews[index];
-    return imageView.image;
-}
 
 @end
