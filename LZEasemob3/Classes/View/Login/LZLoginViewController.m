@@ -10,8 +10,12 @@
 
 @interface LZLoginViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, weak) UITextField *usernamefield;
-@property (nonatomic, weak) UITextField *passwordfield;
+@property (nonatomic, weak) IBOutlet UITextField *usernamefield;
+@property (nonatomic, weak) IBOutlet UITextField *passwordfield;
+
+@property (nonatomic, weak) IBOutlet UIButton *registerBtn;
+@property (nonatomic, weak) IBOutlet UIButton *loginBtn;
+
 
 @end
 
@@ -21,46 +25,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *usernamefield = [[UITextField alloc]init];
-    usernamefield.frame = CGRectMake(20, 150, KScreenW-40, 30);
-    usernamefield.placeholder = @"请输入用户名";
-    [self.view addSubview:usernamefield];
-    [usernamefield.layer setBorderWidth:1];
-    [usernamefield.layer setBorderColor:[UIColor grayColor].CGColor];
-    [usernamefield.layer setCornerRadius:15];
-    usernamefield.clipsToBounds = YES;
-    usernamefield.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 0)];
-    usernamefield.leftViewMode = UITextFieldViewModeAlways;
-    self.usernamefield = usernamefield;
-    
-    UITextField *passwordfield = [[UITextField alloc]init];
-    passwordfield.frame = CGRectMake(20, 190, KScreenW-40, 30);
-    passwordfield.placeholder = @"请输入密码";
-    [self.view addSubview:passwordfield];
-    [passwordfield.layer setBorderWidth:1];
-    [passwordfield.layer setBorderColor:[UIColor grayColor].CGColor];
-    [passwordfield.layer setCornerRadius:15];
-    passwordfield.clipsToBounds = YES;
-    passwordfield.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 0)];
-    passwordfield.leftViewMode = UITextFieldViewModeAlways;
-    passwordfield.secureTextEntry = YES;
-    self.passwordfield = passwordfield;
-    
-    UIButton *btn = [[UIButton alloc]init];
-    btn.frame = CGRectMake(10, 230, KScreenW-20, 30);
-    btn.backgroundColor = [UIColor redColor];
-    [btn setTitle:@"注册" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(registerBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
-    
-    UIButton *loginbtn = [[UIButton alloc]init];
-    loginbtn.frame = CGRectMake(10, 270, KScreenW-20, 30);
-    loginbtn.backgroundColor = [UIColor redColor];
-    [loginbtn setTitle:@"登录" forState:UIControlStateNormal];
-    [loginbtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [loginbtn addTarget:self action:@selector(loginBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:loginbtn];
+    [self.registerBtn addTarget:self action:@selector(registerBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginBtn addTarget:self action:@selector(loginBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     
 //    usernamefield.text = @"nacker";

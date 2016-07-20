@@ -362,6 +362,8 @@
 		629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */; };
 		629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */; };
 		629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */; };
+		629999EC1D3F9CE5005B2914 /* LZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629999EB1D3F9CE5005B2914 /* LZLoginViewController.xib */; };
+		629999F31D3FB444005B2914 /* LoginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629999F21D3FB444005B2914 /* LoginBackground@2x.png */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -970,6 +972,8 @@
 		629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseRefreshView.m; sourceTree = "<group>"; };
 		629999D41D3E74F7005B2914 /* SDTimeLineRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineRefreshHeader.h; sourceTree = "<group>"; };
 		629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
+		629999EB1D3F9CE5005B2914 /* LZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZLoginViewController.xib; sourceTree = "<group>"; };
+		629999F21D3FB444005B2914 /* LoginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginBackground@2x.png"; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1183,6 +1187,8 @@
 			children = (
 				6299905B1D3C8608005B2914 /* LZLoginViewController.h */,
 				6299905C1D3C8608005B2914 /* LZLoginViewController.m */,
+				629999EB1D3F9CE5005B2914 /* LZLoginViewController.xib */,
+				629999F21D3FB444005B2914 /* LoginBackground@2x.png */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2509,6 +2515,7 @@
 				629999151D3CB83F005B2914 /* icon_035_cover.png in Resources */,
 				629998FE1D3CB83F005B2914 /* icon_012.gif in Resources */,
 				6299991B1D3CB83F005B2914 /* password@2x.png in Resources */,
+				629999EC1D3F9CE5005B2914 /* LZLoginViewController.xib in Resources */,
 				629998F31D3CB83F005B2914 /* chat_sender_audio_playing_002@2x.png in Resources */,
 				629999741D3CD38B005B2914 /* 12.jpg in Resources */,
 				629999381D3CB83F005B2914 /* tabbarBackground.png in Resources */,
@@ -2639,6 +2646,7 @@
 				629999801D3CD38B005B2914 /* 23.jpg in Resources */,
 				629999781D3CD38B005B2914 /* 16.jpg in Resources */,
 				629998D61D3CB83F005B2914 /* call_out_h.png in Resources */,
+				629999F31D3FB444005B2914 /* LoginBackground@2x.png in Resources */,
 				629998E21D3CB83F005B2914 /* chat_location_detail_disclosureHL.png in Resources */,
 				629998F51D3CB83F005B2914 /* chat_sender_audio_playing_full@2x.png in Resources */,
 				629999291D3CB83F005B2914 /* groupPublicHeader@2x.png in Resources */,
