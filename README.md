@@ -60,14 +60,30 @@
 
 
 ##部分截图
+####整体架构图
+---
 ![LZEasemob3 in action](LZEasemob3.png)
+
+
+#### 微信
+---
+![LZEasemob3 in action](LZ1.gif)
+#### 通讯录
+---
+![LZEasemob3 in action](LZ2.gif)
+#### 发现
+---
+![LZEasemob3 in action](LZ3.gif)
+#### 我
+---
+![LZEasemob3 in action](LZ4.gif)
 
 ##感恩
 >感谢那些开源作者们,我在这里就不一一点名感谢了.有了你们在整个项目的开发进度上提升了不少.也让我学会了很多
 
 ##关于我
-* ####QQ  : 648959 <br>
-* ####微信 : 648959 <br>
+* QQ  : 648959 <br>
+* 微信 : 648959 <br>
 
 ![LZEasemob3 in action](me.png)
 
