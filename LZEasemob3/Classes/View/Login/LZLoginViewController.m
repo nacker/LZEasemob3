@@ -63,8 +63,8 @@
     [self.view addSubview:loginbtn];
     
     
-    usernamefield.text = @"nacker";
-    passwordfield.text = @"123456";
+//    usernamefield.text = @"nacker";
+//    passwordfield.text = @"123456";
 }
 
 - (void)loginBtnClick
