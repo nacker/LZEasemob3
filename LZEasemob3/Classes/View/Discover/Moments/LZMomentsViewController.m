@@ -9,7 +9,6 @@
 #import "LZMomentsViewController.h"
 #import "LZMomentsHeaderView.h"
 #import "SDTimeLineRefreshHeader.h"
-#import "LZMomentsRefreshFooter.h"
 #import "LZMomentsCell.h"
 #import "LZMomentsListViewModel.h"
 #import "LZMomentsViewModel.h"
@@ -60,14 +59,10 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
         
         _refreshHeader = [SDTimeLineRefreshHeader refreshHeaderWithCenter:CGPointMake(40, 45)];
         _refreshHeader.scrollView = self.tableView;
-//        __weak typeof(_refreshHeader) weakHeader = _refreshHeader;
         __weak typeof(self) weakSelf = self;
         [_refreshHeader setRefreshingBlock:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [weakSelf setupNewData];
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [weakSelf.tableView reloadData];
-//                });
             });
         }];
         [self.tableView.superview addSubview:_refreshHeader];
@@ -181,7 +176,6 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 #pragma mark - setupRefresh
 - (void)setupFooterRefresh
 {
-    self.tableView.mj_footer = [LZMomentsRefreshFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 - (void)loadMoreData

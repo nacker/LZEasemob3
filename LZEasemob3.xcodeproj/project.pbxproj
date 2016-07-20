@@ -363,7 +363,6 @@
 		629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999CF1D3E1E4F005B2914 /* LZApplyUserModel.m */; };
 		629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */; };
 		629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */; };
-		629999D91D3E76B0005B2914 /* LZMomentsRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */; };
 		629999E21D3E775B005B2914 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999DC1D3E775B005B2914 /* SDBrowserImageView.m */; };
 		629999E31D3E775B005B2914 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999DE1D3E775B005B2914 /* SDPhotoBrowser.m */; };
 		629999E41D3E775B005B2914 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999E11D3E775B005B2914 /* SDWaitingView.m */; };
@@ -977,8 +976,6 @@
 		629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBaseRefreshView.m; sourceTree = "<group>"; };
 		629999D41D3E74F7005B2914 /* SDTimeLineRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineRefreshHeader.h; sourceTree = "<group>"; };
 		629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
-		629999D71D3E76B0005B2914 /* LZMomentsRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMomentsRefreshFooter.h; sourceTree = "<group>"; };
-		629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMomentsRefreshFooter.m; sourceTree = "<group>"; };
 		629999DB1D3E775B005B2914 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		629999DC1D3E775B005B2914 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
 		629999DD1D3E775B005B2914 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
@@ -1942,8 +1939,6 @@
 				629999D21D3E74E8005B2914 /* SDBaseRefreshView.m */,
 				629999D41D3E74F7005B2914 /* SDTimeLineRefreshHeader.h */,
 				629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */,
-				629999D71D3E76B0005B2914 /* LZMomentsRefreshFooter.h */,
-				629999D81D3E76B0005B2914 /* LZMomentsRefreshFooter.m */,
 			);
 			path = Refresh;
 			sourceTree = "<group>";
@@ -2906,7 +2901,6 @@
 				629998111D3CB1F1005B2914 /* TZPhotoPickerController.m in Sources */,
 				629997C61D3CA72F005B2914 /* MLExpressionManager.m in Sources */,
 				6299970D1D3C887D005B2914 /* NSDateFormatter+Category.m in Sources */,
-				629999D91D3E76B0005B2914 /* LZMomentsRefreshFooter.m in Sources */,
 				629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */,
 				629997A11D3CA647005B2914 /* LZMomentsListViewModel.m in Sources */,
 				629997161D3C887D005B2914 /* EaseEmotionEscape.m in Sources */,
