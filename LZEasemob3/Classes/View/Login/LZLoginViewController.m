@@ -37,6 +37,16 @@
 {
     [self.view endEditing:YES];
     
+    if (!self.usernamefield.text.length) {
+        [MBProgressHUD showError:@"请输入用户名"];
+        return ;
+    }else if (!self.passwordfield.text.length) {
+        [MBProgressHUD showError:@"请输入密码"];
+        return ;
+    }
+    
+    
+    
     [MBProgressHUD showMessage:@"登录中"];
     
     if (self.usernamefield.text.length == 0 || self.passwordfield.text.length == 0) {
@@ -71,6 +81,14 @@
 
 - (void)registerBtnClick
 {
+    if (!self.usernamefield.text.length) {
+        [MBProgressHUD showError:@"请输入用户名"];
+        return ;
+    }else if (!self.passwordfield.text.length) {
+        [MBProgressHUD showError:@"请输入密码"];
+        return ;
+    }
+    
     NSString *account = self.usernamefield.text;
     NSString *pwd = self.passwordfield.text;
     EMError *error = [[EMClient sharedClient] registerWithUsername:account password:pwd];
