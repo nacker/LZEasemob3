@@ -2,6 +2,17 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+# 忽略Xcode本地用户配置信息
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+xcshareddata/
+.metadata/
+# 忽略`Pods/`和`Podfile.lock`
+Pods/
+Podfile.lock
+
+
 ## Build generated
 build/
 DerivedData/
