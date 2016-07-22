@@ -47,29 +47,26 @@
 
 @implementation LZPictureBrowserCell
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
+    if (self = [super initWithFrame:frame]) {
         // Initialization code
         [self setUp];
     }
     return self;
 }
 
-- (id)init
+- (instancetype)init
 {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         [self setUp];
     }
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
+    if (self = [super initWithCoder:aDecoder]) {
         [self setUp];
     }
     return self;
