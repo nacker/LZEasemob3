@@ -29,8 +29,8 @@
     [self.loginBtn addTarget:self action:@selector(loginBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     
-//    usernamefield.text = @"nacker";
-//    passwordfield.text = @"123456";
+    _usernamefield.text = @"nacker";
+    _passwordfield.text = @"123456";
 }
 
 - (void)loginBtnClick

@@ -364,6 +364,13 @@
 		629999D61D3E74F7005B2914 /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */; };
 		629999EC1D3F9CE5005B2914 /* LZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629999EB1D3F9CE5005B2914 /* LZLoginViewController.xib */; };
 		629999F31D3FB444005B2914 /* LoginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 629999F21D3FB444005B2914 /* LoginBackground@2x.png */; };
+		62C555E61D41CAE30065C7BF /* LZBroadcastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555DA1D41CAE30065C7BF /* LZBroadcastView.m */; };
+		62C555E71D41CAE30065C7BF /* LZBroadcastViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555DC1D41CAE30065C7BF /* LZBroadcastViewCell.m */; };
+		62C555E81D41CAE30065C7BF /* LZPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555DE1D41CAE30065C7BF /* LZPicture.m */; };
+		62C555E91D41CAE30065C7BF /* LZPictureBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555E01D41CAE30065C7BF /* LZPictureBrowser.m */; };
+		62C555EA1D41CAE30065C7BF /* LZPictureBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555E21D41CAE30065C7BF /* LZPictureBrowserCell.m */; };
+		62C555EB1D41CAE30065C7BF /* picture_download_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C555E31D41CAE30065C7BF /* picture_download_icon@2x.png */; };
+		62C555EC1D41CAE30065C7BF /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C555E51D41CAE30065C7BF /* UIImage+Tint.m */; };
 		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -974,6 +981,19 @@
 		629999D51D3E74F7005B2914 /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
 		629999EB1D3F9CE5005B2914 /* LZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZLoginViewController.xib; sourceTree = "<group>"; };
 		629999F21D3FB444005B2914 /* LoginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginBackground@2x.png"; sourceTree = "<group>"; };
+		62C555D91D41CAE30065C7BF /* LZBroadcastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBroadcastView.h; sourceTree = "<group>"; };
+		62C555DA1D41CAE30065C7BF /* LZBroadcastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBroadcastView.m; sourceTree = "<group>"; };
+		62C555DB1D41CAE30065C7BF /* LZBroadcastViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBroadcastViewCell.h; sourceTree = "<group>"; };
+		62C555DC1D41CAE30065C7BF /* LZBroadcastViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBroadcastViewCell.m; sourceTree = "<group>"; };
+		62C555DD1D41CAE30065C7BF /* LZPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPicture.h; sourceTree = "<group>"; };
+		62C555DE1D41CAE30065C7BF /* LZPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPicture.m; sourceTree = "<group>"; };
+		62C555DF1D41CAE30065C7BF /* LZPictureBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPictureBrowser.h; sourceTree = "<group>"; };
+		62C555E01D41CAE30065C7BF /* LZPictureBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPictureBrowser.m; sourceTree = "<group>"; };
+		62C555E11D41CAE30065C7BF /* LZPictureBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZPictureBrowserCell.h; sourceTree = "<group>"; };
+		62C555E21D41CAE30065C7BF /* LZPictureBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZPictureBrowserCell.m; sourceTree = "<group>"; };
+		62C555E31D41CAE30065C7BF /* picture_download_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture_download_icon@2x.png"; sourceTree = "<group>"; };
+		62C555E41D41CAE30065C7BF /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		62C555E51D41CAE30065C7BF /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1268,6 +1288,7 @@
 		629990441D3C8368005B2914 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				629999F41D40BB79005B2914 /* PhotoBrowser */,
 				629997D91D3CB1F1005B2914 /* Album */,
 				629997AA1D3CA72F005B2914 /* MLLabel */,
 				629995991D3C887C005B2914 /* EaseUI */,
@@ -2398,6 +2419,26 @@
 			path = DBTool;
 			sourceTree = "<group>";
 		};
+		629999F41D40BB79005B2914 /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				62C555D91D41CAE30065C7BF /* LZBroadcastView.h */,
+				62C555DA1D41CAE30065C7BF /* LZBroadcastView.m */,
+				62C555DB1D41CAE30065C7BF /* LZBroadcastViewCell.h */,
+				62C555DC1D41CAE30065C7BF /* LZBroadcastViewCell.m */,
+				62C555DD1D41CAE30065C7BF /* LZPicture.h */,
+				62C555DE1D41CAE30065C7BF /* LZPicture.m */,
+				62C555DF1D41CAE30065C7BF /* LZPictureBrowser.h */,
+				62C555E01D41CAE30065C7BF /* LZPictureBrowser.m */,
+				62C555E11D41CAE30065C7BF /* LZPictureBrowserCell.h */,
+				62C555E21D41CAE30065C7BF /* LZPictureBrowserCell.m */,
+				62C555E31D41CAE30065C7BF /* picture_download_icon@2x.png */,
+				62C555E41D41CAE30065C7BF /* UIImage+Tint.h */,
+				62C555E51D41CAE30065C7BF /* UIImage+Tint.m */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2597,6 +2638,7 @@
 				6299991C1D3CB83F005B2914 /* add@2x.png in Resources */,
 				629999041D3CB83F005B2914 /* icon_019.gif in Resources */,
 				629998DC1D3CB83F005B2914 /* callBg@2x.png in Resources */,
+				62C555EB1D41CAE30065C7BF /* picture_download_icon@2x.png in Resources */,
 				629999101D3CB83F005B2914 /* icon_029.gif in Resources */,
 				629998D51D3CB83F005B2914 /* call_out@2x.png in Resources */,
 				629999111D3CB83F005B2914 /* icon_029_cover.png in Resources */,
@@ -2747,9 +2789,11 @@
 				629996CC1D3C887D005B2914 /* MBProgressHUD+Add.m in Sources */,
 				6299972A1D3C887D005B2914 /* EaseBubbleView+Voice.m in Sources */,
 				629997291D3C887D005B2914 /* EaseBubbleView+Video.m in Sources */,
+				62C555E91D41CAE30065C7BF /* LZPictureBrowser.m in Sources */,
 				6299998F1D3CDE81005B2914 /* LZChatHelper.m in Sources */,
 				6299982B1D3CB3BE005B2914 /* UIButton+Extension.m in Sources */,
 				629997111D3C887D005B2914 /* EaseChineseToPinyin.m in Sources */,
+				62C555E61D41CAE30065C7BF /* LZBroadcastView.m in Sources */,
 				629997281D3C887D005B2914 /* EaseBubbleView+Text.m in Sources */,
 				629999D01D3E1E4F005B2914 /* LZApplyUserModel.m in Sources */,
 				629997311D3C887D005B2914 /* EaseFacialView.m in Sources */,
@@ -2764,11 +2808,13 @@
 				6299904B1D3C8471005B2914 /* LZConversationViewController.m in Sources */,
 				6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */,
 				629997A61D3CA6AE005B2914 /* LZMoments.m in Sources */,
+				62C555EC1D41CAE30065C7BF /* UIImage+Tint.m in Sources */,
 				6299971A1D3C887D005B2914 /* EaseLocationViewController.m in Sources */,
 				629996FC1D3C887D005B2914 /* PSTCollectionViewCell.m in Sources */,
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
 				629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */,
 				629997301D3C887D005B2914 /* EaseFaceView.m in Sources */,
+				62C555EA1D41CAE30065C7BF /* LZPictureBrowserCell.m in Sources */,
 				629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */,
 				629997C51D3CA72F005B2914 /* NSString+MLLabel.m in Sources */,
 				629997121D3C887D005B2914 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
@@ -2826,6 +2872,7 @@
 				629997CC1D3CA72F005B2914 /* MLLinkLabel.m in Sources */,
 				629997921D3CA62F005B2914 /* LZPhotoContainerView.m in Sources */,
 				629996E11D3C887D005B2914 /* MWCaptionView.m in Sources */,
+				62C555E71D41CAE30065C7BF /* LZBroadcastViewCell.m in Sources */,
 				629997C71D3CA72F005B2914 /* MLTextAttachment.m in Sources */,
 				629997C31D3CA72F005B2914 /* NSAttributedString+MLLabel.m in Sources */,
 				629998121D3CB1F1005B2914 /* TZPhotoPreviewCell.m in Sources */,
@@ -2836,6 +2883,7 @@
 				6299979A1D3CA62F005B2914 /* MomentsPublishPictureCell.m in Sources */,
 				629999A51D3D1517005B2914 /* EMAlertView.m in Sources */,
 				629997021D3C887D005B2914 /* PSTCollectionViewUpdateItem.m in Sources */,
+				62C555E81D41CAE30065C7BF /* LZPicture.m in Sources */,
 				6299971D1D3C887D005B2914 /* EaseUsersListViewController.m in Sources */,
 				629997D51D3CAAFA005B2914 /* UIView+Extension.m in Sources */,
 				6299979B1D3CA62F005B2914 /* LZMomentsTimeLineViewController.m in Sources */,

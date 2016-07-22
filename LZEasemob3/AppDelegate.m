@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "LZTabBarController.h"
 #import "LZLoginViewController.h"
+#import "EMAlertView.h"
 
 @interface AppDelegate ()<EMClientDelegate>
 
@@ -136,5 +137,9 @@
     [[EMClient sharedClient] logout:NO];
     LZLoginViewController * loginVC = [[LZLoginViewController alloc] init];
     self.window.rootViewController = loginVC;
+    
+    [EMAlertView showAlertWithTitle:@"警告" message:@"您被T下线了" completionBlock:^(NSUInteger buttonIndex, EMAlertView *alertView) {
+        
+    } cancelButtonTitle:@"取消" otherButtonTitles:@"确定"];
 }
 @end

@@ -18,6 +18,7 @@ NSString *const kStatusPictureCellId = @"StatusPictureCellId";
 
 #import "LZPhotoContainerView.h"
 #import "LZMomentsPictureCell.h"
+#import "LZPictureBrowser.h"
 
 @interface LZPhotoContainerView()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIViewControllerTransitioningDelegate>
 
@@ -81,6 +82,8 @@ NSString *const kStatusPictureCellId = @"StatusPictureCellId";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LZMomentsPictureCell *cell = (LZMomentsPictureCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    LZPictureBrowser *mvc = [[LZPictureBrowser alloc] init];
+    [mvc showWithPictureURLs:self.urls atIndex:cell.imageView.tag];
 }
 
 
