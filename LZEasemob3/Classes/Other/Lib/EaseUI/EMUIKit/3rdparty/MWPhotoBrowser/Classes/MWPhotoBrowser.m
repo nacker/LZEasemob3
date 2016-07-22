@@ -10,7 +10,6 @@
 #import "MWCommon.h"
 #import "MWPhotoBrowser.h"
 #import "MWPhotoBrowserPrivate.h"
-//#import "EMSDImageCache.h"
 #import "EaseLocalDefine.h"
 
 #define PADDING                  10

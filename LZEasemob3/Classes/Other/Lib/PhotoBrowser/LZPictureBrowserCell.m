@@ -254,7 +254,7 @@
     [self.indicator startAnimating];
 
     //加载图像
-    if ([self.picture isKindOfClass:[NSURL class]]) {
+    if (self.picture.url) {
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.picture.url];
         [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
         

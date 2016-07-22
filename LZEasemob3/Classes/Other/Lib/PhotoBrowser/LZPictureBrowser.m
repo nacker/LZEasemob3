@@ -89,8 +89,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
-    
-    NSLog(@"---销毁了");
+    KLog(@"---销毁了");
 }
 
 -(void)onDeviceOrientationChange
@@ -118,7 +117,6 @@
     }
 }
 
-#pragma mark - seLZer and geLZer
 - (LZBroadcastView*)mainView
 {
     if (!_mainView) {
@@ -262,11 +260,6 @@
     [self.mainView scrollToPageIndex:index animated:NO];
     
     [self showWithAnimated:YES];
-}
-
-- (void)showWithPictureWithImage:(UIImage*)image
-{
-    
 }
 
 - (void)showWithAnimated:(BOOL)animated

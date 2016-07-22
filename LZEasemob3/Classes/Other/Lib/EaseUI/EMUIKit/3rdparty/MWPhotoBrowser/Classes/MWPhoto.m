@@ -8,17 +8,13 @@
 
 #import "MWPhoto.h"
 #import "MWPhotoBrowser.h"
-//#import "EMSDWebImageDecoder.h"
-//#import "EMSDWebImageManager.h"
-//#import "EMSDWebImageOperation.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface MWPhoto () {
 
     BOOL _loadingInProgress;
-//    id <EMSDWebImageOperation> _webImageOperation;
     id <SDWebImageOperation> _webImageOperation;
-    
+        
 }
 
 - (void)imageLoadingComplete;
