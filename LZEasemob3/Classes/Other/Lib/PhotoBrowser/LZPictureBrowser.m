@@ -249,8 +249,9 @@
         }else if ([pictureURLs[i] isKindOfClass:[NSURL class]]) {
             picture.url = pictureURLs[i];
         }else{
-            NSAssert(NO, @"图片的URL类型异常");
-            return;
+//            NSAssert(NO, @"图片的URL类型异常");
+//            return;
+            picture.image = pictureURLs[i];
         }
         [pictures addObject:picture];
     }
@@ -263,6 +264,11 @@
     [self showWithAnimated:YES];
 }
 
+- (void)showWithPictureWithImage:(UIImage*)image
+{
+    
+}
+
 - (void)showWithAnimated:(BOOL)animated
 {
     if (!self.pictures||self.pictures.count<=0) {
@@ -270,7 +276,7 @@
     }
     for (NSUInteger i=0; i<self.pictures.count; i++) {
         if (![self.pictures[i] isKindOfClass:[LZPicture class]]) {
-            NSAssert(NO, @"传递的图片类型非MLPicture");
+            NSAssert(NO, @"传递的图片类型非LZPicture");
             return;
         }
     }

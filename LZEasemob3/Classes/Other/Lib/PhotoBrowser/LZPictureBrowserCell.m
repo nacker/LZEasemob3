@@ -254,29 +254,36 @@
     [self.indicator startAnimating];
 
     //加载图像
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.picture.url];
-    [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+    if ([self.picture isKindOfClass:[NSURL class]]) {
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.picture.url];
+        [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+        
+        __weak __typeof(self)weakSelf = self;
+        NSURL *recordImageURL =self.picture.url;
+        [self.imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            if (![recordImageURL isEqual:weakSelf.picture.url]) {
+                return;
+            }
+            weakSelf.picture.isLoaded = YES;
+            
+            [weakSelf.indicator stopAnimating];
+            weakSelf.imageView.image = image;
+            [weakSelf adjustFrame];
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            if (![recordImageURL isEqual:weakSelf.picture.url]) {
+                return;
+            }
+            [weakSelf.indicator stopAnimating];
+            
+            weakSelf.tipsLabel.layer.opacity = .8f;
+        }];
+    }else {
+        self.imageView.image = self.picture.image;
+        self.tipsLabel.layer.opacity = .0f;
+        [self.indicator stopAnimating];
+    }
     
-    __weak __typeof(self)weakSelf = self;
-    NSURL *recordImageURL =self.picture.url;
-    [self.imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-        if (![recordImageURL isEqual:weakSelf.picture.url]) {
-            return;
-        }
-        weakSelf.picture.isLoaded = YES;
-        
-        [weakSelf.indicator stopAnimating];
-        weakSelf.imageView.image = image;
-        [weakSelf adjustFrame];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        if (![recordImageURL isEqual:weakSelf.picture.url]) {
-            return;
-        }
-        [weakSelf.indicator stopAnimating];
-        
-        weakSelf.tipsLabel.layer.opacity = .8f;
-    }];
-     [self adjustFrame];
+    [self adjustFrame];
 }
 
 - (CGPoint)centerOfScrollView:(UIScrollView *)scrollView

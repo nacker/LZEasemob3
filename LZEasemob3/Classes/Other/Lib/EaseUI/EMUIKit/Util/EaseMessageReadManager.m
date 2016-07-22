@@ -13,6 +13,7 @@
 #import "EaseMessageReadManager.h"
 //#import "UIImageView+EMWebCache.h"
 #import "EMCDDeviceManager.h"
+#import "LZPictureBrowser.h"
 
 #define IMAGE_MAX_SIZE_5k 5120*2880
 
@@ -118,6 +119,8 @@ static EaseMessageReadManager *detailInstance = nil;
 
 - (void)showBrowserWithImages:(NSArray *)imageArray
 {
+    NSMutableArray *pArray = [NSMutableArray array];
+    
     if (imageArray && [imageArray count] > 0) {
         NSMutableArray *photoArray = [NSMutableArray array];
         for (id object in imageArray) {
@@ -129,23 +132,21 @@ static EaseMessageReadManager *detailInstance = nil;
                 } else {
                     photo = [MWPhoto photoWithImage:object];
                 }
-            }
-            else if ([object isKindOfClass:[NSURL class]])
-            {
+            }else if ([object isKindOfClass:[NSURL class]]){
                 photo = [MWPhoto photoWithURL:object];
-            }
-            else if ([object isKindOfClass:[NSString class]])
-            {
+            }else if ([object isKindOfClass:[NSString class]]){
                 
             }
             [photoArray addObject:photo];
         }
-        
         self.photos = photoArray;
     }
     
-    UIViewController *rootController = [self.keyWindow rootViewController];
-    [rootController presentViewController:self.photoNavigationController animated:YES completion:nil];
+    for (MWPhoto *p in self.photos) {
+        [pArray addObject:p.image];
+    }
+    LZPictureBrowser *mvc = [[LZPictureBrowser alloc] init];
+    [mvc showWithPictureURLs:pArray atIndex:0];
 }
 
 - (BOOL)prepareMessageAudioModel:(EaseMessageModel *)messageModel
