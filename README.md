@@ -1,8 +1,18 @@
  酷信（高仿微信-环信的人说让我取个吊的名字）
 ==================
 
-###告示:
-	有谁想为开源贡献自己的一份力量的单独联系我.我会在文档加入你的名字.期待你哟!!!
+###告示(Notices):
+	1.LZEasemob3 works on "Xcode 7.3.1 , iOS 7+ and requires ARC to build. 
+	2.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
+	2.有谁想为开源贡献自己的一份力量的单独联系我.我会在文档加入你的名字.期待你哟!!!
+	
+###安装方式(Installation Method)
+* First step
+
+		git clone https://github.com/nacker/LZEasemob3.git
+* Second step
+
+		pod install	
 
 ###说明:
 	此项目构建于16/7/18,今天16年7月20号就两天时间,所以时间有限,希望大伙在使用过程中遇到BUG请@我一下,我会去认真迭代这款高仿APP
