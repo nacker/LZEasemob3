@@ -55,12 +55,14 @@
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
+      "filename" : "LaunchImage@2x.png",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
       "extent" : "full-screen",
+      "filename" : "LaunchImage-568h@2x.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },

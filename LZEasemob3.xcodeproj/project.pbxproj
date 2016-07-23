@@ -371,7 +371,6 @@
 		62C5566B1D420C3A0065C7BF /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C556441D420C3A0065C7BF /* PSTGridLayoutSection.m */; };
 		62C5566C1D420C3A0065C7BF /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62C556451D420C3A0065C7BF /* MWPhotoBrowser.bundle */; };
 		62DADC621D43017A00698239 /* UIAlertView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DADC611D43017A00698239 /* UIAlertView+Extension.m */; };
-		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,8 +391,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZEasemob3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B1AFCBB3649CFEE07D1CF4D /* Pods-LZEasemob3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.debug.xcconfig"; sourceTree = "<group>"; };
 		629990001D3C818F005B2914 /* LZEasemob3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZEasemob3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629990041D3C818F005B2914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		629990061D3C818F005B2914 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -994,7 +991,6 @@
 		62C556451D420C3A0065C7BF /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
 		62DADC601D43017A00698239 /* UIAlertView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extension.h"; sourceTree = "<group>"; };
 		62DADC611D43017A00698239 /* UIAlertView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extension.m"; sourceTree = "<group>"; };
-		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1034,7 +1030,6 @@
 				629996CA1D3C887D005B2914 /* libopencore-amrnb.a in Frameworks */,
 				629996CB1D3C887D005B2914 /* libopencore-amrwb.a in Frameworks */,
 				629995951D3C885A005B2914 /* libcrypto.a in Frameworks */,
-				BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,15 +1050,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		382D32253833659F2DD899AB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5B1AFCBB3649CFEE07D1CF4D /* Pods-LZEasemob3.debug.xcconfig */,
-				B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		62998FF71D3C818F005B2914 = {
 			isa = PBXGroup;
 			children = (
@@ -1072,7 +1058,6 @@
 				6299901C1D3C818F005B2914 /* LZEasemob3Tests */,
 				629990271D3C818F005B2914 /* LZEasemob3UITests */,
 				629990011D3C818F005B2914 /* Products */,
-				382D32253833659F2DD899AB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1775,7 +1760,6 @@
 				6299973A1D3C89C5005B2914 /* AVFoundation.framework */,
 				629997381D3C89BE005B2914 /* AudioToolbox.framework */,
 				629997361D3C89AD005B2914 /* CoreMedia.framework */,
-				2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */,
 			);
 			name = Frameworks;
 			path = LZEasemob3;
@@ -2446,12 +2430,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6299902D1D3C818F005B2914 /* Build configuration list for PBXNativeTarget "LZEasemob3" */;
 			buildPhases = (
-				316368F2A29C7B9B7C96F6A5 /* Check Pods Manifest.lock */,
 				62998FFC1D3C818F005B2914 /* Sources */,
 				62998FFD1D3C818F005B2914 /* Frameworks */,
 				62998FFE1D3C818F005B2914 /* Resources */,
-				41821AED0D5B3C398379EE5C /* Copy Pods Resources */,
-				282BC37111A60B1194F98821 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2726,54 +2707,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		282BC37111A60B1194F98821 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		316368F2A29C7B9B7C96F6A5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		41821AED0D5B3C398379EE5C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62998FFC1D3C818F005B2914 /* Sources */ = {
@@ -3101,7 +3034,6 @@
 		};
 		6299902E1D3C818F005B2914 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B1AFCBB3649CFEE07D1CF4D /* Pods-LZEasemob3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -3130,7 +3062,6 @@
 		};
 		6299902F1D3C818F005B2914 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
