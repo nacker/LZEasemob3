@@ -37,22 +37,12 @@
 {
     [self.view endEditing:YES];
     
-    if (!self.usernamefield.text.length) {
-        [MBProgressHUD showError:@"请输入用户名"];
-        return ;
-    }else if (!self.passwordfield.text.length) {
-        [MBProgressHUD showError:@"请输入密码"];
-        return ;
-    }
-    
-    
-    
-    [MBProgressHUD showMessage:@"登录中"];
-    
     if (self.usernamefield.text.length == 0 || self.passwordfield.text.length == 0) {
-        NSLog(@"请输入用户名和密码");
+        [MBProgressHUD showError:@"请输入用户名和密码"];
         return;
     }
+    
+    [MBProgressHUD showMessage:@"登录中"];
     
     BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
     if (!isAutoLogin) {
