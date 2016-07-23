@@ -328,7 +328,6 @@
 		6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999A1D3D08D0005B2914 /* LZBadgeView.m */; };
 		6299999E1D3D0A41005B2914 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299999D1D3D0A41005B2914 /* NSDate+Extension.m */; };
 		629999A11D3D1422005B2914 /* LZAddFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A01D3D1422005B2914 /* LZAddFriendCell.m */; };
-		629999A51D3D1517005B2914 /* EMAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A41D3D1517005B2914 /* EMAlertView.m */; };
 		629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999A81D3D1706005B2914 /* LZApplyViewController.m */; };
 		629999AC1D3D175A005B2914 /* LZApplyFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 629999AB1D3D175A005B2914 /* LZApplyFriendCell.m */; };
 		629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 629999BB1D3DEC19005B2914 /* InfoPlist.strings */; };
@@ -371,7 +370,8 @@
 		62C5566A1D420C3A0065C7BF /* PSTGridLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C556421D420C3A0065C7BF /* PSTGridLayoutRow.m */; };
 		62C5566B1D420C3A0065C7BF /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C556441D420C3A0065C7BF /* PSTGridLayoutSection.m */; };
 		62C5566C1D420C3A0065C7BF /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62C556451D420C3A0065C7BF /* MWPhotoBrowser.bundle */; };
-		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		62DADC621D43017A00698239 /* UIAlertView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DADC611D43017A00698239 /* UIAlertView+Extension.m */; };
+		BCD60F157E93F2C92C629750 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F94E759C9C1CDADD0651845 /* Pods_LZEasemob3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -907,8 +907,6 @@
 		6299999D1D3D0A41005B2914 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		6299999F1D3D1422005B2914 /* LZAddFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAddFriendCell.h; sourceTree = "<group>"; };
 		629999A01D3D1422005B2914 /* LZAddFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAddFriendCell.m; sourceTree = "<group>"; };
-		629999A31D3D1517005B2914 /* EMAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAlertView.h; sourceTree = "<group>"; };
-		629999A41D3D1517005B2914 /* EMAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAlertView.m; sourceTree = "<group>"; };
 		629999A71D3D1706005B2914 /* LZApplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyViewController.h; sourceTree = "<group>"; };
 		629999A81D3D1706005B2914 /* LZApplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZApplyViewController.m; sourceTree = "<group>"; };
 		629999AA1D3D175A005B2914 /* LZApplyFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZApplyFriendCell.h; sourceTree = "<group>"; };
@@ -994,6 +992,8 @@
 		62C556431D420C3A0065C7BF /* PSTGridLayoutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSTGridLayoutSection.h; sourceTree = "<group>"; };
 		62C556441D420C3A0065C7BF /* PSTGridLayoutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSTGridLayoutSection.m; sourceTree = "<group>"; };
 		62C556451D420C3A0065C7BF /* MWPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MWPhotoBrowser.bundle; sourceTree = "<group>"; };
+		62DADC601D43017A00698239 /* UIAlertView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extension.h"; sourceTree = "<group>"; };
+		62DADC611D43017A00698239 /* UIAlertView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extension.m"; sourceTree = "<group>"; };
 		B150FEA614D767DEF7C34F4C /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1281,6 +1281,8 @@
 				629999441D3CC467005B2914 /* UIBarButtonItem+Extension.m */,
 				6299999C1D3D0A41005B2914 /* NSDate+Extension.h */,
 				6299999D1D3D0A41005B2914 /* NSDate+Extension.m */,
+				62DADC601D43017A00698239 /* UIAlertView+Extension.h */,
+				62DADC611D43017A00698239 /* UIAlertView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2293,8 +2295,6 @@
 		629999A21D3D14F1005B2914 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				629999A31D3D1517005B2914 /* EMAlertView.h */,
-				629999A41D3D1517005B2914 /* EMAlertView.m */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -2879,7 +2879,6 @@
 				6299905A1D3C8525005B2914 /* UIImage+Extension.m in Sources */,
 				629998101D3CB1F1005B2914 /* TZImagePickerController.m in Sources */,
 				6299979A1D3CA62F005B2914 /* MomentsPublishPictureCell.m in Sources */,
-				629999A51D3D1517005B2914 /* EMAlertView.m in Sources */,
 				62C555E81D41CAE30065C7BF /* LZPicture.m in Sources */,
 				6299971D1D3C887D005B2914 /* EaseUsersListViewController.m in Sources */,
 				62C556651D420C3A0065C7BF /* PSTCollectionViewItemKey.m in Sources */,
@@ -2897,6 +2896,7 @@
 				629998131D3CB1F1005B2914 /* TZPhotoPreviewController.m in Sources */,
 				629997191D3C887D005B2914 /* EaseConversationListViewController.m in Sources */,
 				629999511D3CD25D005B2914 /* LZContactsViewCell.m in Sources */,
+				62DADC621D43017A00698239 /* UIAlertView+Extension.m in Sources */,
 				6299994A1D3CCFD0005B2914 /* LZUIHelper.m in Sources */,
 				62C5566A1D420C3A0065C7BF /* PSTGridLayoutRow.m in Sources */,
 				629997881D3CA62F005B2914 /* LZMomentsCellCommentBgView.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import "LZAddFriendViewController.h"
 #import "LZAddFriendCell.h"
-#import "EMAlertView.h"
 #import "LZApplyViewController.h"
 
 @interface LZAddFriendViewController ()<UITextFieldDelegate, UIAlertViewDelegate>
@@ -138,21 +137,22 @@
     if ([self didBuddyExist:buddyName]) {
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"friend.repeat", @"'%@'has been your friend!"), buddyName];
         
-        [EMAlertView showAlertWithTitle:message
-                                message:nil
-                        completionBlock:nil
-                      cancelButtonTitle:NSLocalizedString(@"ok", @"OK")
-                      otherButtonTitles:nil];
+        [UIAlertView showAlertViewWithTitle:message message:nil cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil onDismiss:^(int buttonIndex) {
+            
+        } onCancel:^{
+            
+        }];
         
     }
     else if([self hasSendBuddyRequest:buddyName])
     {
         NSString *message = [NSString stringWithFormat:NSLocalizedString(@"friend.repeatApply", @"you have send fridend request to '%@'!"), buddyName];
-        [EMAlertView showAlertWithTitle:message
-                                message:nil
-                        completionBlock:nil
-                      cancelButtonTitle:NSLocalizedString(@"ok", @"OK")
-                      otherButtonTitles:nil];
+        
+        [UIAlertView showAlertViewWithTitle:message message:nil cancelButtonTitle:NSLocalizedString(@"ok", @"OK") otherButtonTitles:nil onDismiss:^(int buttonIndex) {
+            
+        } onCancel:^{
+            
+        }];
         
     }else{
         [self showMessageAlertView];

@@ -19,5 +19,6 @@
 #import "NSString+Extension.h"
 #import "UIBarButtonItem+Extension.h"
 #import "NSDate+Extension.h"
+#import "UIAlertView+Extension.h"
 
 #endif /* LZCategory_h */
