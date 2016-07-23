@@ -13,7 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if ([super initWithFrame:frame]) {
-        [self setBackgroundImage:[UIImage resizedImage:@"main_badge"] forState:UIControlStateNormal];
+        [self setBackgroundImage:[UIImage resizedImage:@"tabbar_badge"] forState:UIControlStateNormal];
         self.hidden = YES;
         self.userInteractionEnabled = NO;
         self.titleLabel.font = [UIFont systemFontOfSize:11];
@@ -28,7 +28,7 @@
         self.hidden = NO;
         
         if ([badgeValue intValue] > 99) {
-            badgeValue = @"99+";
+            badgeValue = @"N";
         }
         
         [self setTitle:badgeValue forState:UIControlStateNormal];

@@ -12,7 +12,6 @@
 @interface LZConversationCell()
 {
     UIImageView *_iconView;
-    UIButton *_authenView;
     UILabel *_nameLabel;
     UILabel *_timeLabel;
     UILabel *_messageLabel;
@@ -47,7 +46,6 @@
         _iconView.layer.cornerRadius = 50 * 0.5;
         _iconView.clipsToBounds = YES;
         
-        _authenView = [[UIButton alloc] init];
 
         _badgeView = [[LZBadgeView alloc] init];
         
@@ -69,7 +67,6 @@
         _divider.alpha = 0.3;
         
         [self.contentView addSubview:_iconView];
-        [self.contentView addSubview:_authenView];
         [self.contentView addSubview:_badgeView];
         [self.contentView addSubview:_nameLabel];
         [self.contentView addSubview:_timeLabel];
@@ -81,12 +78,6 @@
         [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.equalTo(self.contentView).offset(margin);
             make.size.mas_equalTo(CGSizeMake(50, 50));
-        }];
-        
-        [_authenView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(25, 25));
-            make.left.mas_equalTo(_iconView.mas_right).with.offset(- 1.5 * margin);
-            make.top.mas_equalTo(_iconView.mas_bottom).offset(- 2 * margin);
         }];
         
         [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -124,8 +115,8 @@
     int randomIndex = arc4random_uniform(23);
     _iconView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",randomIndex]];
     
-    KLog(@"%d",conversaion.unreadMessagesCount);
-    _badgeView.badgeValue = [NSString stringWithFormat:@"%d",conversaion.unreadMessagesCount];
+    KLog(@"%d",[conversaion unreadMessagesCount]);
+    _badgeView.badgeValue = [NSString stringWithFormat:@"%d",[conversaion unreadMessagesCount]];
     
     _nameLabel.text = conversaion.conversationId;
     
