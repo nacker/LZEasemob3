@@ -13,6 +13,10 @@
 * Second step
 
 		pod install	
+		
+* Third step
+		
+		open  LZEasemob3.xcworkspace
 
 ###说明:
 	此项目构建于16/7/18,今天16年7月20号就两天时间,所以时间有限,希望大伙在使用过程中遇到BUG请@我一下,我会去认真迭代这款高仿APP
