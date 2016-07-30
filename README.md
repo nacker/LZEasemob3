@@ -12,7 +12,7 @@
 		git clone https://github.com/nacker/LZEasemob3.git
 * Second step
 
-		pod install	
+		pod install
 		
 * Third step
 		
