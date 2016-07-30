@@ -25,6 +25,9 @@
 
 @property (nonatomic, assign, readonly) BOOL shouldShowMoreButton;
 
+// 是否点赞
+@property (nonatomic, assign, getter = isLiked) BOOL liked;
+
 
 // 点赞文字
 @property (nonatomic, copy) NSMutableAttributedString *likesStr;

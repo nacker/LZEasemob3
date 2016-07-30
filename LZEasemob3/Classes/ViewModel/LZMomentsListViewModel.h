@@ -17,4 +17,7 @@
 - (void)loadStatusWithCount:(NSInteger)count Completed:(void (^)(BOOL isSuccessed))completed;
 
 - (void)loadMoreStatusWithCount:(NSInteger)count Completed:(void (^)(BOOL isSuccessed))completed;
+
+- (void)didClickLickButtonInCellWithIndexPath:(NSIndexPath *)indexPath success:(void (^)())success failure:(void (^)())failure;
+
 @end

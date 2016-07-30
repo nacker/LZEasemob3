@@ -130,17 +130,4 @@
 {
     NSLog(@"%@", link.linkValue);
 }
-
-//+ (instancetype)cellWithTableView:(UITableView *)tableView
-//{
-//    static NSString *ID = nil;
-//    if (ID == nil) {
-//        ID = [NSString stringWithFormat:@"%@ID", NSStringFromClass(self)];
-//    }
-//    id cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//    if (!cell) {
-//        cell = [[self alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-//    }
-//    return cell;
-//}
 @end

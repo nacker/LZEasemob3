@@ -262,4 +262,34 @@
     
     completed(YES);
 }
+
+- (void)didClickLickButtonInCellWithIndexPath:(NSIndexPath *)indexPath success:(void (^)())success failure:(void (^)())failure
+{
+    LZMomentsViewModel *model = self.statusList[indexPath.row];
+    NSMutableArray *temp = [NSMutableArray arrayWithArray:model.status.likeItemsArray];
+    NSString *name = [[EMClient sharedClient] currentUsername];
+    
+    if (!model.status.isLiked) {
+        LZMomentsCellLikeItemModel *likeModel = [LZMomentsCellLikeItemModel new];
+        likeModel.userName = name;
+        likeModel.userId = name;
+        [temp addObject:likeModel];
+        model.status.liked = YES;
+    } else {
+        LZMomentsCellLikeItemModel *tempLikeModel = nil;
+        for (LZMomentsCellLikeItemModel *likeModel in model.status.likeItemsArray) {
+            if ([likeModel.userId isEqualToString:name]) {
+                tempLikeModel = likeModel;
+                break;
+            }
+        }
+        [temp removeObject:tempLikeModel];
+        model.status.liked = NO;
+    }
+    model.status.likeItemsArray = [temp copy];
+    
+    if (success) {
+        success();
+    }
+}
 @end
