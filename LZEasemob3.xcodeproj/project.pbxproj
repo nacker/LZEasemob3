@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		623ED6701D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 623ED6651D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg */; };
+		623ED6711D4D148600109C40 /* LZShakeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 623ED6691D4D148600109C40 /* LZShakeBottomView.m */; };
+		623ED6721D4D148600109C40 /* LZShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623ED66B1D4D148600109C40 /* LZShakeViewController.m */; };
+		623ED6731D4D148600109C40 /* shake_match.wav in Resources */ = {isa = PBXBuildFile; fileRef = 623ED66D1D4D148600109C40 /* shake_match.wav */; };
+		623ED6741D4D148600109C40 /* shake_nomatch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 623ED66E1D4D148600109C40 /* shake_nomatch.wav */; };
+		623ED6751D4D148600109C40 /* shake_sound_male.wav in Resources */ = {isa = PBXBuildFile; fileRef = 623ED66F1D4D148600109C40 /* shake_sound_male.wav */; };
+		623ED6791D4D155400109C40 /* LZBaseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 623ED6781D4D155400109C40 /* LZBaseBtn.m */; };
 		6274FA841D439A72006C6B7E /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA801D439A72006C6B7E /* MBProgressHUD+Add.m */; };
 		6274FA851D439A72006C6B7E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */; };
 		6274FA861D439A72006C6B7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA831D439A72006C6B7E /* MBProgressHUD.m */; };
@@ -394,6 +401,17 @@
 
 /* Begin PBXFileReference section */
 		596D990EE4946E3E114957F2 /* Pods_LZEasemob3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZEasemob3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		623ED6651D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlbumHeaderBackgrounImage.jpg; sourceTree = "<group>"; };
+		623ED6661D4D148600109C40 /* LZFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFoundationMacro.h; sourceTree = "<group>"; };
+		623ED6681D4D148600109C40 /* LZShakeBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZShakeBottomView.h; sourceTree = "<group>"; };
+		623ED6691D4D148600109C40 /* LZShakeBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZShakeBottomView.m; sourceTree = "<group>"; };
+		623ED66A1D4D148600109C40 /* LZShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZShakeViewController.h; sourceTree = "<group>"; };
+		623ED66B1D4D148600109C40 /* LZShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZShakeViewController.m; sourceTree = "<group>"; };
+		623ED66D1D4D148600109C40 /* shake_match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_match.wav; sourceTree = "<group>"; };
+		623ED66E1D4D148600109C40 /* shake_nomatch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_nomatch.wav; sourceTree = "<group>"; };
+		623ED66F1D4D148600109C40 /* shake_sound_male.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_sound_male.wav; sourceTree = "<group>"; };
+		623ED6771D4D155400109C40 /* LZBaseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseBtn.h; sourceTree = "<group>"; };
+		623ED6781D4D155400109C40 /* LZBaseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseBtn.m; sourceTree = "<group>"; };
 		6274FA7F1D439A72006C6B7E /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		6274FA801D439A72006C6B7E /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -1064,6 +1082,31 @@
 				66C8AD67407B91480E894F26 /* Pods-LZEasemob3.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		623ED6641D4D148600109C40 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				623ED6661D4D148600109C40 /* LZFoundationMacro.h */,
+				623ED66A1D4D148600109C40 /* LZShakeViewController.h */,
+				623ED66B1D4D148600109C40 /* LZShakeViewController.m */,
+				623ED6681D4D148600109C40 /* LZShakeBottomView.h */,
+				623ED6691D4D148600109C40 /* LZShakeBottomView.m */,
+				623ED66D1D4D148600109C40 /* shake_match.wav */,
+				623ED66E1D4D148600109C40 /* shake_nomatch.wav */,
+				623ED66F1D4D148600109C40 /* shake_sound_male.wav */,
+				623ED6651D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg */,
+			);
+			path = Shake;
+			sourceTree = "<group>";
+		};
+		623ED6761D4D154E00109C40 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				623ED6771D4D155400109C40 /* LZBaseBtn.h */,
+				623ED6781D4D155400109C40 /* LZBaseBtn.m */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		6274FA7E1D439A72006C6B7E /* MBProgressHUD */ = {
@@ -1789,6 +1832,7 @@
 			children = (
 				629997521D3CA33F005B2914 /* LZDiscoverViewController.h */,
 				629997531D3CA33F005B2914 /* LZDiscoverViewController.m */,
+				623ED6641D4D148600109C40 /* Shake */,
 				629997551D3CA610005B2914 /* Moments */,
 			);
 			path = Discover;
@@ -2009,6 +2053,7 @@
 		629998161D3CB21A005B2914 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				623ED6761D4D154E00109C40 /* Button */,
 				629999A21D3D14F1005B2914 /* AlertView */,
 				629999981D3D08B9005B2914 /* BadgeView */,
 				6299981F1D3CB23D005B2914 /* TextView */,
@@ -2576,6 +2621,7 @@
 				629998041D3CB1F1005B2914 /* photo_original_sel@2x.png in Resources */,
 				629999271D3CB83F005B2914 /* group_participant_addHL@2x.png in Resources */,
 				629998EA1D3CB83F005B2914 /* chat_receiver_audio_playing000@2x.png in Resources */,
+				623ED6751D4D148600109C40 /* shake_sound_male.wav in Resources */,
 				629997FE1D3CB1F1005B2914 /* MMVideoPreviewPlayHL@2x.png in Resources */,
 				629998F41D3CB83F005B2914 /* chat_sender_audio_playing_003@2x.png in Resources */,
 				629999B91D3DEC19005B2914 /* InfoPlist.strings in Resources */,
@@ -2620,6 +2666,7 @@
 				629998FD1D3CB83F005B2914 /* icon_010_cover.png in Resources */,
 				629998E31D3CB83F005B2914 /* chat_location_detail_disclosureHL@2x.png in Resources */,
 				629998051D3CB1F1005B2914 /* photo_sel_photoPickerVc@2x.png in Resources */,
+				623ED6741D4D148600109C40 /* shake_nomatch.wav in Resources */,
 				629999751D3CD38B005B2914 /* 13.jpg in Resources */,
 				6299990F1D3CB83F005B2914 /* icon_027_cover.png in Resources */,
 				629997FF1D3CB1F1005B2914 /* navi_back@2x.png in Resources */,
@@ -2629,6 +2676,7 @@
 				629999821D3CD38B005B2914 /* 4.jpg in Resources */,
 				6274FA851D439A72006C6B7E /* MBProgressHUD.bundle in Resources */,
 				629999061D3CB83F005B2914 /* icon_020.gif in Resources */,
+				623ED6731D4D148600109C40 /* shake_match.wav in Resources */,
 				629999251D3CB83F005B2914 /* group_joinpublicgroup@2x.png in Resources */,
 				629999011D3CB83F005B2914 /* icon_013_cover.png in Resources */,
 				6299991D1D3CB83F005B2914 /* back@2x.png in Resources */,
@@ -2689,6 +2737,7 @@
 				629998EB1D3CB83F005B2914 /* chat_receiver_audio_playing001@2x.png in Resources */,
 				629999871D3CD38B005B2914 /* 9.jpg in Resources */,
 				629999121D3CB83F005B2914 /* icon_030.gif in Resources */,
+				623ED6701D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg in Resources */,
 				629999801D3CD38B005B2914 /* 23.jpg in Resources */,
 				629999781D3CD38B005B2914 /* 16.jpg in Resources */,
 				629998D61D3CB83F005B2914 /* call_out_h.png in Resources */,
@@ -2813,6 +2862,7 @@
 				6299999B1D3D08D0005B2914 /* LZBadgeView.m in Sources */,
 				629997A61D3CA6AE005B2914 /* LZMoments.m in Sources */,
 				62C555EC1D41CAE30065C7BF /* UIImage+Tint.m in Sources */,
+				623ED6721D4D148600109C40 /* LZShakeViewController.m in Sources */,
 				6299971A1D3C887D005B2914 /* EaseLocationViewController.m in Sources */,
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
 				62C556631D420C3A0065C7BF /* PSTCollectionViewData.m in Sources */,
@@ -2894,6 +2944,7 @@
 				629998151D3CB1F1005B2914 /* UIView+Layout.m in Sources */,
 				629997221D3C887D005B2914 /* EaseMessageCell.m in Sources */,
 				62C556471D420C3A0065C7BF /* MWGridCell.m in Sources */,
+				623ED6711D4D148600109C40 /* LZShakeBottomView.m in Sources */,
 				629997241D3C887D005B2914 /* EaseBubbleView+File.m in Sources */,
 				629998131D3CB1F1005B2914 /* TZPhotoPreviewController.m in Sources */,
 				629997191D3C887D005B2914 /* EaseConversationListViewController.m in Sources */,
@@ -2941,6 +2992,7 @@
 				6299972F1D3C887D005B2914 /* EaseTextView.m in Sources */,
 				6299980E1D3CB1F1005B2914 /* TZAssetModel.m in Sources */,
 				6299970A1D3C887D005B2914 /* EaseMessageModel.m in Sources */,
+				623ED6791D4D155400109C40 /* LZBaseBtn.m in Sources */,
 				62C5565F1D420C3A0065C7BF /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				6299970E1D3C887D005B2914 /* NSString+Valid.m in Sources */,
 				629997981D3CA62F005B2914 /* LZMomentsDefaultsCell.m in Sources */,

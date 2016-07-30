@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, KButtonTitlePostionType) {
+    KButtonTitlePostionTypeBottom = 0,
+};
+
 @interface UIButton (Extension)
 
 /// 使用图像名创建图像
@@ -40,4 +44,5 @@
 /// @return UIButton
 + (instancetype)buttonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor backImageName:(NSString *)backImageName;
 
+- (void)setTitlePositionWithType:(KButtonTitlePostionType)type;
 @end

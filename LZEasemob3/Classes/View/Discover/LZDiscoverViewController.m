@@ -8,6 +8,7 @@
 
 #import "LZDiscoverViewController.h"
 #import "LZMomentsViewController.h"
+#import "LZShakeViewController.h"
 
 @interface LZDiscoverViewController ()
 
@@ -23,20 +24,26 @@ static NSString * const CellIdentifier = @"DiscoverIdentifier";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.tableView.rowHeight = 60;
+    self.tableView.rowHeight = 46;
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = @"朋友圈";
-    cell.imageView.image = [UIImage imageNamed:@"ff_IconShowAlbum"];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"朋友圈";
+        cell.imageView.image = [UIImage imageNamed:@"ff_IconShowAlbum"];
+    }else if (indexPath.row == 1) {
+        cell.textLabel.text = @"摇一摇";
+        cell.imageView.image = [UIImage imageNamed:@"ff_IconShake"];
+    }
+    
     return cell;
 }
 
@@ -44,7 +51,12 @@ static NSString * const CellIdentifier = @"DiscoverIdentifier";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    LZMomentsViewController *vc = [[LZMomentsViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (indexPath.row == 0) {
+        LZMomentsViewController *vc = [[LZMomentsViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1) {
+        LZShakeViewController *vc = [[LZShakeViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 @end

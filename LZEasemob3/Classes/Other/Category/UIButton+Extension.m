@@ -84,4 +84,18 @@
     return button;
 }
 
+- (void)setTitlePositionWithType:(KButtonTitlePostionType)type {
+    switch (type) {
+        case KButtonTitlePostionTypeBottom: {
+            CGFloat spacing = 2.0;
+            CGSize imageSize = self.imageView.frame.size;
+            self.titleEdgeInsets = UIEdgeInsetsMake(0.0, - imageSize.width, - (imageSize.height + spacing), 0.0);
+            CGSize titleSize = self.titleLabel.frame.size;
+            self.imageEdgeInsets = UIEdgeInsetsMake(-(titleSize.height + spacing), 0.0, 0.0, - titleSize.width);
+            break;
+        }
+        default:
+            break;
+    }
+}
 @end

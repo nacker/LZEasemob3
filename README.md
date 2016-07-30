@@ -37,7 +37,7 @@
 ##关于我
 * QQ群  : 527885963 <br>
 
-![LZEasemob3 in action](me.png)
+![LZEasemob3 in action](./image/me.png)
 
 ##高仿微信计划：
 
@@ -75,6 +75,8 @@
 
 * 我（界面、退出功能）
 
+* 摇一摇功能
+
 ### 3.待实现功能（）
 * 搜索好友
 
@@ -86,8 +88,6 @@
 
 * 其他细节实现
 
-* 摇一摇
-
 * 发送朋友圈信息
 
 * 其他
@@ -96,25 +96,29 @@
 ##部分截图
 ####整体架构图
 ---
-![LZEasemob3 in action](LZEasemob3.png)
+![LZEasemob3 in action](./image/LZEasemob3.png)
 
 
 #### 微信
 ---
-![LZEasemob3 in action](LZ1.gif)
+![LZEasemob3 in action](./image/LZ1.gif)
 #### 通讯录
 ---
-![LZEasemob3 in action](LZ2.gif)
+![LZEasemob3 in action](./image/LZ2.gif)
 #### 发现
 ---
-![LZEasemob3 in action](LZ3.gif)
+![LZEasemob3 in action](./image/LZ3.gif)
 #### 我
 ---
-![LZEasemob3 in action](LZ4.gif)
+![LZEasemob3 in action](./image/LZ4.gif)
 
-##版本更新记录
-### V1.0.1(2016.7.20)
-1.	工程项目初始化,完善一部分功能
+##--------------------版本更新记录-------------------
+###V1.0.3 (2016.7.31)
+1. 增加摇一摇功能(只有真机可以运行)
+2. 修复V1.0.2中残留的Bug
+
+![LZEasemob3 in action](./image/Shake1.png) 
+![LZEasemob3 in action](./image/Shake2.png)
 
 ###V1.0.2 (2016.7.22)
 1. 增加朋友圈图片浏览器功能
@@ -122,8 +126,11 @@
 3. 更换了聊天界面的展示图片功能
 4. 修改上一个版本中存在的一些Bug
 
+![LZEasemob3 in action](./image/v102.gif)
 
-![LZEasemob3 in action](v102.gif)
+### V1.0.1(2016.7.20)
+1.	工程项目初始化,完善一部分功能
+
 
 ##感恩
 >感谢那些开源作者们,我在这里就不一一点名感谢了.有了你们在整个项目的开发进度上提升了不少.也让我学会了很多
