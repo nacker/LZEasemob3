@@ -17,6 +17,13 @@
 		6274FA841D439A72006C6B7E /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA801D439A72006C6B7E /* MBProgressHUD+Add.m */; };
 		6274FA851D439A72006C6B7E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */; };
 		6274FA861D439A72006C6B7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA831D439A72006C6B7E /* MBProgressHUD.m */; };
+		62956F871D7434DF00A44B0E /* LZGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F861D7434DF00A44B0E /* LZGroupsViewController.m */; };
+		62956F8B1D74361500A44B0E /* LZCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */; };
+		62956F961D74402500A44B0E /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 62956F8F1D74402500A44B0E /* sr_refresh.png */; };
+		62956F971D74402500A44B0E /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 62956F901D74402500A44B0E /* sr_refresh@2X.png */; };
+		62956F981D74402500A44B0E /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F931D74402500A44B0E /* SRRefreshView.m */; };
+		62956F991D74402500A44B0E /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F951D74402500A44B0E /* SRSlimeView.m */; };
+		62956F9D1D7446F500A44B0E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */; };
 		629990051D3C818F005B2914 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990041D3C818F005B2914 /* main.m */; };
 		629990081D3C818F005B2914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990071D3C818F005B2914 /* AppDelegate.m */; };
 		629990101D3C818F005B2914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6299900F1D3C818F005B2914 /* Assets.xcassets */; };
@@ -414,6 +421,19 @@
 		6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		6274FA821D439A72006C6B7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6274FA831D439A72006C6B7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		62956F851D7434DF00A44B0E /* LZGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGroupsViewController.h; sourceTree = "<group>"; };
+		62956F861D7434DF00A44B0E /* LZGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGroupsViewController.m; sourceTree = "<group>"; };
+		62956F891D74361500A44B0E /* LZCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCreateGroupViewController.h; sourceTree = "<group>"; };
+		62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCreateGroupViewController.m; sourceTree = "<group>"; };
+		62956F8F1D74402500A44B0E /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
+		62956F901D74402500A44B0E /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
+		62956F911D74402500A44B0E /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
+		62956F921D74402500A44B0E /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
+		62956F931D74402500A44B0E /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
+		62956F941D74402500A44B0E /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
+		62956F951D74402500A44B0E /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
+		62956F9B1D7446F500A44B0E /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		629990001D3C818F005B2914 /* LZEasemob3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZEasemob3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629990041D3C818F005B2914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		629990061D3C818F005B2914 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1112,6 +1132,48 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		62956F841D7434B200A44B0E /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				62956F851D7434DF00A44B0E /* LZGroupsViewController.h */,
+				62956F861D7434DF00A44B0E /* LZGroupsViewController.m */,
+				62956F881D74360200A44B0E /* AddGroup */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		62956F881D74360200A44B0E /* AddGroup */ = {
+			isa = PBXGroup;
+			children = (
+				62956F891D74361500A44B0E /* LZCreateGroupViewController.h */,
+				62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */,
+			);
+			path = AddGroup;
+			sourceTree = "<group>";
+		};
+		62956F8E1D74402500A44B0E /* SlimeRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				62956F8F1D74402500A44B0E /* sr_refresh.png */,
+				62956F901D74402500A44B0E /* sr_refresh@2X.png */,
+				62956F911D74402500A44B0E /* SRDefine.h */,
+				62956F921D74402500A44B0E /* SRRefreshView.h */,
+				62956F931D74402500A44B0E /* SRRefreshView.m */,
+				62956F941D74402500A44B0E /* SRSlimeView.h */,
+				62956F951D74402500A44B0E /* SRSlimeView.m */,
+			);
+			path = SlimeRefresh;
+			sourceTree = "<group>";
+		};
+		62956F9A1D7446DB00A44B0E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				62956F9B1D7446F500A44B0E /* BaseTableViewCell.h */,
+				62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		62998FF71D3C818F005B2914 = {
 			isa = PBXGroup;
 			children = (
@@ -1233,6 +1295,7 @@
 				6299904D1D3C8485005B2914 /* LZContactsViewController.m */,
 				6299994F1D3CD25D005B2914 /* LZContactsViewCell.h */,
 				629999501D3CD25D005B2914 /* LZContactsViewCell.m */,
+				62956F841D7434B200A44B0E /* Group */,
 				6299993C1D3CC3C3005B2914 /* FriendApply */,
 				629999A61D3D16EF005B2914 /* Apply */,
 			);
@@ -1423,17 +1486,9 @@
 		6299958F1D3C885A005B2914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				629995901D3C885A005B2914 /* 3rdparty */,
 				629995941D3C885A005B2914 /* libHyphenateFullSDK.a */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		629995901D3C885A005B2914 /* 3rdparty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 3rdparty;
 			sourceTree = "<group>";
 		};
 		629995991D3C887C005B2914 /* EaseUI */ = {
@@ -1463,6 +1518,7 @@
 		6299959D1D3C887C005B2914 /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
+				62956F8E1D74402500A44B0E /* SlimeRefresh */,
 				62C555ED1D420C3A0065C7BF /* MWPhotoBrowser */,
 				6299959E1D3C887C005B2914 /* DeviceHelper */,
 			);
@@ -2041,6 +2097,7 @@
 		629998161D3CB21A005B2914 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				62956F9A1D7446DB00A44B0E /* TableViewCell */,
 				623ED6761D4D154E00109C40 /* Button */,
 				629999A21D3D14F1005B2914 /* AlertView */,
 				629999981D3D08B9005B2914 /* BadgeView */,
@@ -2645,6 +2702,7 @@
 				6299991A1D3CB83F005B2914 /* password.png in Resources */,
 				629999231D3CB83F005B2914 /* group_header@2x.png in Resources */,
 				629999331D3CB83F005B2914 /* tabbar_contactsHL@2x.png in Resources */,
+				62956F961D74402500A44B0E /* sr_refresh.png in Resources */,
 				6299993B1D3CB83F005B2914 /* tabbarSelectBg@2x.png in Resources */,
 				629999001D3CB83F005B2914 /* icon_013.gif in Resources */,
 				629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */,
@@ -2703,6 +2761,7 @@
 				629999191D3CB83F005B2914 /* account@2x.png in Resources */,
 				6299992C1D3CB83F005B2914 /* tabbar_chats.png in Resources */,
 				62C5566C1D420C3A0065C7BF /* MWPhotoBrowser.bundle in Resources */,
+				62956F971D74402500A44B0E /* sr_refresh@2X.png in Resources */,
 				629998D91D3CB83F005B2914 /* call_silence@2x.png in Resources */,
 				6299990B1D3CB83F005B2914 /* icon_022_cover.png in Resources */,
 				629999311D3CB83F005B2914 /* tabbar_contacts@2x.png in Resources */,
@@ -2855,10 +2914,12 @@
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
 				62C556631D420C3A0065C7BF /* PSTCollectionViewData.m in Sources */,
 				629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */,
+				62956F991D74402500A44B0E /* SRSlimeView.m in Sources */,
 				62C556491D420C3A0065C7BF /* MWPhoto.m in Sources */,
 				629997301D3C887D005B2914 /* EaseFaceView.m in Sources */,
 				62C555EA1D41CAE30065C7BF /* LZPictureBrowserCell.m in Sources */,
 				629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */,
+				62956F981D74402500A44B0E /* SRRefreshView.m in Sources */,
 				629997C51D3CA72F005B2914 /* NSString+MLLabel.m in Sources */,
 				629997121D3C887D005B2914 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				629997131D3C887D005B2914 /* EaseMessageReadManager.m in Sources */,
@@ -2880,6 +2941,7 @@
 				629997261D3C887D005B2914 /* EaseBubbleView+Image.m in Sources */,
 				6299970B1D3C887D005B2914 /* EaseUserModel.m in Sources */,
 				629997211D3C887D005B2914 /* EaseCustomMessageCell.m in Sources */,
+				62956F871D7434DF00A44B0E /* LZGroupsViewController.m in Sources */,
 				6299980F1D3CB1F1005B2914 /* TZImageManager.m in Sources */,
 				629990511D3C8499005B2914 /* LZMeViewController.m in Sources */,
 				629999451D3CC467005B2914 /* UIBarButtonItem+Extension.m in Sources */,
@@ -2912,6 +2974,7 @@
 				6299972C1D3C887D005B2914 /* EaseChatToolbar.m in Sources */,
 				629997CC1D3CA72F005B2914 /* MLLinkLabel.m in Sources */,
 				629997921D3CA62F005B2914 /* LZPhotoContainerView.m in Sources */,
+				62956F8B1D74361500A44B0E /* LZCreateGroupViewController.m in Sources */,
 				62C555E71D41CAE30065C7BF /* LZBroadcastViewCell.m in Sources */,
 				629997C71D3CA72F005B2914 /* MLTextAttachment.m in Sources */,
 				629997C31D3CA72F005B2914 /* NSAttributedString+MLLabel.m in Sources */,
@@ -2952,6 +3015,7 @@
 				6299971B1D3C887D005B2914 /* EaseMessageViewController.m in Sources */,
 				6274FA841D439A72006C6B7E /* MBProgressHUD+Add.m in Sources */,
 				629997971D3CA62F005B2914 /* DFPlainGridImageView.m in Sources */,
+				62956F9D1D7446F500A44B0E /* BaseTableViewCell.m in Sources */,
 				629996C21D3C887D005B2914 /* EMCDDeviceManager+Media.m in Sources */,
 				62C556681D420C3A0065C7BF /* PSTGridLayoutInfo.m in Sources */,
 				6299978B1D3CA62F005B2914 /* LZMomentsCellLikeHeaderFooterView.m in Sources */,

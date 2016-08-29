@@ -12,6 +12,7 @@
 #import "LZChatViewController.h"
 #import "LZApplyViewController.h"
 #import "LZApplyUserModel.h"
+#import "LZGroupsViewController.h"
 
 static LZContactsViewController *controller = nil;
 
@@ -158,7 +159,7 @@ static LZContactsViewController *controller = nil;
                 break;
                 
             case 1:
-//                [self.navigationController pushViewController:[[LZGroupViewController alloc] init] animated:YES];
+                [self.navigationController pushViewController:[[LZGroupsViewController alloc] init] animated:YES];
                 
                 break;
         }
