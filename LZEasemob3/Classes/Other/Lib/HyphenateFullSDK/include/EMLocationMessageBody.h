@@ -30,7 +30,7 @@
  *  纬度
  *
  *  \~english
- *  Latitude
+ *  Location latitude
  */
 @property (nonatomic) double latitude;
 
@@ -39,7 +39,7 @@
  *  经度
  *
  *  \~english
- *  Longitude
+ *  Loctaion longitude
  */
 @property (nonatomic) double longitude;
 
@@ -63,7 +63,7 @@
  *  @result 位置消息体实例
  *
  *  \~english
- *  Initialize location message body instance
+ *  Initialize a location message body instance
  *
  *  @param aLatitude   Latitude
  *  @param aLongitude  Longitude

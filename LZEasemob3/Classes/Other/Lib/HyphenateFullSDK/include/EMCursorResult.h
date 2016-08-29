@@ -56,7 +56,7 @@
  *  @param aList    Result list<id>
  *  @param aCusror  The cursor of next section
  *
- *  @result Instance of cursor result
+ *  @result An instance of cursor result
  */
 + (instancetype)cursorResultWithList:(NSArray *)aList
                            andCursor:(NSString *)aCusror;

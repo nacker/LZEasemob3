@@ -29,9 +29,6 @@
 		629990541D3C84C9005B2914 /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990531D3C84C9005B2914 /* LZNavigationController.m */; };
 		6299905A1D3C8525005B2914 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990591D3C8525005B2914 /* UIImage+Extension.m */; };
 		6299905D1D3C8608005B2914 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299905C1D3C8608005B2914 /* LZLoginViewController.m */; };
-		629995951D3C885A005B2914 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995911D3C885A005B2914 /* libcrypto.a */; };
-		629995961D3C885A005B2914 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995921D3C885A005B2914 /* libcurl.a */; };
-		629995971D3C885A005B2914 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995931D3C885A005B2914 /* libssl.a */; };
 		629995981D3C885A005B2914 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995941D3C885A005B2914 /* libHyphenateFullSDK.a */; };
 		629996BF1D3C887D005B2914 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299959B1D3C887C005B2914 /* EaseUI.m */; };
 		629996C01D3C887D005B2914 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 629995A51D3C887C005B2914 /* EMAudioPlayerUtil.m */; };
@@ -483,9 +480,6 @@
 		6299958C1D3C885A005B2914 /* IEMContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMContactManager.h; sourceTree = "<group>"; };
 		6299958D1D3C885A005B2914 /* IEMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMGroupManager.h; sourceTree = "<group>"; };
 		6299958E1D3C885A005B2914 /* OpenGLView20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView20.h; sourceTree = "<group>"; };
-		629995911D3C885A005B2914 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		629995921D3C885A005B2914 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
-		629995931D3C885A005B2914 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		629995941D3C885A005B2914 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		6299959A1D3C887C005B2914 /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		6299959B1D3C887C005B2914 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
@@ -1048,12 +1042,9 @@
 				6299973B1D3C89C5005B2914 /* AVFoundation.framework in Frameworks */,
 				629997391D3C89BE005B2914 /* AudioToolbox.framework in Frameworks */,
 				629997371D3C89AD005B2914 /* CoreMedia.framework in Frameworks */,
-				629995971D3C885A005B2914 /* libssl.a in Frameworks */,
-				629995961D3C885A005B2914 /* libcurl.a in Frameworks */,
 				629995981D3C885A005B2914 /* libHyphenateFullSDK.a in Frameworks */,
 				629996CA1D3C887D005B2914 /* libopencore-amrnb.a in Frameworks */,
 				629996CB1D3C887D005B2914 /* libopencore-amrwb.a in Frameworks */,
-				629995951D3C885A005B2914 /* libcrypto.a in Frameworks */,
 				C52A389CECE49757B28AA2B0 /* Pods_LZEasemob3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1441,9 +1432,6 @@
 		629995901D3C885A005B2914 /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
-				629995911D3C885A005B2914 /* libcrypto.a */,
-				629995921D3C885A005B2914 /* libcurl.a */,
-				629995931D3C885A005B2914 /* libssl.a */,
 			);
 			path = 3rdparty;
 			sourceTree = "<group>";
@@ -3165,6 +3153,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3179,7 +3168,7 @@
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3194,6 +3183,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3208,7 +3198,7 @@
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

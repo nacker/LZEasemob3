@@ -27,7 +27,7 @@
 typedef enum{
     EMGroupStylePrivateOnlyOwnerInvite  = 0,    /*! \~chinese 私有群组，只允许Owner邀请用户加入 \~english Private groups, only owner can invite users to join */
     EMGroupStylePrivateMemberCanInvite,         /*! \~chinese 私有群组，Owner和群成员均可邀请用户加入 \~english Private groups, both owner and members can invite users to join  */
-    EMGroupStylePublicJoinNeedApproval,         /*! \~chinese 公开群组，Owner可以邀请用户加入; 非群成员用户发送入群申请，经Owner同意后才能入组 \~english Public groups, owner can invite users to join; User can join group after owner accept user's application */
+    EMGroupStylePublicJoinNeedApproval,         /*! \~chinese 公开群组，Owner可以邀请用户加入; 非群成员用户发送入群申请，经Owner同意后才能入组 \~english Public groups, owner can invite users to join; User can join group after owner approves user's group request */
     EMGroupStylePublicOpenJoin,                 /*! \~chinese 公开群组，用户可以自由加入 \~english Public groups, user can join the group freely */
 }EMGroupStyle;
 
@@ -54,7 +54,7 @@ typedef enum{
  *  群组的最大成员数(3 - 2000，默认是200)
  *
  *  \~english
- *  The maximum number of group member(3-2000, the default is 200)
+ *  The group capacity (3-2000, the default is 200)
  */
 @property (nonatomic) NSInteger maxUsersCount;
 

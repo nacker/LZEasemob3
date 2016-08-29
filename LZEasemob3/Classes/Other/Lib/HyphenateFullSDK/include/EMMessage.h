@@ -24,9 +24,9 @@
  *  Chat type
  */
 typedef enum{
-    EMChatTypeChat   = 0,   /*! \~chinese 单聊消息 \~english Chat */
-    EMChatTypeGroupChat,    /*! \~chinese 群聊消息 \~english Group chat */
-    EMChatTypeChatRoom,     /*! \~chinese 聊天室消息 \~english Chatroom chat */
+    EMChatTypeChat   = 0,   /*! \~chinese 单聊消息 \~english one to one chat type */
+    EMChatTypeGroupChat,    /*! \~chinese 群聊消息 \~english Group chat type */
+    EMChatTypeChatRoom,     /*! \~chinese 聊天室消息 \~english Chatroom chat type */
 }EMChatType;
 
 /*!
@@ -96,7 +96,7 @@ typedef enum{
  *  发送方
  *
  *  \~english
- *  The sender
+ *  Message sender
  */
 @property (nonatomic, copy) NSString *from;
 
@@ -105,7 +105,7 @@ typedef enum{
  *  接收方
  *
  *  \~english
- *  The receiver
+ *  Message receiver
  */
 @property (nonatomic, copy) NSString *to;
 
@@ -123,7 +123,7 @@ typedef enum{
  *  客户端发送/收到此消息的时间
  *
  *  \~english
- *  The time of client send/received this message
+ *  The time of client send/receive the message
  */
 @property (nonatomic) long long localTime;
 
@@ -150,7 +150,7 @@ typedef enum{
  *  已读回执是否已发送/收到, 对于发送方表示是否已经收到已读回执，对于接收方表示是否已经发送已读回执
  *
  *  \~english
- *  Whether read ack has been sent or received, it indicates whether has received read ack for sender, and whether has send read ack for receiver
+ *  Whether read acknowledgement has been sent or received, it indicates whether the sender has received a message read acknowledgement, or whether the recipient has sent a message read acknowledgement
  */
 @property (nonatomic) BOOL isReadAcked;
 
@@ -159,7 +159,7 @@ typedef enum{
  *  送达回执是否已发送/收到，对于发送方表示是否已经收到送达回执，对于接收方表示是否已经发送送达回执，如果EMOptions设置了enableDeliveryAck，SDK收到消息后会自动发送送达回执
  *
  *  \~english
- *  Whether delivery ack has been sent or received, it indicates whether has received delivery ack for send, and whether has send delivery ack for receiver, SDK will automatically send delivery ack if EMOptions has set enableDeliveryAck
+ *  Whether delivery acknowledgement has been sent or received, it indicates whether the sender has received a message deliver acknowledgement, or whether the recipient has sent a message deliver acknowledgement, SDK will automatically send delivery acknowledgement if EMOptions is set to enableDeliveryAck
  */
 @property (nonatomic) BOOL isDeliverAcked;
 
@@ -190,7 +190,7 @@ typedef enum{
  *  \~english
  *  Message extention
  *
- *  Key type must be NSString, Value type must be NSString or NSNumber of BOOL, int, unsigned in, long long, double.
+ *  Key type must be NSString, Value type must be NSString, int, unsigned in, long long, or double. Please use NSNumber (@YES or @NO) instead of BOOL.
  */
 @property (nonatomic, copy) NSDictionary *ext;
 
@@ -207,7 +207,7 @@ typedef enum{
  *  @result 消息实例
  *
  *  \~english
- *  Initialize message instance
+ *  Initialize a message instance
  *
  *  @param aConversationId  Conversation id
  *  @param aFrom            The sender

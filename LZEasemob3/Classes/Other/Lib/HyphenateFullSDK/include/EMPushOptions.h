@@ -7,7 +7,7 @@
  *
  *  \~english
  *  @header EMPushOptions.h
- *  @abstract Setting options of Apple APNS
+ *  @abstract Setting options of Apple Push Notification
  *  @author Hyphenate
  *  @version 3.00
  */
@@ -51,7 +51,7 @@ typedef enum{
  *  推送免打扰设置的状态
  *
  *  \~english 
- *  Status of APNS no-disturb setting
+ *  Status of Push Notification no-disturb setting
  */
 typedef enum{
     EMPushNoDisturbStatusDay = 0,   /*! \~chinese 全天免打扰 \~english The whole day */
@@ -64,7 +64,7 @@ typedef enum{
  *  消息推送的设置选项
  *
  *  \~english 
- *  Apple APNS setting options
+ *  Apple Push Notification setting options
  */
 @interface EMPushOptions : NSObject
 
@@ -73,16 +73,17 @@ typedef enum{
  *  推送消息显示的昵称
  *
  *  \~english 
- *  Nick name to show for push message
+ *  User's nickname to be displayed in apple push notification service messages
  */
-@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, copy) NSString *nickname __deprecated_msg("Use - displayName");
+@property (nonatomic, copy) NSString *displayName;
 
 /*!
  *  \~chinese 
  *  推送消息显示的类型
  *
  *  \~english 
- *  Display style of push message
+ *  Display style of notification message
  */
 @property (nonatomic) EMPushDisplayStyle displayStyle;
 
@@ -91,7 +92,7 @@ typedef enum{
  *  消息推送的免打扰设置
  *
  *  \~english 
- *  No-disturb setting of push message
+ *  No disturbing setting of notification message
  */
 @property (nonatomic) EMPushNoDisturbStatus noDisturbStatus;
 
@@ -100,7 +101,7 @@ typedef enum{
  *  消息推送免打扰开始时间，小时，暂时只支持整点（小时）
  *
  *  \~english 
- *  No-disturn mode start time, only supports hour
+ *  No disturbing mode start time (in hour)
  */
 @property (nonatomic) NSInteger noDisturbingStartH;
 
@@ -109,7 +110,7 @@ typedef enum{
  *  消息推送免打扰结束时间，小时，暂时只支持整点（小时）
  *
  *  \~english 
- *  No-disturn mode end time, only supports hour
+ *  No disturbing mode end time (in hour)
  */
 @property (nonatomic) NSInteger noDisturbingEndH;
 

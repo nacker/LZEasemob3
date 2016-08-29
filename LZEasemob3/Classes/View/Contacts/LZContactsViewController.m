@@ -274,15 +274,28 @@ static LZContactsViewController *controller = nil;
 //    [alert show];
 }
 
+/*!
+ *  用户A发送加用户B为好友的申请，用户B会收到这个回调
+ *
+ *  @param aUsername   用户名
+ *  @param aMessage    附属信息
+ */
 - (void)didReceiveFriendInvitationFromUsername:(NSString *)aUsername
                                        message:(NSString *)aMessage
 {
     KLog(@"%@",aUsername);
     
-    LZApplyUserModel *user = [[LZApplyUserModel alloc] init];
-    user.name = aUsername;
-    user.apply = NO;
-    [user save];
+    LZApplyUserModel *obj = [LZApplyUserModel findFirstByCriteria:aUsername];
+    
+    if (obj == nil) {
+        LZApplyUserModel *user = [[LZApplyUserModel alloc] init];
+        user.name = aUsername;
+        user.apply = NO;
+        [user save];
+    }else {
+        obj.apply = NO;
+        [obj update];
+    }
     
     [self showTabBarBadge];
 }
@@ -293,6 +306,8 @@ static LZContactsViewController *controller = nil;
     
     if (totalUnreadCount > 0) {
         self.unapplyCount = totalUnreadCount;
+    }else {
+        self.unapplyCount = 0;
     }
 
     if (totalUnreadCount == 0) {
@@ -304,6 +319,8 @@ static LZContactsViewController *controller = nil;
             self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%ld",(long)totalUnreadCount];
         }
     }
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - 懒加载

@@ -57,7 +57,7 @@
  *  缩略图的密钥, 下载缩略图时需要密匙做校验
  *
  *  \~english
- *  Secret key of thumbnail, need verify secret key when download thumbnail
+ *  Secret key of thumbnail, required to download a thumbnail
  */
 @property (nonatomic, copy) NSString *thumbnailSecretKey;
 
