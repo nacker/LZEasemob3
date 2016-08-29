@@ -2,9 +2,12 @@
 ==================
 
 ###告示(Notices):
-	1.LZEasemob3 works on "Xcode 7.3.1 , iOS 7+ and requires ARC to build. 
-	2.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
-	2.有谁想为开源贡献自己的一份力量的单独联系我.我会在文档加入你的名字.期待你哟!!!
+	1.LZEasemob3 works on "Xcode 7.3.1 , iOS 8+ and requires ARC to build. 
+	2.如果无法运行项目,请把Xcode 升级为7.3.1版本以上,ios8.0以上,cocoapods版本最好在0.39.0,最好不要用测试版,二哥亲测是没有问题的.
+	3.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
+	4.有谁想为开源贡献自己的一份力量的单独联系我.我会在文档加入你的名字.期待你哟!!!
+	
+	5.谢谢大家一直以来的关注,二哥这段时间太忙所以更新比较慢,大家觉得好的话请推荐给你的朋友们.为感谢大家二哥在STAR 1000前一定把群聊功能加上,请大家继续关注.
 	
 ###安装方式(Installation Method)
 * First step
@@ -44,6 +47,14 @@
 ### 0.测试账号
 	nacker 123456
 	h18    123456
+	j20    123456
+	j25    123456
+	t17    123456
+	o22    123456
+	k5     123456
+	y21    123456
+	i9     123456
+	g14    123456
 
 ### 1.采用技术点
 * pod用于第三方库的管理
@@ -69,7 +80,7 @@
 ### 2.已经实现功能
 * 微信首页（列表数据展示、cell侧滑编辑、点击进入聊天详情界面、发送文字图片和语音）
 
-* 通讯录（联系人字母排序、添加联系人）
+* 通讯录（联系人字母排序、添加联系人、群组列表）
 
 * 发现（朋友圈、下拉刷新、朋友圈点赞功能）
 
@@ -113,6 +124,12 @@
 ![LZEasemob3 in action](./image/LZ4.gif)
 
 ##--------------------版本更新记录-------------------
+###V1.0.4 (2016.8.29)
+1. 解决添加好友逻辑BUG
+2. 增加群组列表
+
+![LZEasemob3 in action](./image/groupList.gif) 
+
 ###V1.0.3 (2016.7.31)
 1. 朋友圈点赞功能 
 2. 增加摇一摇功能(真机上可用)
