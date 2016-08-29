@@ -59,7 +59,7 @@
 ### 1.采用技术点
 * pod用于第三方库的管理
 
-* 环信SDK(V3.1.4 2016-07-08)作为此APP DEMO的IM功能
+* 环信SDK(V3.1.5 2016-08-26)作为此APP DEMO的IM功能
 
 * Masonry用于界面布局
 
@@ -127,6 +127,7 @@
 ###V1.0.4 (2016.8.29)
 1. 解决添加好友逻辑BUG
 2. 增加群组列表
+3. 更新环信SDKV3.1.5 2016-08-26
 
 ![LZEasemob3 in action](./image/groupList.gif) 
 
