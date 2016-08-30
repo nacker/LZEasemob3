@@ -79,4 +79,15 @@ static MBProgressHUD *_hud;
 {
     [_hud hide:YES];
 }
+
+
+//  Add by Sunxb
++ (void)showTipMessageOnly:(NSString *)_text toView:(UIView *)_view hiddenAfterDelay:(CGFloat)_time {
+    _hud = [self showMessage:_text toView:_view];
+    _hud.mode = MBProgressHUDModeText;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(_time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_hud hide:YES];
+    });
+}
+
 @end

@@ -21,4 +21,6 @@
 
 + (void)hideHUDForView:(UIView *)view;
 + (void)hideHUD;
+
++ (void)showTipMessageOnly:(NSString *)_text toView:(UIView *)_view hiddenAfterDelay:(CGFloat)_time;
 @end

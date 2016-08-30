@@ -61,8 +61,10 @@
             
         } else {
             [MBProgressHUD hideHUD];
-            
-            [MBProgressHUD showError:@"登录失败"];
+            //FIXME
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD showTipMessageOnly:@"登录失败" toView:self.view hiddenAfterDelay:2.0];
+            });
             KLog(@"---登录失败%u",error.code);
             
         }
