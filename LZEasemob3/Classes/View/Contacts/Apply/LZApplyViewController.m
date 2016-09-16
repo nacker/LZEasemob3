@@ -122,10 +122,8 @@ static LZApplyViewController *controller = nil;
     EMError *error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:obj.name];
     if (!error) {
         KLog(@"发送同意成功");
-        
         obj.apply = YES;
         [obj update];
-        
         [self.tableView reloadData];
     }
 }
@@ -133,10 +131,11 @@ static LZApplyViewController *controller = nil;
 #pragma mark - 拒绝
 - (void)applyCellRefuseFriendAtIndexPath:(NSIndexPath *)indexPath
 {
-    LZApplyUserModel *status = _dataSource[indexPath.row];
-    EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:status.name];
+    LZApplyUserModel *obj = _dataSource[indexPath.row];
+    EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:obj.name];
     if (!error) {
         KLog(@"发送拒绝成功");
+        [self.tableView reloadData];
     }
 }
 

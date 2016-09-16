@@ -29,7 +29,7 @@ typedef enum{
     EMMessageBodyTypeLocation,      /*! \~chinese 位置类型 \~english Location */
     EMMessageBodyTypeVoice,         /*! \~chinese 语音类型 \~english Voice */
     EMMessageBodyTypeFile,          /*! \~chinese 文件类型 \~english File */
-    EMMessageBodyTypeCmd,           /*! \~chinese 命令类型 \~english Cmd */
+    EMMessageBodyTypeCmd,           /*! \~chinese 命令类型 \~english Command */
 }EMMessageBodyType;
 
 /*!

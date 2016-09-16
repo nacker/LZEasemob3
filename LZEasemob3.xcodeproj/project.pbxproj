@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3434EDD879A3FB5028FC2C6D /* Pods_LZEasemob3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E789D125B25D09F1A5ABF135 /* Pods_LZEasemob3Tests.framework */; };
 		623ED6701D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 623ED6651D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg */; };
 		623ED6711D4D148600109C40 /* LZShakeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 623ED6691D4D148600109C40 /* LZShakeBottomView.m */; };
 		623ED6721D4D148600109C40 /* LZShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 623ED66B1D4D148600109C40 /* LZShakeViewController.m */; };
@@ -17,6 +18,13 @@
 		6274FA841D439A72006C6B7E /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA801D439A72006C6B7E /* MBProgressHUD+Add.m */; };
 		6274FA851D439A72006C6B7E /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */; };
 		6274FA861D439A72006C6B7E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6274FA831D439A72006C6B7E /* MBProgressHUD.m */; };
+		62956F871D7434DF00A44B0E /* LZGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F861D7434DF00A44B0E /* LZGroupsViewController.m */; };
+		62956F8B1D74361500A44B0E /* LZCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */; };
+		62956F961D74402500A44B0E /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 62956F8F1D74402500A44B0E /* sr_refresh.png */; };
+		62956F971D74402500A44B0E /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 62956F901D74402500A44B0E /* sr_refresh@2X.png */; };
+		62956F981D74402500A44B0E /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F931D74402500A44B0E /* SRRefreshView.m */; };
+		62956F991D74402500A44B0E /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F951D74402500A44B0E /* SRSlimeView.m */; };
+		62956F9D1D7446F500A44B0E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */; };
 		629990051D3C818F005B2914 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990041D3C818F005B2914 /* main.m */; };
 		629990081D3C818F005B2914 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990071D3C818F005B2914 /* AppDelegate.m */; };
 		629990101D3C818F005B2914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6299900F1D3C818F005B2914 /* Assets.xcassets */; };
@@ -29,9 +37,6 @@
 		629990541D3C84C9005B2914 /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990531D3C84C9005B2914 /* LZNavigationController.m */; };
 		6299905A1D3C8525005B2914 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 629990591D3C8525005B2914 /* UIImage+Extension.m */; };
 		6299905D1D3C8608005B2914 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299905C1D3C8608005B2914 /* LZLoginViewController.m */; };
-		629995951D3C885A005B2914 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995911D3C885A005B2914 /* libcrypto.a */; };
-		629995961D3C885A005B2914 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995921D3C885A005B2914 /* libcurl.a */; };
-		629995971D3C885A005B2914 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995931D3C885A005B2914 /* libssl.a */; };
 		629995981D3C885A005B2914 /* libHyphenateFullSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 629995941D3C885A005B2914 /* libHyphenateFullSDK.a */; };
 		629996BF1D3C887D005B2914 /* EaseUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 6299959B1D3C887C005B2914 /* EaseUI.m */; };
 		629996C01D3C887D005B2914 /* EMAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 629995A51D3C887C005B2914 /* EMAudioPlayerUtil.m */; };
@@ -379,6 +384,7 @@
 		62C5566B1D420C3A0065C7BF /* PSTGridLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 62C556441D420C3A0065C7BF /* PSTGridLayoutSection.m */; };
 		62C5566C1D420C3A0065C7BF /* MWPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62C556451D420C3A0065C7BF /* MWPhotoBrowser.bundle */; };
 		62DADC621D43017A00698239 /* UIAlertView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DADC611D43017A00698239 /* UIAlertView+Extension.m */; };
+		A6DBD9F0F35B17407FF7511F /* Pods_LZEasemob3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA5DE00BF2E45012F8F3B20 /* Pods_LZEasemob3UITests.framework */; };
 		C52A389CECE49757B28AA2B0 /* Pods_LZEasemob3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 596D990EE4946E3E114957F2 /* Pods_LZEasemob3.framework */; };
 /* End PBXBuildFile section */
 
@@ -400,6 +406,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A03C5C83645821CE73755E1 /* Pods-LZEasemob3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3UITests/Pods-LZEasemob3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		596D990EE4946E3E114957F2 /* Pods_LZEasemob3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZEasemob3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		623ED6651D4D148600109C40 /* AlbumHeaderBackgrounImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlbumHeaderBackgrounImage.jpg; sourceTree = "<group>"; };
 		623ED6661D4D148600109C40 /* LZFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFoundationMacro.h; sourceTree = "<group>"; };
@@ -417,6 +424,19 @@
 		6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		6274FA821D439A72006C6B7E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6274FA831D439A72006C6B7E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		62956F851D7434DF00A44B0E /* LZGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGroupsViewController.h; sourceTree = "<group>"; };
+		62956F861D7434DF00A44B0E /* LZGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGroupsViewController.m; sourceTree = "<group>"; };
+		62956F891D74361500A44B0E /* LZCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCreateGroupViewController.h; sourceTree = "<group>"; };
+		62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCreateGroupViewController.m; sourceTree = "<group>"; };
+		62956F8F1D74402500A44B0E /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
+		62956F901D74402500A44B0E /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
+		62956F911D74402500A44B0E /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
+		62956F921D74402500A44B0E /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
+		62956F931D74402500A44B0E /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
+		62956F941D74402500A44B0E /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
+		62956F951D74402500A44B0E /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
+		62956F9B1D7446F500A44B0E /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		629990001D3C818F005B2914 /* LZEasemob3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZEasemob3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629990041D3C818F005B2914 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		629990061D3C818F005B2914 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -483,9 +503,6 @@
 		6299958C1D3C885A005B2914 /* IEMContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMContactManager.h; sourceTree = "<group>"; };
 		6299958D1D3C885A005B2914 /* IEMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMGroupManager.h; sourceTree = "<group>"; };
 		6299958E1D3C885A005B2914 /* OpenGLView20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView20.h; sourceTree = "<group>"; };
-		629995911D3C885A005B2914 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		629995921D3C885A005B2914 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
-		629995931D3C885A005B2914 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		629995941D3C885A005B2914 /* libHyphenateFullSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateFullSDK.a; sourceTree = "<group>"; };
 		6299959A1D3C887C005B2914 /* EaseUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EaseUI.h; sourceTree = "<group>"; };
 		6299959B1D3C887C005B2914 /* EaseUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EaseUI.m; sourceTree = "<group>"; };
@@ -1015,6 +1032,11 @@
 		62DADC611D43017A00698239 /* UIAlertView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extension.m"; sourceTree = "<group>"; };
 		643E0FF502B716E165B89C28 /* Pods-LZEasemob3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.debug.xcconfig"; sourceTree = "<group>"; };
 		66C8AD67407B91480E894F26 /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
+		7EA5DE00BF2E45012F8F3B20 /* Pods_LZEasemob3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZEasemob3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980EFC3E370F26D5848B31D6 /* Pods-LZEasemob3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC8F54D4DBDB664798D5B714 /* Pods-LZEasemob3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3UITests/Pods-LZEasemob3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1DCC0663473C35C36D23488 /* Pods-LZEasemob3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E789D125B25D09F1A5ABF135 /* Pods_LZEasemob3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZEasemob3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1048,12 +1070,9 @@
 				6299973B1D3C89C5005B2914 /* AVFoundation.framework in Frameworks */,
 				629997391D3C89BE005B2914 /* AudioToolbox.framework in Frameworks */,
 				629997371D3C89AD005B2914 /* CoreMedia.framework in Frameworks */,
-				629995971D3C885A005B2914 /* libssl.a in Frameworks */,
-				629995961D3C885A005B2914 /* libcurl.a in Frameworks */,
 				629995981D3C885A005B2914 /* libHyphenateFullSDK.a in Frameworks */,
 				629996CA1D3C887D005B2914 /* libopencore-amrnb.a in Frameworks */,
 				629996CB1D3C887D005B2914 /* libopencore-amrwb.a in Frameworks */,
-				629995951D3C885A005B2914 /* libcrypto.a in Frameworks */,
 				C52A389CECE49757B28AA2B0 /* Pods_LZEasemob3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1062,6 +1081,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3434EDD879A3FB5028FC2C6D /* Pods_LZEasemob3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1069,6 +1089,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6DBD9F0F35B17407FF7511F /* Pods_LZEasemob3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,6 +1101,10 @@
 			children = (
 				643E0FF502B716E165B89C28 /* Pods-LZEasemob3.debug.xcconfig */,
 				66C8AD67407B91480E894F26 /* Pods-LZEasemob3.release.xcconfig */,
+				980EFC3E370F26D5848B31D6 /* Pods-LZEasemob3Tests.debug.xcconfig */,
+				C1DCC0663473C35C36D23488 /* Pods-LZEasemob3Tests.release.xcconfig */,
+				BC8F54D4DBDB664798D5B714 /* Pods-LZEasemob3UITests.debug.xcconfig */,
+				2A03C5C83645821CE73755E1 /* Pods-LZEasemob3UITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1119,6 +1144,48 @@
 				6274FA831D439A72006C6B7E /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		62956F841D7434B200A44B0E /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				62956F851D7434DF00A44B0E /* LZGroupsViewController.h */,
+				62956F861D7434DF00A44B0E /* LZGroupsViewController.m */,
+				62956F881D74360200A44B0E /* AddGroup */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		62956F881D74360200A44B0E /* AddGroup */ = {
+			isa = PBXGroup;
+			children = (
+				62956F891D74361500A44B0E /* LZCreateGroupViewController.h */,
+				62956F8A1D74361500A44B0E /* LZCreateGroupViewController.m */,
+			);
+			path = AddGroup;
+			sourceTree = "<group>";
+		};
+		62956F8E1D74402500A44B0E /* SlimeRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				62956F8F1D74402500A44B0E /* sr_refresh.png */,
+				62956F901D74402500A44B0E /* sr_refresh@2X.png */,
+				62956F911D74402500A44B0E /* SRDefine.h */,
+				62956F921D74402500A44B0E /* SRRefreshView.h */,
+				62956F931D74402500A44B0E /* SRRefreshView.m */,
+				62956F941D74402500A44B0E /* SRSlimeView.h */,
+				62956F951D74402500A44B0E /* SRSlimeView.m */,
+			);
+			path = SlimeRefresh;
+			sourceTree = "<group>";
+		};
+		62956F9A1D7446DB00A44B0E /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				62956F9B1D7446F500A44B0E /* BaseTableViewCell.h */,
+				62956F9C1D7446F500A44B0E /* BaseTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		62998FF71D3C818F005B2914 = {
@@ -1242,6 +1309,7 @@
 				6299904D1D3C8485005B2914 /* LZContactsViewController.m */,
 				6299994F1D3CD25D005B2914 /* LZContactsViewCell.h */,
 				629999501D3CD25D005B2914 /* LZContactsViewCell.m */,
+				62956F841D7434B200A44B0E /* Group */,
 				6299993C1D3CC3C3005B2914 /* FriendApply */,
 				629999A61D3D16EF005B2914 /* Apply */,
 			);
@@ -1432,20 +1500,9 @@
 		6299958F1D3C885A005B2914 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				629995901D3C885A005B2914 /* 3rdparty */,
 				629995941D3C885A005B2914 /* libHyphenateFullSDK.a */,
 			);
 			path = lib;
-			sourceTree = "<group>";
-		};
-		629995901D3C885A005B2914 /* 3rdparty */ = {
-			isa = PBXGroup;
-			children = (
-				629995911D3C885A005B2914 /* libcrypto.a */,
-				629995921D3C885A005B2914 /* libcurl.a */,
-				629995931D3C885A005B2914 /* libssl.a */,
-			);
-			path = 3rdparty;
 			sourceTree = "<group>";
 		};
 		629995991D3C887C005B2914 /* EaseUI */ = {
@@ -1475,6 +1532,7 @@
 		6299959D1D3C887C005B2914 /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
+				62956F8E1D74402500A44B0E /* SlimeRefresh */,
 				62C555ED1D420C3A0065C7BF /* MWPhotoBrowser */,
 				6299959E1D3C887C005B2914 /* DeviceHelper */,
 			);
@@ -1822,6 +1880,8 @@
 				629997381D3C89BE005B2914 /* AudioToolbox.framework */,
 				629997361D3C89AD005B2914 /* CoreMedia.framework */,
 				596D990EE4946E3E114957F2 /* Pods_LZEasemob3.framework */,
+				E789D125B25D09F1A5ABF135 /* Pods_LZEasemob3Tests.framework */,
+				7EA5DE00BF2E45012F8F3B20 /* Pods_LZEasemob3UITests.framework */,
 			);
 			name = Frameworks;
 			path = LZEasemob3;
@@ -2053,6 +2113,7 @@
 		629998161D3CB21A005B2914 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				62956F9A1D7446DB00A44B0E /* TableViewCell */,
 				623ED6761D4D154E00109C40 /* Button */,
 				629999A21D3D14F1005B2914 /* AlertView */,
 				629999981D3D08B9005B2914 /* BadgeView */,
@@ -2494,12 +2555,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6299902D1D3C818F005B2914 /* Build configuration list for PBXNativeTarget "LZEasemob3" */;
 			buildPhases = (
-				126317C8A091AF2C2C98AE7C /* Check Pods Manifest.lock */,
+				126317C8A091AF2C2C98AE7C /* [CP] Check Pods Manifest.lock */,
 				62998FFC1D3C818F005B2914 /* Sources */,
 				62998FFD1D3C818F005B2914 /* Frameworks */,
 				62998FFE1D3C818F005B2914 /* Resources */,
-				563122E67B6F76E8704E8AAB /* Embed Pods Frameworks */,
-				BBD6DB5D506AAE03C402CC1A /* Copy Pods Resources */,
+				563122E67B6F76E8704E8AAB /* [CP] Embed Pods Frameworks */,
+				BBD6DB5D506AAE03C402CC1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2514,9 +2575,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629990301D3C818F005B2914 /* Build configuration list for PBXNativeTarget "LZEasemob3Tests" */;
 			buildPhases = (
+				75AB53D77DDCF400109CF34C /* [CP] Check Pods Manifest.lock */,
 				629990151D3C818F005B2914 /* Sources */,
 				629990161D3C818F005B2914 /* Frameworks */,
 				629990171D3C818F005B2914 /* Resources */,
+				E4DFB999FDAD7D52F6A3E854 /* [CP] Embed Pods Frameworks */,
+				B07167F0452F6C243570F6CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2532,9 +2596,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 629990331D3C818F005B2914 /* Build configuration list for PBXNativeTarget "LZEasemob3UITests" */;
 			buildPhases = (
+				B7CE8A8C8E14751995587F1E /* [CP] Check Pods Manifest.lock */,
 				629990201D3C818F005B2914 /* Sources */,
 				629990211D3C818F005B2914 /* Frameworks */,
 				629990221D3C818F005B2914 /* Resources */,
+				D229B602FC736E91738F4BDF /* [CP] Embed Pods Frameworks */,
+				D498BA915F6ADC5A5C37122F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2660,6 +2727,7 @@
 				6299991A1D3CB83F005B2914 /* password.png in Resources */,
 				629999231D3CB83F005B2914 /* group_header@2x.png in Resources */,
 				629999331D3CB83F005B2914 /* tabbar_contactsHL@2x.png in Resources */,
+				62956F961D74402500A44B0E /* sr_refresh.png in Resources */,
 				6299993B1D3CB83F005B2914 /* tabbarSelectBg@2x.png in Resources */,
 				629999001D3CB83F005B2914 /* icon_013.gif in Resources */,
 				629999BF1D3DEC74005B2914 /* Localizable.strings in Resources */,
@@ -2718,6 +2786,7 @@
 				629999191D3CB83F005B2914 /* account@2x.png in Resources */,
 				6299992C1D3CB83F005B2914 /* tabbar_chats.png in Resources */,
 				62C5566C1D420C3A0065C7BF /* MWPhotoBrowser.bundle in Resources */,
+				62956F971D74402500A44B0E /* sr_refresh@2X.png in Resources */,
 				629998D91D3CB83F005B2914 /* call_silence@2x.png in Resources */,
 				6299990B1D3CB83F005B2914 /* icon_022_cover.png in Resources */,
 				629999311D3CB83F005B2914 /* tabbar_contacts@2x.png in Resources */,
@@ -2784,29 +2853,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		126317C8A091AF2C2C98AE7C /* Check Pods Manifest.lock */ = {
+		126317C8A091AF2C2C98AE7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		563122E67B6F76E8704E8AAB /* Embed Pods Frameworks */ = {
+		563122E67B6F76E8704E8AAB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2814,19 +2883,109 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBD6DB5D506AAE03C402CC1A /* Copy Pods Resources */ = {
+		75AB53D77DDCF400109CF34C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B07167F0452F6C243570F6CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7CE8A8C8E14751995587F1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBD6DB5D506AAE03C402CC1A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D229B602FC736E91738F4BDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3UITests/Pods-LZEasemob3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D498BA915F6ADC5A5C37122F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3UITests/Pods-LZEasemob3UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4DFB999FDAD7D52F6A3E854 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2870,10 +3029,12 @@
 				629997101D3C887D005B2914 /* UIViewController+HUD.m in Sources */,
 				62C556631D420C3A0065C7BF /* PSTCollectionViewData.m in Sources */,
 				629999A91D3D1706005B2914 /* LZApplyViewController.m in Sources */,
+				62956F991D74402500A44B0E /* SRSlimeView.m in Sources */,
 				62C556491D420C3A0065C7BF /* MWPhoto.m in Sources */,
 				629997301D3C887D005B2914 /* EaseFaceView.m in Sources */,
 				62C555EA1D41CAE30065C7BF /* LZPictureBrowserCell.m in Sources */,
 				629999D31D3E74E8005B2914 /* SDBaseRefreshView.m in Sources */,
+				62956F981D74402500A44B0E /* SRRefreshView.m in Sources */,
 				629997C51D3CA72F005B2914 /* NSString+MLLabel.m in Sources */,
 				629997121D3C887D005B2914 /* EaseConvertToCommonEmoticonsHelper.m in Sources */,
 				629997131D3C887D005B2914 /* EaseMessageReadManager.m in Sources */,
@@ -2895,6 +3056,7 @@
 				629997261D3C887D005B2914 /* EaseBubbleView+Image.m in Sources */,
 				6299970B1D3C887D005B2914 /* EaseUserModel.m in Sources */,
 				629997211D3C887D005B2914 /* EaseCustomMessageCell.m in Sources */,
+				62956F871D7434DF00A44B0E /* LZGroupsViewController.m in Sources */,
 				6299980F1D3CB1F1005B2914 /* TZImageManager.m in Sources */,
 				629990511D3C8499005B2914 /* LZMeViewController.m in Sources */,
 				629999451D3CC467005B2914 /* UIBarButtonItem+Extension.m in Sources */,
@@ -2927,6 +3089,7 @@
 				6299972C1D3C887D005B2914 /* EaseChatToolbar.m in Sources */,
 				629997CC1D3CA72F005B2914 /* MLLinkLabel.m in Sources */,
 				629997921D3CA62F005B2914 /* LZPhotoContainerView.m in Sources */,
+				62956F8B1D74361500A44B0E /* LZCreateGroupViewController.m in Sources */,
 				62C555E71D41CAE30065C7BF /* LZBroadcastViewCell.m in Sources */,
 				629997C71D3CA72F005B2914 /* MLTextAttachment.m in Sources */,
 				629997C31D3CA72F005B2914 /* NSAttributedString+MLLabel.m in Sources */,
@@ -2967,6 +3130,7 @@
 				6299971B1D3C887D005B2914 /* EaseMessageViewController.m in Sources */,
 				6274FA841D439A72006C6B7E /* MBProgressHUD+Add.m in Sources */,
 				629997971D3CA62F005B2914 /* DFPlainGridImageView.m in Sources */,
+				62956F9D1D7446F500A44B0E /* BaseTableViewCell.m in Sources */,
 				629996C21D3C887D005B2914 /* EMCDDeviceManager+Media.m in Sources */,
 				62C556681D420C3A0065C7BF /* PSTGridLayoutInfo.m in Sources */,
 				6299978B1D3CA62F005B2914 /* LZMomentsCellLikeHeaderFooterView.m in Sources */,
@@ -3168,6 +3332,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3182,7 +3347,7 @@
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -3198,6 +3363,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3212,7 +3378,7 @@
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
 					"$(PROJECT_DIR)/LZEasemob3/Classes/Other/Lib/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -3220,6 +3386,7 @@
 		};
 		629990311D3C818F005B2914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 980EFC3E370F26D5848B31D6 /* Pods-LZEasemob3Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LZEasemob3Tests/Info.plist;
@@ -3233,6 +3400,7 @@
 		};
 		629990321D3C818F005B2914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1DCC0663473C35C36D23488 /* Pods-LZEasemob3Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LZEasemob3Tests/Info.plist;
@@ -3246,6 +3414,7 @@
 		};
 		629990341D3C818F005B2914 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC8F54D4DBDB664798D5B714 /* Pods-LZEasemob3UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LZEasemob3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -3258,6 +3427,7 @@
 		};
 		629990351D3C818F005B2914 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A03C5C83645821CE73755E1 /* Pods-LZEasemob3UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LZEasemob3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

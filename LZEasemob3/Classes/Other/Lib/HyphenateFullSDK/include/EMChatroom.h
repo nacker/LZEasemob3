@@ -19,7 +19,7 @@
  *  聊天室
  *
  *  \~english 
- *  Chatroom
+ *  Chat room object
  */
 @interface EMChatroom : NSObject
 
@@ -28,7 +28,7 @@
  *  聊天室ID
  *
  *  \~english 
- *  Chatroom id
+ *  Chat room id
  */
 @property (nonatomic, copy, readonly) NSString *chatroomId;
 
@@ -37,7 +37,7 @@
  *  聊天室的主题
  *
  *  \~english 
- *  Subject of chatroom
+ *  Subject of chat room
  */
 @property (nonatomic, copy, readonly) NSString *subject;
 
@@ -46,7 +46,7 @@
  *  聊天室的描述
  *
  *  \~english 
- *  Description of chatroom
+ *  Description of chat room
  */
 @property (nonatomic, copy, readonly) NSString *description;
 
@@ -57,9 +57,7 @@
  *  聊天室的所有者只有一人
  *
  *  \~english
- *  Chatroom‘s owner, need to fetch chatroom's specification
- *
- *  A chatroom only has one owner
+ *  Owner of the chat room. Only one owner per chat room. 
  */
 @property (nonatomic, copy, readonly) NSString *owner;
 
@@ -68,27 +66,30 @@
  *  聊天室的当前人数，如果没有获取聊天室详情将返回0
  *
  *  \~english
- *  The current number of members, will return 0 if have not ever fetched chatroom's specification
+ *  The total number of members in the chat room
  */
-@property (nonatomic, readonly) NSInteger occupantsCount;
+@property (nonatomic, readonly) NSInteger occupantsCount __deprecated_msg("Use - membersCount");
+@property (nonatomic, readonly) NSInteger membersCount;
 
 /*!
  *  \~chinese 
  *  聊天室的最大人数，如果没有获取聊天室详情将返回0
  *
  *  \~english
- *  The maximum number of members, will return 0 if have not ever fetched chatroom's specification
+ *  The capacity of the chat room
  */
-@property (nonatomic, readonly) NSInteger maxOccupantsCount;
+@property (nonatomic, readonly) NSInteger maxOccupantsCount __deprecated_msg("Use - maxMembersCount");
+@property (nonatomic, readonly) NSInteger maxMembersCount;
 
 /*!
  *  \~chinese
  *  聊天室的成员列表，需要获取聊天室详情
  *
  *  \~english
- *  Member list of chatroom, need to fetch chatroom's specification
+ *  List of members in the chat room
  */
-@property (nonatomic, copy, readonly) NSArray *occupants;
+@property (nonatomic, copy, readonly) NSArray *occupants __deprecated_msg("Use - members");
+@property (nonatomic, copy, readonly) NSArray *members;
 
 /*!
  *  \~chinese
@@ -116,7 +117,7 @@
  *  @result 聊天室实例
  *
  *  \~english
- *  Create chatroom instance
+ *  Construct a chatroom instance with chatroom id
  *
  *  @param aChatroomId   Chatroom id
  *

@@ -43,7 +43,7 @@
  *  @result 文本消息体实例
  *
  *  \~english
- *  Initialize text message body instance
+ *  Initialize a text message body instance
  *
  *  @param aText   Text content
  *

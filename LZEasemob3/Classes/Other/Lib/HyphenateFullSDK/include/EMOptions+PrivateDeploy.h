@@ -7,7 +7,7 @@
  *
  *  \~english
  *  @header   EMOptions+PrivateDeploy.h
- *  @abstract SDK setting options of private  deployment
+ *  @abstract SDK setting options of private deployment
  *  @author   Hyphenate
  *  @version  3.0
  */
@@ -23,9 +23,9 @@
  *  只能在[EMClient initializeSDKWithOptions:]中设置，不能在程序运行过程中动态修改。
  *
  *  \~english
- *  Whether allow to use DNS, default is YES
+ *  Whether to allow using DNS, default is YES
  *
- *  Can only set when initialize SDK [EMClient initializeSDKWithOptions:], can't change it in runtime
+ *  Can only be set when initializing the SDK [EMClient initializeSDKWithOptions:], cannot be altered in runtime
  */
 @property (nonatomic, assign) BOOL enableDnsConfig;
 
@@ -38,7 +38,8 @@
  *  \~english
  *  IM server port
  *
- *  It's effective only when enableDnsConfig is NO. Can only set when initialize SDK [EMClient initializeSDKWithOptions:], can't change it in runtime
+ *  chatPort is Only effective when isDNSEnabled is NO. 
+ *  Can only be set when initializing the SDK with [EMClient initializeSDKWithOptions:], cannot be altered in runtime
  */
 @property (nonatomic, assign) int chatPort;
 
@@ -51,9 +52,9 @@
  *  \~english
  *  IM server
  *
- *  It's effective only when enableDnsConfig is NO. Can only set when initialize SDK [EMClient initializeSDKWithOptions:], can't change it in runtime
+ *  chatServer is Only effective when isDNSEnabled is NO. Can only be set when initializing the SDK with [EMClient initializeSDKWithOptions:], cannot be altered in runtime
  */
-@property (nonatomic, strong) NSString *chatServer;
+@property (nonatomic, copy) NSString *chatServer;
 
 /*!
  *  \~chinese 
@@ -64,8 +65,8 @@
  *  \~english
  *  REST server
  *
- *  It's effective only when enableDnsConfig is NO. Can only set when initialize SDK [EMClient initializeSDKWithOptions:], can't change it in runtime
+ *  restServer Only effective when isDNSEnabled is NO. Can only be set when initializing the SDK with [EMClient initializeSDKWithOptions:], cannot be altered in runtime
  */
-@property (nonatomic, strong) NSString *restServer;
+@property (nonatomic, copy) NSString *restServer;
 
 @end

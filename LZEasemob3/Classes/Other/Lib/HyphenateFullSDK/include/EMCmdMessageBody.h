@@ -39,7 +39,7 @@
  *  命令参数，只是为了兼容老版本，应该使用EMMessage的扩展属性来代替
  *
  *  \~english
- *  Command parameters, only for compatable with old version, use EMMessage's extend attribute instead
+ *  Command parameters, only compatable with old sdk versions. For SDK version 3.0+, use EMMessage's ext property instead
  */
 @property (nonatomic, copy) NSArray *params;
 
@@ -52,7 +52,7 @@
  *  @result 命令消息体实例
  *
  *  \~english
- *  Initialize command message body
+ *  Construct command message body
  *
  *  @param aAction  Action content
  *

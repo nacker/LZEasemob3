@@ -40,7 +40,7 @@ typedef enum{
 @optional
 
 /*!
- *  \~chinese 
+ *  \~chinese
  *  SDK连接服务器的状态变化时会接收到该回调
  *
  *  有以下几种情况, 会引起该方法的调用:
@@ -49,7 +49,57 @@ typedef enum{
  *
  *  @param aConnectionState 当前状态
  *
- *  \~english 
+ *  \~english
+ *  Delegate method will be invoked when server connection state has changed
+ *
+ *  @param aConnectionState Current state
+ */
+- (void)connectionStateDidChange:(EMConnectionState)aConnectionState;
+
+/*!
+ *  \~chinese
+ *  自动登录失败时的回调
+ *
+ *  @param aError 错误信息
+ *
+ *  \~english
+ *  Delegate method will be invoked when auto login is completed
+ *
+ *  @param aError Error
+ */
+- (void)autoLoginDidCompleteWithError:(EMError *)aError;
+
+/*!
+ *  \~chinese
+ *  当前登录账号在其它设备登录时会接收到此回调
+ *
+ *  \~english
+ *  Delegate method will be invoked when current IM account logged into another device
+ */
+- (void)userAccountDidLoginFromOtherDevice;
+
+/*!
+ *  \~chinese
+ *  当前登录账号已经被从服务器端删除时会收到该回调
+ *
+ *  \~english
+ *  Delegate method will be invoked when current IM account is removed from server
+ */
+- (void)userAccountDidRemoveFromServer;
+
+#pragma mark - Deprecated methods
+
+/*!
+ *  \~chinese
+ *  SDK连接服务器的状态变化时会接收到该回调
+ *
+ *  有以下几种情况, 会引起该方法的调用:
+ *  1. 登录成功后, 手机无法上网时, 会调用该回调
+ *  2. 登录成功后, 网络状态变化时, 会调用该回调
+ *
+ *  @param aConnectionState 当前状态
+ *
+ *  \~english
  *  Connection to the server status changes will receive the callback
  *  
  *  calling the method causes:
@@ -58,37 +108,37 @@ typedef enum{
  *  
  *  @param aConnectionState Current state
  */
-- (void)didConnectionStateChanged:(EMConnectionState)aConnectionState;
+- (void)didConnectionStateChanged:(EMConnectionState)aConnectionState __deprecated_msg("Use -connectionStateDidChange:");
 
 /*!
- *  \~chinese 
+ *  \~chinese
  *  自动登录失败时的回调
  *
  *  @param aError 错误信息
  *
- *  \~english 
+ *  \~english
  *  Callback Automatic login fails
  *
  *  @param aError Error
  */
-- (void)didAutoLoginWithError:(EMError *)aError;
+- (void)didAutoLoginWithError:(EMError *)aError __deprecated_msg("Use -autoLoginDidCompleteWithError:");
 
 /*!
- *  \~chinese 
- *  当前登录账号在其它设备登录时会接收到该回调
+ *  \~chinese
+ *  当前登录账号在其它设备登录时会接收到此回调
  *
- *  \~english 
- *  Current login account to log in on other devices will receive the callback
+ *  \~english
+ *  Will receive this callback when current account login from other device
  */
-- (void)didLoginFromOtherDevice;
+- (void)didLoginFromOtherDevice __deprecated_msg("Use -userAccountDidLoginFromOtherDevice");
 
 /*!
- *  \~chinese 
+ *  \~chinese
  *  当前登录账号已经被从服务器端删除时会收到该回调
  *
- *  \~english 
+ *  \~english
  *  Current login account will receive the callback is deleted from the server
  */
-- (void)didRemovedFromServer;
+- (void)didRemovedFromServer __deprecated_msg("Use -userAccountDidRemoveFromServer");
 
 @end
