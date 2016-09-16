@@ -9,8 +9,8 @@ pod "Masonry"
 pod 'FMDB'
 pod "MJRefresh"
 pod "SDWebImage"
-pod 'ReactiveCocoa'
 pod "AFNetworking"
+pod "ReactiveCocoa", "~> 2.5"
 
 end
 

@@ -2558,13 +2558,16 @@
 					62998FFF1D3C818F005B2914 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = P248AKQ8LP;
+						LastSwiftMigration = 0800;
 					};
 					629990181D3C818F005B2914 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 62998FFF1D3C818F005B2914;
 					};
 					629990231D3C818F005B2914 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 62998FFF1D3C818F005B2914;
 					};
 				};
@@ -3181,6 +3184,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3210,6 +3214,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -3221,6 +3226,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZEasemob3.app/LZEasemob3";
 			};
 			name = Debug;
@@ -3233,6 +3239,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZEasemob3.app/LZEasemob3";
 			};
 			name = Release;
@@ -3244,6 +3251,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LZEasemob3;
 			};
 			name = Debug;
@@ -3255,6 +3263,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lz.LZEasemob3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LZEasemob3;
 			};
 			name = Release;

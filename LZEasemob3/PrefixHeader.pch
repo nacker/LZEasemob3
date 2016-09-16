@@ -44,7 +44,7 @@
 #import "SDWebImageManager.h"
 #import "SDImageCache.h"
 #import "UIImageView+WebCache.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "ReactiveCocoa.h"
 #import "MJExtension.h"
 #import "FMDB.h"
 #import "JKDBHelper.h"

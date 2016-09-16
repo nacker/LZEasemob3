@@ -6,7 +6,7 @@
 //  Copyright © 2016年 帶頭二哥 QQ:648959. All rights reserved.
 //
 
-#import <MJRefresh/MJRefresh.h>
+#import "MJRefresh.h"
 
 @interface LZChatRefreshHeader : MJRefreshHeader
 
