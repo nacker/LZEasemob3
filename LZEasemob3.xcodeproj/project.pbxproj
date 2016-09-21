@@ -419,6 +419,7 @@
 		623ED66F1D4D148600109C40 /* shake_sound_male.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_sound_male.wav; sourceTree = "<group>"; };
 		623ED6771D4D155400109C40 /* LZBaseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseBtn.h; sourceTree = "<group>"; };
 		623ED6781D4D155400109C40 /* LZBaseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseBtn.m; sourceTree = "<group>"; };
+		6274AADE1D927077009E4993 /* LZEasemob3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LZEasemob3.entitlements; sourceTree = "<group>"; };
 		6274FA7F1D439A72006C6B7E /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
 		6274FA801D439A72006C6B7E /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
 		6274FA811D439A72006C6B7E /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -1213,6 +1214,7 @@
 		629990021D3C818F005B2914 /* LZEasemob3 */ = {
 			isa = PBXGroup;
 			children = (
+				6274AADE1D927077009E4993 /* LZEasemob3.entitlements */,
 				629990371D3C825C005B2914 /* Classes */,
 				629990031D3C818F005B2914 /* Supporting Files */,
 			);
@@ -2561,6 +2563,7 @@
 				62998FFE1D3C818F005B2914 /* Resources */,
 				563122E67B6F76E8704E8AAB /* [CP] Embed Pods Frameworks */,
 				BBD6DB5D506AAE03C402CC1A /* [CP] Copy Pods Resources */,
+				E57B94CFD6A99F06F21EEA4C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2626,6 +2629,14 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = P248AKQ8LP;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					629990181D3C818F005B2914 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -2988,6 +2999,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E57B94CFD6A99F06F21EEA4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3328,6 +3354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LZEasemob3/LZEasemob3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
@@ -3359,6 +3386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = LZEasemob3/LZEasemob3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
