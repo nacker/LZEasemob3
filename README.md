@@ -2,6 +2,7 @@
 ==================
 
 ###告示(Notices):
+	0.最近比较忙，酷信我打算10月1号国庆回家后写完后面的所有功能，iOS10出了，Masonry导致有的页面布局乱了，所以大家在自己的项目中尽量少用第三方的东西，不然会改死。请大家敬请期待...谢谢大家的关心!
 	1.LZEasemob3 works on "Xcode 7.3.1 , iOS 8+ and requires ARC to build. 
 	2.如果无法运行项目,请把Xcode 升级为7.3.1版本以上,ios8.0以上,cocoapods版本最好在0.39.0,最好不要用测试版,二哥亲测是没有问题的.
 	3.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
