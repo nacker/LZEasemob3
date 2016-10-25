@@ -38,8 +38,8 @@ static NSString *kGroupName = @"GroupName";
 {
     ConversationListController *_chatListVC;
     ContactListViewController *_contactsVC;
-    SettingsViewController *_settingsVC;
-    LZDiscoverViewController *_discoverVC;
+//    SettingsViewController *_settingsVC;
+//    LZDiscoverViewController *_discoverVC;
 //    __weak CallViewController *_callController;
 }
 
@@ -98,7 +98,8 @@ static NSString *kGroupName = @"GroupName";
     [_chatListVC networkChanged:_connectionState];
     
     _contactsVC = [[ContactListViewController alloc] init];
-    [self addChildViewController:[[ContactListViewController alloc] init] title:@"通讯录" imageName:@"tabbar_contacts"];
+    [self addChildViewController:_contactsVC title:@"通讯录" imageName:@"tabbar_contacts"];
+    
     [self addChildViewController:[[LZDiscoverViewController alloc] init] title:@"发现" imageName:@"tabbar_discover"];
     [self addChildViewController:[[SettingsViewController alloc] init] title:@"我" imageName:@"tabbar_me"];
 }

@@ -3,17 +3,20 @@
 
 ###告示(Notices):
 
-	0.环信最新SDK存在BUG,请大家稍安勿躁,很快就会有新版本出来.请大家去下载老版本
-		https://git.oschina.net/iosNacker/LZEasemob3.git
-		新版本已运行不起来了.
-	1.LZEasemob3 works on "Xcode 7.3.1 , iOS 8+ and requires ARC to build. 
-	2.如果无法运行项目,请把Xcode 升级为7.3.1版本以上,ios8.0以上,cocoapods版本最好在0.39.0,最好不要用测试版,二哥亲测是没有问题的.
+	0.小伙伴们去下载吧,最新版出来了.
+	1.LZEasemob3 works on "Xcode 8.0 , iOS 8+ and requires ARC to build. 
+	2.如果无法运行项目,请把Xcode 升级为8.0版本以上,ios8.0以上,cocoapods版本最好在0.39.0,最好不要用测试版,二哥亲测是没有问题的.
 	3.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
 	4.有谁想为开源贡献自己的一份力量的单独联系我.我会在文档加入你的名字.期待你哟!!!
 	
 	5.谢谢大家一直以来的关注,二哥这段时间太忙所以更新比较慢,大家觉得好的话请推荐给你的朋友们.为感谢大家二哥在STAR 1000前一定把群聊功能加上,请大家继续关注.
 	
 ###安装方式(Installation Method)
+* 由于包含实时语音版本SDK静态库超过100M,所以用到了git-lfs,当pod install之前需要安装git-lfs 
+
+		brew install git-lfs
+		git lfs init
+
 * First step
 
 		git clone https://github.com/nacker/LZEasemob3.git
@@ -128,6 +131,10 @@
 ![LZEasemob3 in action](./image/LZ4.gif)
 
 ##--------------------版本更新记录-------------------
+###V1.0.5 (2016.10.26)
+1. 更新环信SDKV3.2.0 2016.10.25
+2. 整体架构更换,让小菜菜们拖我的Classes目录就可以分分钟把IM功能集成起来.
+
 ###V1.0.4 (2016.8.29)
 1. 解决添加好友逻辑BUG
 2. 增加群组列表

@@ -1,0 +1,355 @@
+/************************************************************
+ *  * Hyphenate CONFIDENTIAL
+ * __________________
+ * Copyright (C) 2016 Hyphenate Inc. All rights reserved.
+ *
+ * NOTICE: All information contained herein is, and remains
+ * the property of Hyphenate Inc.
+ * Dissemination of this information or reproduction of this material
+ * is strictly forbidden unless prior written permission is obtained
+ * from Hyphenate Inc.
+ */
+
+//general
+"register" = "注册";
+"login" = "登录";
+"logout" = "登出";
+"password" = "密码";
+"username" = "个人账户";
+"confirmpassword"="确认密码";
+
+"ok" = "确定";
+"yes" = "是";
+"cancel" = "取消";
+"no" = "否";
+
+"search" = "搜索";
+"searching" = "正在搜索";
+"error" = "错误";
+"delete" = "删除";
+"copy" = "复制";
+"transpond" = "转发";
+"save" = "保存";
+"prompt" = "提示";
+"add" = "添加";
+"send" = "发送";
+"open" = "打开";
+"down" = "完成";
+"choose" = "选择";
+"accept" = "接受";
+"reject" = "拒绝";
+"wait" = "请等待...";
+
+"sendingApply" = "正在发送申请...";
+"acceptFail" = "接受失败";
+"rejectFail" = "拒绝失败";
+"transponding" = "正在转发...";
+"transpondFail" = "转发失败";
+"refreshData" = "刷新数据...";
+"loadData" = "加载数据...";
+"loadDataFailed" = "加载数据失败";
+"saySomething" = "说点啥子吧";
+"searchResults" = "搜索结果";
+"doneWithCount" = "确定(%i)";
+"sureToDelete" = "请确定删除";
+"receiveCmd" = "有透传消息";
+"receiveMessage" = "您有一条新消息";
+"loginAtOtherDevice" = "你的账号已在其他地方登录";
+"loginUserRemoveFromServer" = "你的账号已被从服务器端移除";
+"deleteFailed" = "删除失败:%@";
+"notFound" = "没有找到";
+"noMore" = "没有更多数据了";
+"hasRead" = "已读";
+
+//app
+"AppName" = "环信Demo";
+
+//error des
+"error.connectServerFail" = "连接服务器失败!";
+"error.connectServerTimeout" = "连接服务器超时!";
+"error.connectNetworkFail" = "网络未连接!";
+"error.notFound" = "文件路径不存在";
+"error.initPlayerFail" = "初始化AVAudioPlayer失败!";
+"error.palyFail" = "播放失败!";
+"error.conversionFail" = "初始化AVAudioRecorder失败";
+"error.initRecorderFail" = "文件格式转换失败";
+"error.recordStoping" = "语音录制还没有结束";
+"error.recordNotBegin" = "还没有开始语音录制";
+"error.recordTooShort" = "录制时间过短";
+
+//login
+"login.beginAutoLogin" = "自动登录开始...";
+"login.endAutoLogin" = "自动登录结束...";
+"login.errorAutoLogin" = "自动登录失败.";
+"login.nameNotSupportZh" = "用户名不支持中文";
+"login.ongoing" = "正在登录...";
+"login.fail" = "登录失败";
+"login.inputNameAndPswd" = "请输入账号和密码";
+"login.inputApnsNickname" = "填写推送消息时使用的昵称";
+
+//register
+"register.ongoing" = "正在注册...";
+"register.fail" = "注册失败";
+"register.success" = "注册成功，请登陆";
+"register.repeat" = "您注册的用户已存在!";
+"register.confirmPassword" = "两次输入密码不一致,请重新输入";
+
+//apns
+"apns.failToRegisterApns" = "注册推送失败";
+"apns.failToBindDeviceToken" = "消息推送与设备绑定失败";
+"apns.content" = "推送内容";
+
+//friend
+"friend.add" = "添加好友";
+"friend.somebodyAddWithName" = "%@ 添加你为好友";
+"friend.beRefusedToAdd" = "你被'%@'无耻的拒绝了";
+"friend.inputNameToSearch" = "输入要查找的好友";
+"friend.repeat" = "'%@'已经是你的好友了!";
+"friend.repeatApply" = "您已向'%@'发送好友请求了!";
+"friend.notAddSelf" = "不能添加自己为好友";
+"friend.repeatInvite" = "%@已经给你发来了申请";
+"friend.somebodyInvite" = "%@ 邀请你为好友";
+"friend.sendApply" = "正在发送申请...";
+"friend.sendApplyFail" = "发送申请失败，请重新操作";
+"friend.sendApplySuccess" = "发送申请成功";
+"friend.black" = "黑名单";
+"friend.notChatSelf" = "不能跟自己聊天";
+"friend.notDeleteSelf" = "不能删除自己";
+"friend.block" = "加入黑名单";
+
+//group
+"group.somebodyInvite" = "%@ 邀请你加入群组\'%@\'";
+"group.applyJoin" = "%@ 申请加入群组\'%@\'";
+"group.applyJoinWithName" = "%@ 申请加入群组\'%@\'：%@";
+"group.sendApplyFail" = "发送申请失败:%@\n原因：%@";
+"group.beRefusedToJoin" = "被拒绝加入群组\'%@\'";
+"group.beKicked" = "你被从群组\'%@\'中踢出";
+"group.agreedAndJoined" = "同意并已加入群组\'%@\'";
+"group.join" = "加入群组";
+"group.joined" = "已加入";
+"group.owner" = "群主";
+"group.describe" = "群组简介";
+"group.join.ongoing" = "加入群组...";
+"group.join.fail" = "加入群组失败，请重新操作";
+"group.sendingApply" = "发送加群申请...";
+"group.sendApplyRepeat" = "申请已发送";
+"group.maxUserCount" = "群成员个数超了最大值了";
+
+//Create Group
+"group.create.addOccupant" = "添加成员";
+"group.create.inputName" = "请输入群组名称";
+"group.create.inputDescribe" = "请输入群组简介";
+"group.create.groupPermission" = "群组权限";
+"group.create.private" = "私有群";
+"group.create.occupantPermissions" = "成员邀请权限";
+"group.create.allowedOccupantInvite" = "允许群成员邀请其他人";
+"group.create.unallowedOccupantInvite" = "不允许群成员邀请其他人";
+"group.create.ongoing" = "创建群组...";
+"group.create.success" = "创建群组成功";
+"group.create.fail" = "创建群组失败，请重新操作";
+"group.create.public" = "公有群";
+"group.create.occupantJoinPermissions" = "成员加入权限";
+"group.create.open" = "随便加入";
+"group.create.needApply" = "加入群组需要管理员同意";
+"group.create.group" = "新建群聊";
+"group.create.join" = "添加公开群";
+
+//Group Bans
+"group.ban.removing" = "正在将成员移出黑名单...";
+"group.ban.adding" = "正在将成员加入黑名单...";
+"group.ban.fetching" = "获取群组黑名单...";
+"group.ban.fetchFail" = "获取黑名单失败: %@";
+
+//Group Detail
+"group.removeAllMessages" = "清空聊天记录";
+"group.destroy" = "解散群组";
+"group.leave" = "退出群组";
+"group.id" = "群组ID";
+"group.occupantCount" = "群组人数";
+"group.addingOccupant" = "添加组成员...";
+"group.fetchInfoFail" = "获取群组详情失败，请稍后重试";
+"group.removingOccupant" = "正在删除成员...";
+"group.destroyFail" = "解散群组失败";
+"group.leaveFail" = "退出群组失败";
+"group.addOccupantFail" = "添加群成员失败, 请稍后再试";
+
+//Group Setting
+"group.setting.receiveAndPrompt" = "接收并提示群消息";
+"group.setting.receiveAndUnprompt" = "只接收不提示群消息";
+"group.setting.blockMessage" = "屏蔽群消息";
+"group.setting.save" = "设置属性";
+"group.setting.success" = "设置成功";
+"group.setting.fail" = "设置失败";
+"group.setting.subject" = "请输入群组名称";
+
+//Chatroom detail
+"chatroom.somebodyInvite" = "%@ 邀请你加入聊天室\'%@\'";
+"chatroom.id" = "聊天室Id";
+"chatroom.occupantCount" = "聊天室人数";
+"chatroom.description" = "描述";
+"chatroom.joining" = "正在加入...";
+"chatroom.fetchInfoFail" = "获取聊天室详情失败";
+"chatroom.joinFailed" = "加入聊天室\'%@\'失败";
+"chatroom.join" = "\'%@\'加入聊天室\'%@\'";
+"chatroom.leave" = "\'%@\'离开聊天室\'%@\'";
+"chatroom.remove" = "被踢出聊天室\'%@\'";
+
+//call
+"call.initFailed"="创建实时通话失败，请稍后重试";
+"call.waiting"="等待接听...";
+"call.connecting"="正在建立连接...";
+"call.silence"="静音";
+"call.speaker"="免提";
+"call.reject"="拒接";
+"call.answer"="接听";
+"call.hangup"="挂断";
+"call.finished"="连接建立完成";
+"call.autoHangup"="没有响应，自动挂断";
+"call.noResponse"="对方没有回应";
+"call.connectFailed"="建立连接失败";
+"call.failed"="通话失败";
+"call.suspended"="通话已挂断";
+"call.over"="通话结束";
+"call.cancel"="取消通话";
+"call.rejected"="拒接通话";
+"call.in"="正在通话中...";
+"call.speak"="可以说话了...";
+"call.speak.relay"="可以说话了...Relay";
+"call.speak.direct"="可以说话了...Direct";
+"call.init"="正在初始化通话...";
+"call.dealloc"="正在结束通话...";
+"call.videoSize"="宽/高: ";
+"call.videoTimedelay"="延迟: ";
+"call.videoFramerate"="帧率: ";
+"call.videoLostcnt"="丢包数: ";
+"call.videoLocalBitrate"="本地比特率: ";
+"call.videoRemoteBitrate"="对方比特率: ";
+"call.switchCamera"="切换摄像头";
+
+//message
+"message.image" = "图片";
+"message.location" = "位置";
+"message.voice" = "音频";
+"message.video" = "视频";
+"message.image1" = "[图片]";
+"message.location1" = "[位置]";
+"message.voice1" = "[音频]";
+"message.video1" = "[视频]";
+"message.beginReceiveOffine" = "开始接收离线消息";
+"message.endReceiveOffine" = "离线消息接收成功";
+"message.toolBar.inputPlaceHolder" = "输入新消息";
+"message.toolBar.record.upCancel" = " 手指上滑，取消发送 ";
+"message.toolBar.record.loosenCancel" = " 松开手指，取消发送 ";
+"message.toolBar.record.touch" = "按住说话";
+"message.toolBar.record.send" = "松开发送";
+
+"message.downloadingAudio" = "正在下载语音，稍后点击";
+"message.downloadingVideo" = "正在获取视频...";
+"message.videoFail" = "视频获取失败!";
+"message.downloadingImage" = "正在获取大图...";
+"message.imageFail" = "大图获取失败!";
+"message.thumImageFail" = "缩略图获取失败!";
+"message.simulatorNotSupportCamera" = "模拟器不支持拍照";
+"message.simulatorNotSupportVideo" = "模拟器不支持录像";
+"message.startRecordFail" = "开始录音失败";
+"message.noMessage" = "消息已经清空";
+"message.forbiddenWords" = "你的消息包含不当言论";
+
+//media
+"media.timeShort" = "录音时间太短了";
+
+//network
+"network.disconnection" = "当前网络连接失败";
+
+//reconnection
+"reconnection.retry" = "你的账号登录失败，正在重试中... \n点击 '登出' 按钮跳转到登录页面 \n点击 '继续等待' 按钮等待重连成功";
+"reconnection.ongoing" = "正在重连中...";
+"reconnection.fail" = "重连失败，稍候将继续重连";
+"reconnection.success" = "重连成功！";
+"reconnection.wait" = "继续等待";
+
+//location
+"location.messageType" = "位置信息";
+"location.fail" = "定位失败";
+"location.ongoning" = "正在定位...";
+
+//title
+"title.conversation" = "会话";
+"title.addressbook" = "通讯录";
+"title.setting" = "设置";
+"title.group" = "群组";
+"title.chatroom" = "聊天室";
+"title.mychatroom" = "我的聊天室";
+"title.chooseContact" = "选择联系人";
+"title.debug" = "诊断";
+"title.groupBlackList" = "群组黑名单";
+"title.createGroup" = "创建群组";
+"title.publicGroup" = "公有群组";
+"title.groupSetting" = "群设置";
+"title.apnsSetting" = "消息推送设置";
+"title.buddyBlock" = "黑名单";
+"title.apply" = "申请与通知";
+"title.groupApply" = "群组通知";
+"title.groupSubjectChanging" = "修改群名称";
+"title.groupSearchMessage" = "查找聊天记录";
+"title.chatroomlist" = "聊天室列表";
+"title.robotlist" = "环信助手";
+"title.profile" = "详细资料";
+
+
+//setting
+"setting.autoLogin" = "自动登录";
+"setting.loginUser" = "退出登录(%@)";
+"setting.logoutOngoing" = "正在退出...";
+"setting.sortbyservertime" = "消息根据服务器时间排序";
+
+"setting.notDisturb" = "功能消息免打扰";
+"setting.showDetail" = "通知显示消息详情";
+"setting.open" = "开启";
+"setting.nightOpen" = "只在夜间开启 (22:00 - 7:00)";
+"setting.close" = "关闭";
+"setting.sureNotDisturb" = "此设置会导致全天都处于免打扰模式, 不会再收到推送消息. 是否继续?";
+
+"setting.uploadLog" = "上传运行日志";
+"setting.sdkVersion" = "ONE SDK 版本";
+"setting.uploading" = "正在上传...";
+"setting.uploadSuccess" = "上传成功";
+"setting.uploadFail" = "上传失败";
+"setting.editName" = "更改昵称";
+"setting.inputName" = "请输入新昵称";
+"setting.saveName" = "保存更改昵称";
+"setting.namenotempty" = "昵称不能为空";
+"setting.personalInfo" = "个人信息";
+"setting.setBitrate" = "设置视频通话码率";
+"setting.setBitrateTips" = "设置视频通话码率范围在150-1000";
+"setting.personalInfoUpload" = "头像";
+"setting.edittips" = "设置此昵称以后,在与iOS客户端demo聊天工程中,iOS一侧会显示此昵称而不是环信ID,如果对方使用安卓客户端则此设置不生效";
+"setting.iospushname" = "iOS离线推送昵称";
+"setting.useIp" = "使用IP";
+"setting.deleteConWhenLeave" = "退群时删除会话";
+"setting.showCallInfo" = "显示视频通话信息";
+"setting.microphoneNoAuthority" = "未获得授权使用麦克风";
+"setting.microphoneAuthority" = "请在iOS\"设置中\"-\"隐私\"-\"麦克风\"中打开";
+"setting.cameraNoAuthority" = "未获得授权使用相机";
+"setting.cameraAuthority" = "请在iOS\"设置中\"-\"隐私\"-\"相机\"中打开";
+"setting.cameraUpload" = "拍照上传";
+"setting.localUpload" = "相册上传";
+"setting.profileNickname" = "昵称";
+"setting.saving" = "修改中...";
+"setting.saveFailed" = "修改失败";
+
+//NSDateCategory
+"NSDateCategory.text1" = "1分钟内";
+"NSDateCategory.text2" = "%.f分钟前";
+"NSDateCategory.text3" = "%.f小时前";
+"NSDateCategory.text4" = "%.f天前";
+"NSDateCategory.text5" = "M月d日";
+"NSDateCategory.text6" = "%.f年前";
+"NSDateCategory.text7" = "昨天 %@";
+"NSDateCategory.text8" = "昨天HH:mm";
+"NSDateCategory.text9" = "凌晨hh:mm";
+"NSDateCategory.text10" = "上午hh:mm";
+"NSDateCategory.text11" = "下午hh:mm";
+"NSDateCategory.text12" = "晚上hh:mm";
+"NSDateCategory.text13" = "昨天HH:mm";
+"NSDateCategory.text14" = "今天 %@";

@@ -52,7 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"title.setting", @"Setting");
+//    self.title = NSLocalizedString(@"title.setting", @"Setting");
     self.view.backgroundColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.88 alpha:1.0];
     
     self.tableView.backgroundColor = [UIColor whiteColor];

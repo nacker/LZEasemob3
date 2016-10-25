@@ -407,8 +407,9 @@
 		62A1C8E11DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E01DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd */; };
 		62A1C8E31DBFA2E100BB5FA6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E21DBFA2E100BB5FA6 /* libsqlite3.tbd */; };
 		62A1C8E51DBFA2E900BB5FA6 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E41DBFA2E900BB5FA6 /* libiconv.tbd */; };
-		62A1C8EC1DBFAE4B00BB5FA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C8E81DBFAE4B00BB5FA6 /* InfoPlist.strings */; };
-		62A1C8ED1DBFAE4B00BB5FA6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C8EB1DBFAE4B00BB5FA6 /* Localizable.strings */; };
+		62A9054C1DBFC5420045BEB1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62A9054B1DBFC5420045BEB1 /* Settings.bundle */; };
+		62A905511DBFC61F0045BEB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A905531DBFC61F0045BEB1 /* InfoPlist.strings */; };
+		62A905551DBFC6290045BEB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A905571DBFC6290045BEB1 /* Localizable.strings */; };
 		DF030C02A567ED5A1761350D /* libPods-LZEasemob3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5EBA924A0F058D4D2A1FF0 /* libPods-LZEasemob3.a */; };
 /* End PBXBuildFile section */
 
@@ -1124,10 +1125,11 @@
 		62A1C8E01DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		62A1C8E21DBFA2E100BB5FA6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62A1C8E41DBFA2E900BB5FA6 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		62A1C8E61DBFAE4B00BB5FA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		62A1C8E71DBFAE4B00BB5FA6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		62A1C8E91DBFAE4B00BB5FA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		62A1C8EA1DBFAE4B00BB5FA6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		62A9054B1DBFC5420045BEB1 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		62A905521DBFC61F0045BEB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		62A905541DBFC6210045BEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		62A905561DBFC6290045BEB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		62A905581DBFC62B0045BEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		811CF240489F5F93C8A3FE77 /* Pods-LZEasemob3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.debug.xcconfig"; sourceTree = "<group>"; };
 		CE5EBA924A0F058D4D2A1FF0 /* libPods-LZEasemob3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZEasemob3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BF0CB1FFD0575463280269 /* Pods-LZEasemob3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.release.xcconfig"; sourceTree = "<group>"; };
@@ -1230,8 +1232,9 @@
 				62A1C8CE1DBF9B8B00BB5FA6 /* LZNotificationWorkstation.h */,
 				62A1C8CF1DBF9B8B00BB5FA6 /* LZNotificationWorkstation.m */,
 				62A1C8D11DBF9B9200BB5FA6 /* PrefixHeader.pch */,
-				62A1C8E81DBFAE4B00BB5FA6 /* InfoPlist.strings */,
-				62A1C8EB1DBFAE4B00BB5FA6 /* Localizable.strings */,
+				62A905531DBFC61F0045BEB1 /* InfoPlist.strings */,
+				62A905571DBFC6290045BEB1 /* Localizable.strings */,
+				62A9054B1DBFC5420045BEB1 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -3068,6 +3071,7 @@
 			files = (
 				62A1C8291DBF9ADA00BB5FA6 /* chat_location_detail_disclosure.png in Resources */,
 				62A1C8561DBF9ADA00BB5FA6 /* icon_024_cover.png in Resources */,
+				62A9054C1DBFC5420045BEB1 /* Settings.bundle in Resources */,
 				62A1C7611DBF9AD900BB5FA6 /* photo_sel_photoPickerVc@2x.png in Resources */,
 				62A1C86A1DBF9ADA00BB5FA6 /* newFriends@2x.png in Resources */,
 				62A1C8211DBF9ADA00BB5FA6 /* call_silence.png in Resources */,
@@ -3078,6 +3082,7 @@
 				62A1C8731DBF9ADA00BB5FA6 /* tabbar_setting.png in Resources */,
 				62A1C8771DBF9ADA00BB5FA6 /* tabbarBackground.png in Resources */,
 				62A1C8761DBF9ADA00BB5FA6 /* tabbar_settingHL@2x.png in Resources */,
+				62A905551DBFC6290045BEB1 /* Localizable.strings in Resources */,
 				62A1C88A1DBF9ADA00BB5FA6 /* picture_download_icon@2x.png in Resources */,
 				62A1C7631DBF9AD900BB5FA6 /* preview_number_icon@2x.png in Resources */,
 				62A1C8351DBF9ADA00BB5FA6 /* chat_receiver_audio_playing002@2x.png in Resources */,
@@ -3095,7 +3100,6 @@
 				62A1C7DE1DBF9ADA00BB5FA6 /* RedPacketResource.bundle in Resources */,
 				62A1C7651DBF9AD900BB5FA6 /* TableViewArrow@2x.png in Resources */,
 				62A1C86B1DBF9ADA00BB5FA6 /* tabbar_chats.png in Resources */,
-				62A1C8EC1DBFAE4B00BB5FA6 /* InfoPlist.strings in Resources */,
 				62A1C84A1DBF9ADA00BB5FA6 /* icon_013_cover.png in Resources */,
 				62A1C8BD1DBF9ADA00BB5FA6 /* shake_sound_male.wav in Resources */,
 				62A1C75F1DBF9AD900BB5FA6 /* photo_original_def@2x.png in Resources */,
@@ -3164,7 +3168,6 @@
 				62A1C8551DBF9ADA00BB5FA6 /* icon_024.gif in Resources */,
 				62A1C83E1DBF9ADA00BB5FA6 /* chat_sender_audio_playing_full@2x.png in Resources */,
 				62A1C7D51DBF9ADA00BB5FA6 /* EaseUIResource.bundle in Resources */,
-				62A1C8ED1DBFAE4B00BB5FA6 /* Localizable.strings in Resources */,
 				62A1C84D1DBF9ADA00BB5FA6 /* icon_019.gif in Resources */,
 				62A1C81E1DBF9ADA00BB5FA6 /* call_out@2x.png in Resources */,
 				62A1C8521DBF9ADA00BB5FA6 /* icon_021_cover.png in Resources */,
@@ -3185,6 +3188,7 @@
 				62A1C85B1DBF9ADA00BB5FA6 /* icon_030.gif in Resources */,
 				62A1C8381DBF9ADA00BB5FA6 /* chat_receiver_bg.png in Resources */,
 				62A1C8941DBF9ADA00BB5FA6 /* bgImage_HL@2x.png in Resources */,
+				62A905511DBFC61F0045BEB1 /* InfoPlist.strings in Resources */,
 				62A1C8411DBF9ADA00BB5FA6 /* icon_002.gif in Resources */,
 				62A1C8261DBF9ADA00BB5FA6 /* chat_video_play.png in Resources */,
 				62A1C83C1DBF9ADA00BB5FA6 /* chat_sender_audio_playing_002@2x.png in Resources */,
@@ -3558,24 +3562,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		62A1C8E81DBFAE4B00BB5FA6 /* InfoPlist.strings */ = {
+		62A905531DBFC61F0045BEB1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62A1C8E61DBFAE4B00BB5FA6 /* en */,
-				62A1C8E71DBFAE4B00BB5FA6 /* zh-Hans */,
+				62A905521DBFC61F0045BEB1 /* zh-Hans */,
+				62A905541DBFC6210045BEB1 /* en */,
 			);
 			name = InfoPlist.strings;
-			path = "../../LZEasemob3副本/LZEasemob3";
 			sourceTree = "<group>";
 		};
-		62A1C8EB1DBFAE4B00BB5FA6 /* Localizable.strings */ = {
+		62A905571DBFC6290045BEB1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				62A1C8E91DBFAE4B00BB5FA6 /* en */,
-				62A1C8EA1DBFAE4B00BB5FA6 /* zh-Hans */,
+				62A905561DBFC6290045BEB1 /* zh-Hans */,
+				62A905581DBFC62B0045BEB1 /* en */,
 			);
 			name = Localizable.strings;
-			path = "../../LZEasemob3副本/LZEasemob3";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3679,6 +3681,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3702,6 +3705,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)//LZEasemob3/PrefixHeader.pch";
 				INFOPLIST_FILE = LZEasemob3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
