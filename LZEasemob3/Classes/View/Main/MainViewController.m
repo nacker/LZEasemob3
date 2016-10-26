@@ -16,13 +16,15 @@
 #import "ApplyViewController.h"
 #import "ChatViewController.h"
 #import "UserCacheManager.h"
-#import "ConversationListController.h"
-#import "ContactListViewController.h"
+//#import "ConversationListController.h"
+//#import "ContactListViewController.h"
 #import "ChatUIHelper.h"
 #import "RedPacketChatViewController.h"
 
 #import "LZNavigationController.h"
 #import "LZDiscoverViewController.h"
+#import "LZContactsViewController.h"
+#import "LZConversationViewController.h"
 
 //两次提示的默认间隔
 static const CGFloat kDefaultPlaySoundInterval = 3.0;
@@ -36,8 +38,8 @@ static NSString *kGroupName = @"GroupName";
 @interface MainViewController () <UIAlertViewDelegate>
 #endif
 {
-    ConversationListController *_chatListVC;
-    ContactListViewController *_contactsVC;
+    LZConversationViewController *_chatListVC;
+    LZContactsViewController *_contactsVC;
 //    SettingsViewController *_settingsVC;
 //    LZDiscoverViewController *_discoverVC;
 //    __weak CallViewController *_callController;
@@ -93,11 +95,11 @@ static NSString *kGroupName = @"GroupName";
 
 - (void)setupChildVC
 {
-    _chatListVC = [[ConversationListController alloc] init];
+    _chatListVC = [[LZConversationViewController alloc] init];
     [self addChildViewController:_chatListVC title:@"微信" imageName:@"tabbar_mainframe"];
     [_chatListVC networkChanged:_connectionState];
     
-    _contactsVC = [[ContactListViewController alloc] init];
+    _contactsVC = [[LZContactsViewController alloc] init];
     [self addChildViewController:_contactsVC title:@"通讯录" imageName:@"tabbar_contacts"];
     
     [self addChildViewController:[[LZDiscoverViewController alloc] init] title:@"发现" imageName:@"tabbar_discover"];

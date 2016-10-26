@@ -10,8 +10,5 @@
 #import "ConversationListController.h"
 
 @interface LZConversationViewController : ConversationListController
-//@interface LZConversationViewController : UITableViewController
-
-//+ (instancetype)shareController;
 
 @end
