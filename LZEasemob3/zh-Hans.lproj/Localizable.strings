@@ -274,9 +274,10 @@
 "location.ongoning" = "正在定位...";
 
 //title
-"title.conversation" = "会话";
+"title.conversation" = "酷信";
 "title.addressbook" = "通讯录";
-"title.setting" = "设置";
+"title.discover" = "发现";
+"title.setting" = "我";
 "title.group" = "群组";
 "title.chatroom" = "聊天室";
 "title.mychatroom" = "我的聊天室";

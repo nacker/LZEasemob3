@@ -40,7 +40,7 @@ static NSString *kGroupName = @"GroupName";
 {
     LZConversationViewController *_chatListVC;
     LZContactsViewController *_contactsVC;
-//    SettingsViewController *_settingsVC;
+    SettingsViewController *_settingsVC;
 //    LZDiscoverViewController *_discoverVC;
 //    __weak CallViewController *_callController;
 }
@@ -70,13 +70,13 @@ static NSString *kGroupName = @"GroupName";
 {
     [super viewDidLoad];
     
+    self.delegate = self;
+    
     //if 使tabBarController中管理的viewControllers都符合 UIRectEdgeNone
     if ([UIDevice currentDevice].systemVersion.floatValue >= 7) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
-//    self.title = NSLocalizedString(@"title.conversation", @"Conversations");
-    
-    
+
     [self setupChildVC];
     
     
@@ -96,14 +96,16 @@ static NSString *kGroupName = @"GroupName";
 - (void)setupChildVC
 {
     _chatListVC = [[LZConversationViewController alloc] init];
-    [self addChildViewController:_chatListVC title:@"微信" imageName:@"tabbar_mainframe"];
+    [self addChildViewController:_chatListVC title:NSLocalizedString(@"title.conversation", @"Conversations") imageName:@"tabbar_mainframe"];
     [_chatListVC networkChanged:_connectionState];
     
     _contactsVC = [[LZContactsViewController alloc] init];
-    [self addChildViewController:_contactsVC title:@"通讯录" imageName:@"tabbar_contacts"];
+    [self addChildViewController:_contactsVC title:NSLocalizedString(@"title.addressbook", @"AddressBook") imageName:@"tabbar_contacts"];
     
-    [self addChildViewController:[[LZDiscoverViewController alloc] init] title:@"发现" imageName:@"tabbar_discover"];
-    [self addChildViewController:[[SettingsViewController alloc] init] title:@"我" imageName:@"tabbar_me"];
+    [self addChildViewController:[[LZDiscoverViewController alloc] init] title:NSLocalizedString(@"title.discover", @"Discover") imageName:@"tabbar_discover"];
+    
+    _settingsVC = [[SettingsViewController alloc] init];
+    [self addChildViewController:_settingsVC title:NSLocalizedString(@"title.setting", @"Me") imageName:@"tabbar_me"];
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title imageName:(NSString *)imageName {
@@ -130,24 +132,14 @@ static NSString *kGroupName = @"GroupName";
     [self addChildViewController:nav];
 }
 
-#pragma mark - UITabBarDelegate
-//- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-//{
-//    if (item.tag == 0) {
-//        self.title = NSLocalizedString(@"title.conversation", @"Conversations");
-//        self.navigationItem.rightBarButtonItem = nil;
-//    }else if (item.tag == 1){
-//        self.title = NSLocalizedString(@"title.addressbook", @"AddressBook");
-//        self.navigationItem.rightBarButtonItem = _addFriendItem;
-//    }else if (item.tag == 2){
-//        self.title = NSLocalizedString(@"title.addressbook", @"AddressBook");
-//        self.navigationItem.rightBarButtonItem = nil;
-//    }else if (item.tag == 3){
-//        self.title = NSLocalizedString(@"title.setting", @"Setting");
-//        self.navigationItem.rightBarButtonItem = nil;
-//        [_settingsVC refreshConfig];
-//    }
-//}
+#pragma - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UINavigationController *)viewController
+{
+    UIViewController *vc = [viewController.viewControllers firstObject];
+    if ([vc isKindOfClass:[SettingsViewController class]]) {
+        [_settingsVC refreshConfig];
+    }
+}
 
 // 统计未读消息数
 -(void)setupUnreadMessageCount

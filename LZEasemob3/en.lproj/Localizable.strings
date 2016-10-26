@@ -278,7 +278,8 @@
 //title
 "title.conversation" = "Conversations";
 "title.addressbook" = "AddressBook";
-"title.setting" = "Setting";
+"title.discover" = "Discover";
+"title.setting" = "Me";
 "title.group" = "Group";
 "title.chatroom" = "Chatroom";
 "title.mychatroom" = "My Chatroom";
