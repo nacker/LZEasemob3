@@ -8,20 +8,22 @@
  * Dissemination of this information or reproduction of this material
  * is strictly forbidden unless prior written permission is obtained
  * from Hyphenate Inc.
+ * 聊天图片浏览
  */
 
 #import <Foundation/Foundation.h>
 
-#import "MWPhotoBrowser.h"
+//#import "MWPhotoBrowser.h"
 #import "EaseMessageModel.h"
+#import "MWPhoto.h"
 
 typedef void (^FinishBlock)(BOOL success);
 typedef void (^PlayBlock)(BOOL playing, EaseMessageModel *messageModel);
 
 @class EMChatFireBubbleView;
-@interface EaseMessageReadManager : NSObject<MWPhotoBrowserDelegate>
+@interface EaseMessageReadManager : NSObject//<MWPhotoBrowserDelegate>
 
-@property (strong, nonatomic) MWPhotoBrowser *photoBrowser;
+//@property (strong, nonatomic) MWPhotoBrowser *photoBrowser;
 @property (strong, nonatomic) FinishBlock finishBlock;
 
 @property (strong, nonatomic) EaseMessageModel *audioMessageModel;

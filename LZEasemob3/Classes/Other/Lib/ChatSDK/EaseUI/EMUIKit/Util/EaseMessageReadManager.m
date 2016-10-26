@@ -14,6 +14,9 @@
 #import "UIImageView+EMWebCache.h"
 #import "EMCDDeviceManager.h"
 
+#import "LZNavigationController.h"
+#import "LZPictureBrowser.h"
+
 #define IMAGE_MAX_SIZE_5k 5120*2880
 
 static EaseMessageReadManager *detailInstance = nil;
@@ -64,51 +67,51 @@ static EaseMessageReadManager *detailInstance = nil;
     return _photos;
 }
 
-- (MWPhotoBrowser *)photoBrowser
-{
-    if (_photoBrowser == nil) {
-        _photoBrowser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-        _photoBrowser.displayActionButton = YES;
-        _photoBrowser.displayNavArrows = YES;
-        _photoBrowser.displaySelectionButtons = NO;
-        _photoBrowser.alwaysShowControls = NO;
-        _photoBrowser.wantsFullScreenLayout = YES;
-        _photoBrowser.zoomPhotosToFill = YES;
-        _photoBrowser.enableGrid = NO;
-        _photoBrowser.startOnGrid = NO;
-        [_photoBrowser setCurrentPhotoIndex:0];
-    }
-    
-    return _photoBrowser;
-}
+//- (MWPhotoBrowser *)photoBrowser
+//{
+//    if (_photoBrowser == nil) {
+//        _photoBrowser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+//        _photoBrowser.displayActionButton = YES;
+//        _photoBrowser.displayNavArrows = YES;
+//        _photoBrowser.displaySelectionButtons = NO;
+//        _photoBrowser.alwaysShowControls = NO;
+//        _photoBrowser.wantsFullScreenLayout = YES;
+//        _photoBrowser.zoomPhotosToFill = YES;
+//        _photoBrowser.enableGrid = NO;
+//        _photoBrowser.startOnGrid = NO;
+//        [_photoBrowser setCurrentPhotoIndex:0];
+//    }
+//    
+//    return _photoBrowser;
+//}
 
-- (UINavigationController *)photoNavigationController
-{
-    if (_photoNavigationController == nil) {
-        _photoNavigationController = [[UINavigationController alloc] initWithRootViewController:self.photoBrowser];
-        _photoNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    }
-    
-    [self.photoBrowser reloadData];
-    return _photoNavigationController;
-}
+//- (UINavigationController *)photoNavigationController
+//{
+//    if (_photoNavigationController == nil) {
+//        _photoNavigationController = [[LZNavigationController alloc] initWithRootViewController:self.photoBrowser];
+//        _photoNavigationController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//    }
+//    
+//    [self.photoBrowser reloadData];
+//    return _photoNavigationController;
+//}
 
 #pragma mark - MWPhotoBrowserDelegate
 
-- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser
-{
-    return [self.photos count];
-}
-
-- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index
-{
-    if (index < self.photos.count)
-    {
-        return [self.photos objectAtIndex:index];
-    }
-    
-    return nil;
-}
+//- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser
+//{
+//    return [self.photos count];
+//}
+//
+//- (id <MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index
+//{
+//    if (index < self.photos.count)
+//    {
+//        return [self.photos objectAtIndex:index];
+//    }
+//    
+//    return nil;
+//}
 
 
 #pragma mark - private
@@ -144,8 +147,15 @@ static EaseMessageReadManager *detailInstance = nil;
         self.photos = photoArray;
     }
     
-    UIViewController *rootController = [self.keyWindow rootViewController];
-    [rootController presentViewController:self.photoNavigationController animated:YES completion:nil];
+//    UIViewController *rootController = [self.keyWindow rootViewController];
+//    [rootController presentViewController:self.photoNavigationController animated:YES completion:nil];
+    
+    NSMutableArray *pArray = [NSMutableArray array];
+    for (MWPhoto *p in self.photos) {
+        [pArray addObject:p.image];
+    }
+    LZPictureBrowser *mvc = [[LZPictureBrowser alloc] init];
+    [mvc showWithPictureURLs:pArray atIndex:0];
 }
 
 - (BOOL)prepareMessageAudioModel:(EaseMessageModel *)messageModel
