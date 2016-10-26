@@ -11,7 +11,7 @@
  */
 
 #import "EaseRefreshTableViewController.h"
-
+#import "LZChatRefreshHeader.h"
 #import "MJRefresh.h"
 
 @interface EaseRefreshTableViewController ()
@@ -53,32 +53,36 @@
     _showRefreshHeader = NO;
     _showRefreshFooter = NO;
     _showTableBlankView = NO;
+    
+    
+    __weak EaseRefreshTableViewController *weakSelf = self;
+    weakSelf.tableView.mj_header = [LZChatRefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadData
+{
+    [self tableViewDidTriggerHeaderRefresh];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - setter
-
-- (void)setShowRefreshHeader:(BOOL)showRefreshHeader
-{
-    if (_showRefreshHeader != showRefreshHeader) {
-        _showRefreshHeader = showRefreshHeader;
-        if (_showRefreshHeader) {
-            __weak EaseRefreshTableViewController *weakSelf = self;
-            self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-                [weakSelf tableViewDidTriggerHeaderRefresh];
-                [weakSelf.tableView.mj_header beginRefreshing];
-            }];
-            //            header.updatedTimeHidden = YES;
-        }
-        else{
-            //            [self.tableView removeHeader];
-        }
-    }
-}
+//- (void)setShowRefreshHeader:(BOOL)showRefreshHeader
+//{
+//    if (_showRefreshHeader != showRefreshHeader) {
+//        _showRefreshHeader = showRefreshHeader;
+//        if (_showRefreshHeader) {
+//            __weak EaseRefreshTableViewController *weakSelf = self;
+//            self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//                [weakSelf tableViewDidTriggerHeaderRefresh];
+//                [weakSelf.tableView.mj_header beginRefreshing];
+//            }];
+//            //            header.updatedTimeHidden = YES;
+//        }
+//        else{
+//            //            [self.tableView removeHeader];
+//        }
+//    }
+//}
 
 - (void)setShowRefreshFooter:(BOOL)showRefreshFooter
 {
