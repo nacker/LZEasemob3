@@ -147,59 +147,6 @@ static NSString *kGroupName = @"GroupName";
 //    }
 //}
 
-#pragma mark - private
-
-//- (void)setupSubviews
-//{
-////    self.tabBar.backgroundImage = [[UIImage imageNamed:@"tabbarBackground"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
-////    self.tabBar.selectionIndicatorImage = [[UIImage imageNamed:@"tabbarSelectBg"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
-//    
-//    _chatListVC = [[ConversationListController alloc] initWithNibName:nil bundle:nil];
-//    [_chatListVC networkChanged:_connectionState];
-//    [self setupChildVc:_chatListVC title:NSLocalizedString(@"title.conversation", @"Conversations") image:@"tabbar_chats" selectedImage:@"tabbar_chatsHL" tag:0];
-//    
-//    _contactsVC = [[ContactListViewController alloc] initWithNibName:nil bundle:nil];
-//     [self setupChildVc:_contactsVC title:NSLocalizedString(@"title.conversation", @"Conversations") image:@"tabbar_chats" selectedImage:@"tabbar_chatsHL" tag:1];
-//    
-//    
-//    _discoverVC = [[LZDiscoverViewController alloc] init];
-//    [self setupChildVc:_discoverVC title:NSLocalizedString(@"title.conversation", @"Conversations") image:@"tabbar_chats" selectedImage:@"tabbar_chatsHL" tag:2];
-//    
-//    _settingsVC = [[SettingsViewController alloc] init];
-//    [self setupChildVc:_contactsVC title:NSLocalizedString(@"title.conversation", @"Conversations") image:@"tabbar_chats" selectedImage:@"tabbar_chatsHL" tag:3];
-//    
-//    
-//    self.viewControllers = @[_chatListVC, _contactsVC, _settingsVC];
-//    [self selectedTapTabBarItems:_chatListVC.tabBarItem];
-//}
-
-//- (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage tag:(NSInteger)tag
-//{
-//    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title
-//                                                           image:nil
-//                                                             tag:tag];
-//    [vc.tabBarItem setFinishedSelectedImage:[UIImage imageNamed:selectedImage]
-//                         withFinishedUnselectedImage:[UIImage imageNamed:image]];
-//    [self unSelectedTapTabBarItems:vc.tabBarItem];
-//    [self selectedTapTabBarItems:vc.tabBarItem];
-//}
-
-
-//-(void)unSelectedTapTabBarItems:(UITabBarItem *)tabBarItem
-//{
-//    [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-//                                        [UIFont systemFontOfSize:14], UITextAttributeFont,[UIColor whiteColor],UITextAttributeTextColor,
-//                                        nil] forState:UIControlStateNormal];
-//}
-//
-//-(void)selectedTapTabBarItems:(UITabBarItem *)tabBarItem
-//{
-//    [tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-//                                        [UIFont systemFontOfSize:14],
-//                                        UITextAttributeFont,RGBACOLOR(0x00, 0xac, 0xff, 1),UITextAttributeTextColor,
-//                                        nil] forState:UIControlStateSelected];
-//}
-
 // 统计未读消息数
 -(void)setupUnreadMessageCount
 {
