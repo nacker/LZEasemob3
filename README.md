@@ -1,9 +1,14 @@
- 酷信（高仿微信-环信的人说让我取个屌的名字）
+ 酷信（高仿微信-环信的人说让我取个屌的名字） 
 ==================
+
+#	请花一两分钟看完说明
+
 
 ###告示(Notices):
 
-	0.小伙伴们去下载吧,最新版出来了.
+	0.请花一两分钟看完说明,我每天都要回答怎么安装,我累死了.
+	如果你下载后用不了,请到百度云下面这个地址去下载
+	https://pan.baidu.com/s/1boGx4b9
 	1.LZEasemob3 works on "Xcode 8.0 , iOS 8+ and requires ARC to build. 
 	2.如果无法运行项目,请把Xcode 升级为8.0版本以上,ios8.0以上,cocoapods版本最好在0.39.0,最好不要用测试版,二哥亲测是没有问题的.
 	3.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
@@ -12,6 +17,16 @@
 	5.谢谢大家一直以来的关注,二哥这段时间太忙所以更新比较慢,大家觉得好的话请推荐给你的朋友们.为感谢大家二哥在STAR 1000前一定把群聊功能加上,请大家继续关注.
 	
 ###安装方式(Installation Method)
+* 如果你不会安装就去百度云下载,下面是地址.如果百度云失效请联系我,这之后我不会挨个回答各位怎么安装	
+
+ 	 	https://pan.baidu.com/s/1boGx4b9
+ 	 	
+ 	 	下载完之后解压切换到根目录
+ 	 	
+ 	 	git pull
+ 	 	
+ 	 	更新到最新版本.
+
 * 由于包含实时语音版本SDK静态库超过100M,所以用到了git-lfs,当pod install之前需要安装git-lfs 
 
 		brew install git-lfs
