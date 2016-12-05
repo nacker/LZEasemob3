@@ -35,4 +35,20 @@
 @property (nonatomic, assign) BOOL isOpening;
 @property (nonatomic, assign, readonly) BOOL shouldShowMoreButton;
 
+
+@property (nonatomic, assign, readonly) CGRect iconViewF;
+@property (nonatomic, assign, readonly) CGRect nameLableF;
+@property (nonatomic, assign, readonly) CGRect contentLabelF;
+@property (nonatomic, assign, readonly) CGRect moreButtonF;
+@property (nonatomic, assign, readonly) CGRect photoContainerViewF;
+@property (nonatomic, assign, readonly) CGRect originalViewF;
+
+
+@property (nonatomic, assign, readonly) CGRect timeLabelF;
+@property (nonatomic, assign, readonly) CGRect operationButtonF;
+@property (nonatomic, assign, readonly) CGRect dividerF;
+@property (nonatomic, assign, readonly) CGRect commentBgViewF;
+
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+
 @end

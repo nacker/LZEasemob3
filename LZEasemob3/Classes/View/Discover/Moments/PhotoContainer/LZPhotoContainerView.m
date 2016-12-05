@@ -29,9 +29,7 @@ NSString *const kStatusPictureCellId = @"StatusPictureCellId";
 - (void)setUrls:(NSArray *)urls
 {
     _urls = urls;
-    [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo([self calcViewSize]);
-    }];
+    self.size = [self calcViewSize];
     [self reloadData];
 }
 

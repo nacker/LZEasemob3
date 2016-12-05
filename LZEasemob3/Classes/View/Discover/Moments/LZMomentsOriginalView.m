@@ -12,7 +12,7 @@
 #import "LZMomentsCellCommentTableView.h"
 
 // 根据具体font而定
-CGFloat maxContentLabelHeight = 0;
+CGFloat maxContentLabelHeight = 60;
 
 //@interface LZMomentsOriginalView()
 ////@property (nonatomic, strong) MASConstraint *contentLabelBottomConstraint;
@@ -29,13 +29,6 @@ CGFloat maxContentLabelHeight = 0;
     LZPhotoContainerView *_photoContainerView;
     
     BOOL _shouldOpenContentLabel;
-    
-    /// 文字的高度
-    MASConstraint *_contentLabelHeightConstraint;
-    /// 配图视图顶部约束
-    MASConstraint *_topConstraint;
-    /// 配图视图底部约束
-    MASConstraint *_bottomConstraint;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -77,46 +70,46 @@ CGFloat maxContentLabelHeight = 0;
     [self addSubview:_moreButton];
     [self addSubview:_photoContainerView];
    
-    CGFloat margin = 10;
-    // 头像
-    [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(40, 40));
-        make.left.equalTo(self).with.offset(margin);
-        make.top.equalTo(self.mas_top).with.offset(margin);
-    }];
-    
-    // 名字
-    [_nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_iconView);
-        make.left.equalTo(_iconView.mas_right).with.offset(margin);
-        make.right.equalTo(self.mas_right).with.offset(-margin);
-    }];
-    
-    // 内容
-    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_nameLable);
-        make.right.equalTo(self.mas_right).with.offset(-margin);
-        make.top.equalTo(_nameLable.mas_bottom).with.offset(margin);
-        _contentLabelHeightConstraint = make.height.equalTo(@20);
-    }];
-
-    // 更多(展开按钮)
-    [_moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_nameLable);
-        make.top.equalTo(_contentLabel.mas_bottom).offset(0);
-        make.height.equalTo(@30);
-    }];
-
-    // 图片
-    [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_nameLable);
-        _topConstraint = make.top.equalTo(_moreButton.mas_bottom).offset(margin);
-        make.size.mas_equalTo(CGSizeMake(90, 90));
-    }];
-  
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-        _bottomConstraint = make.bottom.equalTo(_photoContainerView).offset(margin);
-    }];
+//    CGFloat margin = 10;
+//    // 头像
+//    [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(40, 40));
+//        make.left.equalTo(self).with.offset(margin);
+//        make.top.equalTo(self.mas_top).with.offset(margin);
+//    }];
+//    
+//    // 名字
+//    [_nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(_iconView);
+//        make.left.equalTo(_iconView.mas_right).with.offset(margin);
+//        make.right.equalTo(self.mas_right).with.offset(-margin);
+//    }];
+//    
+//    // 内容
+//    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(_nameLable);
+//        make.right.equalTo(self.mas_right).with.offset(-margin);
+//        make.top.equalTo(_nameLable.mas_bottom).with.offset(margin);
+//        _contentLabelHeightConstraint = make.height.equalTo(@20);
+//    }];
+//
+//    // 更多(展开按钮)
+//    [_moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(_nameLable);
+//        make.top.equalTo(_contentLabel.mas_bottom).offset(0);
+//        make.height.equalTo(@30);
+//    }];
+//
+//    // 图片
+//    [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(_nameLable);
+//        _topConstraint = make.top.equalTo(_moreButton.mas_bottom).offset(margin);
+//        make.size.mas_equalTo(CGSizeMake(90, 90));
+//    }];
+//  
+//    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+//        _bottomConstraint = make.bottom.equalTo(_photoContainerView).offset(margin);
+//    }];
 }
 
 - (void)setViewModel:(LZMomentsViewModel *)viewModel
@@ -124,61 +117,49 @@ CGFloat maxContentLabelHeight = 0;
     _viewModel = viewModel;
     
     _iconView.image = [UIImage imageNamed:viewModel.status.iconName];
+    _iconView.frame = viewModel.iconViewF;
+    _iconView.backgroundColor = KRandomColor;
+    
     _nameLable.text = viewModel.status.name;
-    
+    _nameLable.frame = viewModel.nameLableF;
+
     _shouldOpenContentLabel = NO;
-    
     
     [self setupContentViewWithContent:viewModel.msgContent];
     
-    [self setupPictureViewWithURLs:viewModel.status.picNamesArray];
+    [self setupPictureViewWithURLs:viewModel.picNamesArray];
 }
 
 - (void)setupContentViewWithContent:(NSString *)content
 {
-    CGFloat margin = 10;
     BOOL hasContent = content.length > 0;
     _contentLabel.hidden = _moreButton.hidden = !hasContent;
     
-    [_topConstraint uninstall];
     if (content.length) {  // 有文字
         _contentLabel.text = content;
         
         if (self.viewModel.shouldShowMoreButton) { // 如果文字高度超过60
             _moreButton.hidden = NO;
             
-            [_contentLabelHeightConstraint uninstall];
             if (self.viewModel.isOpening) { // 如果需要展开
-                [_moreButton setTitle:@"收起" forState:UIControlStateNormal];
+                [_moreButton setTitle:@"全文" forState:UIControlStateNormal];
+                _contentLabel.frame = self.viewModel.contentLabelF;
             } else {
                 
-                [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                    _contentLabelHeightConstraint = make.height.equalTo(@(maxContentLabelHeight));
-                }];
-                [_moreButton setTitle:@"全文" forState:UIControlStateNormal];
+                [_moreButton setTitle:@"收起" forState:UIControlStateNormal];
+                _contentLabel.frame = self.viewModel.contentLabelF;
             }
+            _moreButton.frame = self.viewModel.moreButtonF;
             
-            
-            [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-                _topConstraint = make.top.equalTo(_moreButton.mas_bottom).offset(margin);
-            }];
         }else {  // 没有超过60
             _moreButton.hidden = YES;
-            [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-                _topConstraint = make.top.equalTo(_contentLabel.mas_bottom).offset(margin);
-            }];
+            _contentLabel.frame = self.viewModel.contentLabelF;
         }
-        
-    }else {  // 没有文字
-        [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-            _topConstraint = make.top.equalTo(_nameLable.mas_bottom).offset(margin);
-        }];
     }
 }
 
 - (void)setupPictureViewWithURLs:(NSArray *)urls
 {
-    CGFloat margin = 10;
     // 1. 设置配图视图数据
     _photoContainerView.urls = urls;
     
@@ -187,23 +168,8 @@ CGFloat maxContentLabelHeight = 0;
     _photoContainerView.hidden = !hasPicture;
     
     // 3. 判断是否有配图
-    [_bottomConstraint uninstall];
     if (hasPicture) {
-        [self mas_makeConstraints:^(MASConstraintMaker *make) {
-            _bottomConstraint = make.bottom.equalTo(_photoContainerView).offset(margin);
-        }];
-    } else {
-        
-        if (self.viewModel.shouldShowMoreButton) {
-            [self mas_makeConstraints:^(MASConstraintMaker *make) {
-                _bottomConstraint = make.bottom.equalTo(_moreButton).offset(margin);
-            }];
-        }else {
-            [self mas_makeConstraints:^(MASConstraintMaker *make) {
-                _bottomConstraint = make.bottom.equalTo(_contentLabel).offset(margin);
-            }];
-        }
-
+        _photoContainerView.frame = self.viewModel.photoContainerViewF;
     }
 }
 

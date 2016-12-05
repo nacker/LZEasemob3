@@ -151,8 +151,6 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 #pragma mark - setupTableView
 - (void)setupTableView {
     [self.tableView registerClass:[LZMomentsCell class] forCellReuseIdentifier:CellIdentifier];
-    self.tableView.estimatedRowHeight = 300;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
@@ -223,6 +221,12 @@ static NSString * const CellIdentifier = @"LZMomentsCell";
 
     return cell;
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LZMomentsViewModel *viewModel = self.statusListViewModel.statusList[indexPath.row];
+    return viewModel.cellHeight;
 }
 
 #pragma mark - LZMomentsCellDelegate
