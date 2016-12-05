@@ -34,4 +34,26 @@
     return returnObj;
 }
 
+#pragma  mark - privat e
++ (void)saveLastLoginUsername
+{
+    NSString *username = [[EMClient sharedClient] currentUsername];
+    if (username && username.length > 0) {
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:username forKey:[NSString stringWithFormat:@"em_lastLogin_username"]];
+        [ud synchronize];
+    }
+}
+
++ (NSString*)lastLoginUsername
+{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *username = [ud objectForKey:[NSString stringWithFormat:@"em_lastLogin_username"]];
+    if (username && username.length > 0) {
+        return username;
+    }
+    return nil;
+}
+
+
 @end

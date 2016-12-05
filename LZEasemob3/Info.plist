@@ -25,16 +25,44 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSCameraUsageDescription</key>
-	<string>酷信想使用您的摄像头</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>酷信想使用您的地理位置信息</string>
-	<key>NSLocationWhenInUseDescription</key>
-	<string>酷信想使用您的地理位置信息</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>酷信想使用您的麦克风</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>酷信想使用您的相册</string>
+    
+    <key>NSAppleMusicUsageDescription</key>
+    <string>酷信需要您的同意,才能访问媒体资料库</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>酷信需要您的同意,才能访问蓝牙</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>酷信需要您的同意,才能访问日历</string>
+    <key>NSCameraUsageDescription</key>
+    <string>酷信需要您的同意,才能访问相机</string>
+    <key>NSContactsUsageDescription</key>
+    <string>酷信需要您的同意,才能访问通讯录</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>酷信需要您的同意,才能访问健康分享</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>酷信需要您的同意,才能访问健康更新 </string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>酷信需要您的同意</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>酷信需要您的同意,才能始终访问位置</string>
+    <key>NSLocationUsageDescription</key>
+    <string>酷信需要您的同意,才能访问位置</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>酷信需要您的同意,才能在使用期间访问位置</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>酷信需要您的同意,才能访问麦克风</string>
+    <key>NSMotionUsageDescription</key>
+    <string>酷信需要您的同意,才能访问运动与健身</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>酷信需要您的同意,才能访问相册</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>酷信需要您的同意,才能访问提醒事项</string>
+    <key>NSSiriUsageDescription</key>
+    <string>酷信需要您的同意,才能访问Siri</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>酷信需要您的同意,才能访问语音识别</string>
+    <key>NSVideoSubscriberAccountUsageDescription</key>
+    <string>酷信需要您的同意</string>
+    
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

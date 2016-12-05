@@ -11,7 +11,9 @@ pod 'FMDB'
 pod "MJRefresh"
 pod "AFNetworking"
 pod "ReactiveCocoa", "~> 2.5"
-pod 'Hyphenate_CN', '~> 3.2.0'
+pod 'Hyphenate_CN', '~> 3.2.1'
+pod 'UMengAnalytics'
+pod 'YTKKeyValueStore'
 
 end
 

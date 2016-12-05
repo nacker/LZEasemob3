@@ -14,4 +14,10 @@
 
 @implementation LZConversationViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
+
 @end

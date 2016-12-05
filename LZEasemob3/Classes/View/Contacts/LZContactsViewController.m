@@ -14,4 +14,13 @@
 
 @implementation LZContactsViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
+    [self.tableView setSectionIndexColor:KRGBACOLOR(20, 20, 20, 0.9)];
+}
+
+
 @end

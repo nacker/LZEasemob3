@@ -11,11 +11,10 @@
  */
 
 #import "AppDelegate+EaseMob.h"
-#import "AppDelegate+EaseMobDebug.h"
 #import "LZLoginViewController.h"
 #import "LZTabBarController.h"
 #import "ApplyViewController.h"
-#import "ChatUIHelper.h"
+#import "ChatDemoHelper.h"
 #import "MBProgressHUD.h"
 #import "LZNavigationController.h"
 
@@ -37,13 +36,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                                                  name:KNOTIFICATION_LOGINCHANGE
                                                object:nil];
     
-    [[EaseSDKHelper shareHelper] easemobApplication:application
-                    didFinishLaunchingWithOptions:launchOptions
-                                           appkey:appkey
-                                     apnsCertName:apnsCertName
-                                      otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES],@"easeSandBox":[NSNumber numberWithBool:[self isSpecifyServer]]}];
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application
+                        didFinishLaunchingWithOptions:launchOptions
+                                               appkey:appkey
+                                         apnsCertName:apnsCertName
+                                          otherConfig:@{kSDKConfigEnableConsoleLogger:[NSNumber numberWithBool:YES],@"easeSandBox":[NSNumber numberWithBool:NO]}];
     
-    [ChatUIHelper shareHelper];
+    [ChatDemoHelper shareHelper];
     
     BOOL isAutoLogin = [EMClient sharedClient].isAutoLogin;
     if (isAutoLogin){
@@ -53,6 +52,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@NO];
     }
+}
+
+- (void)easemobApplication:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [[EaseSDKHelper shareHelper] hyphenateApplication:application didReceiveRemoteNotification:userInfo];
 }
 
 #pragma mark - App Delegate
@@ -89,9 +94,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             self.mainController = [[LZTabBarController alloc] init];
         }
         
-        [[ChatUIHelper shareHelper] asyncGroupFromServer];
-        [[ChatUIHelper shareHelper] asyncConversationFromDB];
-        [[ChatUIHelper shareHelper] asyncPushOptions];
+        [[ChatDemoHelper shareHelper] asyncGroupFromServer];
+        [[ChatDemoHelper shareHelper] asyncConversationFromDB];
+        [[ChatDemoHelper shareHelper] asyncPushOptions];
         
         self.window.rootViewController = self.mainController;
         
@@ -100,7 +105,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             [self.mainController.navigationController popToRootViewControllerAnimated:NO];
         }
         self.mainController = nil;
-        [ChatUIHelper shareHelper].mainVC = nil;
+        [ChatDemoHelper shareHelper].mainVC = nil;
         
         LZLoginViewController *loginController = [[LZLoginViewController alloc] init];
         self.window.rootViewController = [[LZNavigationController alloc] initWithRootViewController:loginController];

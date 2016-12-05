@@ -29,6 +29,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LZTabBarController.h"
+#import "ApplyViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,EMChatManagerDelegate>
 {

@@ -18,4 +18,6 @@
 
 /* 裁剪圆形图片 */
 + (UIImage *)clipImage:(UIImage *)image;
+
+- (UIImage *)imageByScalingAndCroppingForSize:(CGSize)targetSize;
 @end

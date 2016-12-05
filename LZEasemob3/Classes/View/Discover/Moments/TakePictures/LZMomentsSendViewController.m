@@ -11,7 +11,7 @@
 #import "TZImagePickerController.h"
 #import "DFPlainGridImageView.h"
 #import "LZActionSheet.h"
-#import "LZTextView.h"
+#import "EMTextView.h"
 
 #import "LZMomentsSendViewModel.h"
 #import "MomentsPublishPictureCell.h"
@@ -28,7 +28,7 @@
 @implementation LZMomentsSendViewController
 {
     UIView *_headerView;
-    LZTextView *_textView;
+    EMTextView *_textView;
 }
 - (instancetype)initWithImages:(NSArray *)images
 {
@@ -76,7 +76,7 @@
 #pragma mark - setupUI
 - (void)setupUI
 {
-    _textView = [[LZTextView alloc] init];
+    _textView = [[EMTextView alloc] init];
     _textView.placeholder = @"说点什么吧...";
     _textView.scrollEnabled = YES;
     _textView.delegate = self;

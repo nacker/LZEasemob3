@@ -18,19 +18,18 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <Hyphenate_CN/EMSDKFull.h>
-#import "EMAlertView.h"
-#import "TTGlobalUICommon.h"
 
 #import "EMSDKFull.h"
 #import "EaseUI.h"
-#import "ChatUIDefine.h"
-#import "UserCacheManager.h"
+#import "EMAlertView.h"
+#import "TTGlobalUICommon.h"
 
 #define DEMO_CALL 1
 
 #import "EMAlertView.h"
 #import "TTGlobalUICommon.h"
 
+#import "MBProgressHUD.h"
 #import "MBProgressHUD+Add.h"
 #import "MJRefresh.h"
 #import "Masonry.h"

@@ -7,12 +7,13 @@
 //
 
 #import "LZLoginViewController.h"
-#import "ChatUIHelper.h"
+#import "EMError.h"
+#import "ChatDemoHelper.h"
 
 @interface LZLoginViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, weak) IBOutlet UITextField *usernamefield;
-@property (nonatomic, weak) IBOutlet UITextField *passwordfield;
+@property (nonatomic, weak) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *passwordTextField;
 
 @property (nonatomic, weak) IBOutlet UIButton *registerBtn;
 @property (nonatomic, weak) IBOutlet UIButton *loginBtn;
@@ -37,12 +38,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupForDismissKeyboard];
-    _usernamefield.delegate = self;
-    _passwordfield.delegate = self;
+    _usernameTextField.delegate = self;
+    _passwordTextField.delegate = self;
     
-    NSString *username = [self lastLoginUsername];
+    NSString *username = [LZDataBaseTool lastLoginUsername];
     if (username && username.length > 0) {
-        _usernamefield.text = username;
+        _usernameTextField.text = username;
     }
     
     self.title = NSLocalizedString(@"AppName", @"EaseMobDemo");
@@ -51,16 +52,17 @@
     [self.loginBtn addTarget:self action:@selector(doLogin) forControlEvents:UIControlEventTouchUpInside];
     
     
-    _usernamefield.text = @"nacker";
-    _passwordfield.text = @"123456";
+    _usernameTextField.text = @"nacker";
+    _passwordTextField.text = @"123456";
 }
 
+//登陆账号
 - (void)doLogin
 {
     if (![self isEmpty]) {
         [self.view endEditing:YES];
         //支持是否为中文
-        if ([self.usernamefield.text isChinese]) {
+        if ([self.usernameTextField.text isChinese]) {
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:NSLocalizedString(@"login.nameNotSupportZh", @"Name does not support Chinese")
                                   message:nil
@@ -72,19 +74,25 @@
             
             return;
         }
-        [self loginWithUsername:_usernamefield.text password:_passwordfield.text];
+        /*
+         #if !TARGET_IPHONE_SIMULATOR
+         //弹出提示
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"login.inputApnsNickname", @"Please enter nickname for apns") delegate:self cancelButtonTitle:NSLocalizedString(@"cancel", @"Cancel") otherButtonTitles:NSLocalizedString(@"ok", @"OK"), nil];
+         [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+         UITextField *nameTextField = [alert textFieldAtIndex:0];
+         nameTextField.text = self.usernameTextField.text;
+         [alert show];
+         #elif TARGET_IPHONE_SIMULATOR
+         [self loginWithUsername:_usernameTextField.text password:_passwordTextField.text];
+         #endif
+         */
+        [self loginWithUsername:_usernameTextField.text password:_passwordTextField.text];
     }
 }
 
 //点击登陆后的操作
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password
 {
-#pragma - 暂时关闭了红包功能,需要红包自行导入
-    //#ifdef REDPACKET_AVALABLE
-    //    //TODO: 服务器二次校验
-    //    [[RedPacketUserConfig sharedConfig] configWithImUserId:username andImUserPass:password];
-    //#endif
-    
     [self showHudInView:self.view hint:NSLocalizedString(@"login.ongoing", @"Is Login...")];
     //异步登陆账号
     __weak typeof(self) weakself = self;
@@ -93,34 +101,31 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakself hideHud];
             if (!error) {
-                // 保存用户信息
-                [UserCacheManager saveInfo:username imgUrl:@"http://avatar.csdn.net/A/2/1/1_mengmakies.jpg" nickName:username];
-                
                 //设置是否自动登录
                 [[EMClient sharedClient].options setIsAutoLogin:YES];
                 
                 //获取数据库中数据
                 [MBProgressHUD showHUDAddedTo:weakself.view animated:YES];
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    [[EMClient sharedClient] dataMigrationTo3];
+                    [[EMClient sharedClient] migrateDatabaseToLatestSDK];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [[ChatUIHelper shareHelper] asyncGroupFromServer];
-                        [[ChatUIHelper shareHelper] asyncConversationFromDB];
-                        [[ChatUIHelper shareHelper] asyncPushOptions];
+                        [[ChatDemoHelper shareHelper] asyncGroupFromServer];
+                        [[ChatDemoHelper shareHelper] asyncConversationFromDB];
+                        [[ChatDemoHelper shareHelper] asyncPushOptions];
                         [MBProgressHUD hideAllHUDsForView:weakself.view animated:YES];
                         //发送自动登陆状态通知
                         [[NSNotificationCenter defaultCenter] postNotificationName:KNOTIFICATION_LOGINCHANGE object:@([[EMClient sharedClient] isLoggedIn])];
                         
                         //保存最近一次登录用户名
-                        [weakself saveLastLoginUsername];
+                        [LZDataBaseTool saveLastLoginUsername];
                     });
                 });
             } else {
                 switch (error.code)
                 {
-                        //                    case EMErrorNotFound:
-                        //                        TTAlertNoTitle(error.errorDescription);
-                        //                        break;
+//                    case EMErrorNotFound:
+//                        TTAlertNoTitle(error.errorDescription);
+//                        break;
                     case EMErrorNetworkUnavailable:
                         TTAlertNoTitle(NSLocalizedString(@"error.connectNetworkFail", @"No network connection!"));
                         break;
@@ -132,6 +137,9 @@
                         break;
                     case EMErrorServerTimeout:
                         TTAlertNoTitle(NSLocalizedString(@"error.connectServerTimeout", @"Connect to the server timed out!"));
+                        break;
+                    case EMErrorServerServingForbidden:
+                        TTAlertNoTitle(NSLocalizedString(@"servingIsBanned", @"Serving is banned"));
                         break;
                     default:
                         TTAlertNoTitle(NSLocalizedString(@"login.fail", @"Login failure"));
@@ -154,16 +162,18 @@
         }
     }
     //登陆
-    [self loginWithUsername:_usernamefield.text password:_passwordfield.text];
+    [self loginWithUsername:_usernameTextField.text password:_passwordTextField.text];
 }
 
+//注册账号
+//Registered account
 - (void)registerBtnClick
 {
     if (![self isEmpty]) {
         //隐藏键盘
         [self.view endEditing:YES];
         //判断是否是中文，但不支持中英文混编
-        if ([self.usernamefield.text isChinese]) {
+        if ([self.usernameTextField.text isChinese]) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"login.nameNotSupportZh", @"Name does not support Chinese")
                                                             message:nil
                                                            delegate:nil
@@ -177,7 +187,7 @@
         [self showHudInView:self.view hint:NSLocalizedString(@"register.ongoing", @"Is to register...")];
         __weak typeof(self) weakself = self;
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            EMError *error = [[EMClient sharedClient] registerWithUsername:weakself.usernamefield.text password:weakself.passwordfield.text];
+            EMError *error = [[EMClient sharedClient] registerWithUsername:weakself.usernameTextField.text password:weakself.passwordTextField.text];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakself hideHud];
                 if (!error) {
@@ -196,6 +206,9 @@
                         case EMErrorServerTimeout:
                             TTAlertNoTitle(NSLocalizedString(@"error.connectServerTimeout", @"Connect to the server timed out!"));
                             break;
+                        case EMErrorServerServingForbidden:
+                            TTAlertNoTitle(NSLocalizedString(@"servingIsBanned", @"Serving is banned"));
+                            break;
                         default:
                             TTAlertNoTitle(NSLocalizedString(@"register.fail", @"Registration failed"));
                             break;
@@ -209,8 +222,8 @@
 //判断账号和密码是否为空
 - (BOOL)isEmpty{
     BOOL ret = NO;
-    NSString *username = _usernamefield.text;
-    NSString *password = _passwordfield.text;
+    NSString *username = _usernameTextField.text;
+    NSString *password = _passwordTextField.text;
     if (username.length == 0 || password.length == 0) {
         ret = YES;
         [EMAlertView showAlertWithTitle:NSLocalizedString(@"prompt", @"Prompt")
@@ -226,8 +239,8 @@
 
 #pragma  mark - TextFieldDelegate
 -(BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    if (textField == _usernamefield) {
-        _passwordfield.text = @"";
+    if (textField == _usernameTextField) {
+        _passwordTextField.text = @"";
     }
     
     return YES;
@@ -235,37 +248,15 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if (textField == _usernamefield) {
-        [_usernamefield resignFirstResponder];
-        [_passwordfield becomeFirstResponder];
-    } else if (textField == _passwordfield) {
-        [_passwordfield resignFirstResponder];
+    if (textField == _usernameTextField) {
+        [_usernameTextField resignFirstResponder];
+        [_passwordTextField becomeFirstResponder];
+    } else if (textField == _passwordTextField) {
+        [_passwordTextField resignFirstResponder];
         [self doLogin];
     }
     return YES;
 }
-
-#pragma  mark - privat e
-- (void)saveLastLoginUsername
-{
-    NSString *username = [[EMClient sharedClient] currentUsername];
-    if (username && username.length > 0) {
-        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-        [ud setObject:username forKey:[NSString stringWithFormat:@"em_lastLogin_username"]];
-        [ud synchronize];
-    }
-}
-
-- (NSString*)lastLoginUsername
-{
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSString *username = [ud objectForKey:[NSString stringWithFormat:@"em_lastLogin_username"]];
-    if (username && username.length > 0) {
-        return username;
-    }
-    return nil;
-}
-
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {

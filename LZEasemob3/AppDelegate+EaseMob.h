@@ -20,4 +20,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
               apnsCertName:(NSString *)apnsCertName
                otherConfig:(NSDictionary *)otherConfig;
 
+- (void)easemobApplication:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo;
+
 @end

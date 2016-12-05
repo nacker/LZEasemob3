@@ -14,4 +14,7 @@
 + (void)saveToUserDefaults:(id)object key:(NSString *)key;
 + (id)getUserDefaultsWithKey:(NSString *)key;
 
++ (void)saveLastLoginUsername;
++ (NSString*)lastLoginUsername;
+
 @end
