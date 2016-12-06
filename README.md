@@ -8,7 +8,7 @@
 
 	0.请花一两分钟看完说明,我每天都要回答怎么安装,我累死了.
 	如果你下载后用不了,请到百度云下面这个地址去下载
-	https://pan.baidu.com/s/1boGx4b9
+	http://pan.baidu.com/s/1skSi2lf
 	1.LZEasemob3 works on "Xcode 8.0 , iOS 8+ and requires ARC to build. 
 	2.如果无法运行项目,请把Xcode 升级为8.0版本以上,ios8.0以上,cocoapods版本最好在0.39.0和1.0.1,最好不要用测试版,二哥亲测是没有问题的.
 	3.If not running,check the Resources. http://www.bubuko.com/infodetail-1020786.html
@@ -19,7 +19,7 @@
 ###安装方式(Installation Method)
 * 如果你不会安装就去百度云下载,下面是地址.如果百度云失效请联系我,这之后我不会挨个回答各位怎么安装	
 
- 	 	https://pan.baidu.com/s/1boGx4b9
+ 	 	http://pan.baidu.com/s/1skSi2lf
  	 	
  	 	下载完之后解压切换到根目录
  	 	
