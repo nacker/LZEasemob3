@@ -60,6 +60,7 @@
 "notFound" = "Can't found";
 "noMore" = "No more data";
 "hasRead" = "Read";
+"servingIsBanned" = "User is forbidden";
 
 //app
 "AppName" = "EaseMobDemo";
@@ -133,6 +134,9 @@
 "group.join.fail" = "again failed to join the group, please";
 "group.sendingApply" = "send group of application...";
 "group.sendApplyRepeat" = "application has been sent";
+"group.atMe" = "[Somebody @ me]";
+"group.atAll" = "[Everyone's message]";
+"group.atPushTitle" = " @ me in the group";
 
 //Create Group
 "group.create.addOccupant" = "add members";
@@ -207,7 +211,9 @@
 "call.autoHangup"="No response and Hang up";
 "call.noResponse"="NO response";
 "call.connectFailed"="Connect failed";
+"call.connectUnsupported"="Unsupported";
 "call.failed"="Call failed";
+"call.offline"="Remote offline";
 "call.suspended"="Call has been suspended";
 "call.over"="Call end";
 "call.cancel"="Cancel the call";
@@ -279,7 +285,7 @@
 "title.conversation" = "Conversations";
 "title.addressbook" = "AddressBook";
 "title.discover" = "Discover";
-"title.setting" = "Me";
+"title.setting" = "Setting";
 "title.group" = "Group";
 "title.chatroom" = "Chatroom";
 "title.mychatroom" = "My Chatroom";
@@ -311,6 +317,8 @@
 "setting.nightOpen" = "On only from 10pm to 7am.";
 "setting.close" = "Off";
 "setting.sureNotDisturb" = "this setting will cause all day in the don't disturb mode, will no longer receive push messages. Whether or not to continue?";
+"setting.callPush" = "If the offline send call push";
+"setting.callResolution" = "Video call resolution";
 
 "setting.uploadLog" = "upload run log";
 "setting.sdkVersion" = "SDK version";

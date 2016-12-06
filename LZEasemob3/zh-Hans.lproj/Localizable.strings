@@ -60,6 +60,7 @@
 "notFound" = "没有找到";
 "noMore" = "没有更多数据了";
 "hasRead" = "已读";
+"servingIsBanned" = "服务被禁用";
 
 //app
 "AppName" = "环信Demo";
@@ -134,6 +135,9 @@
 "group.sendingApply" = "发送加群申请...";
 "group.sendApplyRepeat" = "申请已发送";
 "group.maxUserCount" = "群成员个数超了最大值了";
+"group.atMe" = "[有人@我]";
+"group.atAll" = "[有全体消息]";
+"group.atPushTitle" = "在群中@了我";
 
 //Create Group
 "group.create.addOccupant" = "添加成员";
@@ -207,7 +211,9 @@
 "call.autoHangup"="没有响应，自动挂断";
 "call.noResponse"="对方没有回应";
 "call.connectFailed"="建立连接失败";
+"call.connectUnsupported"="功能不支持";
 "call.failed"="通话失败";
+"call.offline"="对方不在线";
 "call.suspended"="通话已挂断";
 "call.over"="通话结束";
 "call.cancel"="取消通话";
@@ -274,10 +280,10 @@
 "location.ongoning" = "正在定位...";
 
 //title
-"title.conversation" = "酷信";
+"title.conversation" = "会话";
 "title.addressbook" = "通讯录";
 "title.discover" = "发现";
-"title.setting" = "我";
+"title.setting" = "设置";
 "title.group" = "群组";
 "title.chatroom" = "聊天室";
 "title.mychatroom" = "我的聊天室";
@@ -310,6 +316,8 @@
 "setting.nightOpen" = "只在夜间开启 (22:00 - 7:00)";
 "setting.close" = "关闭";
 "setting.sureNotDisturb" = "此设置会导致全天都处于免打扰模式, 不会再收到推送消息. 是否继续?";
+"setting.callPush" = "实时通话是否发送离线推送";
+"setting.callResolution" = "实时视频通话分辨率";
 
 "setting.uploadLog" = "上传运行日志";
 "setting.sdkVersion" = "ONE SDK 版本";

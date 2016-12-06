@@ -181,6 +181,8 @@
 		6205E3501DF54BD300E57FC9 /* RedPacketResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6205E3411DF54BD300E57FC9 /* RedPacketResource.bundle */; };
 		6205E3511DF54BD300E57FC9 /* 环信红包3.x接入文档(iOS).md in Sources */ = {isa = PBXBuildFile; fileRef = 6205E3441DF54BD300E57FC9 /* 环信红包3.x接入文档(iOS).md */; };
 		6205E3531DF550D000E57FC9 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6205E3521DF550D000E57FC9 /* CoreMotion.framework */; };
+		62172AD71DF6632900519CC0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62172AD61DF6632900519CC0 /* Settings.bundle */; };
+		62172AD81DF663A000519CC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62172ADA1DF663A000519CC0 /* Localizable.strings */; };
 		62A1C4011DBF9A8F00BB5FA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C4001DBF9A8F00BB5FA6 /* main.m */; };
 		62A1C4041DBF9A8F00BB5FA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A1C4031DBF9A8F00BB5FA6 /* AppDelegate.m */; };
 		62A1C40C1DBF9A8F00BB5FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A1C40B1DBF9A8F00BB5FA6 /* Assets.xcassets */; };
@@ -308,9 +310,7 @@
 		62A1C8E11DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E01DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd */; };
 		62A1C8E31DBFA2E100BB5FA6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E21DBFA2E100BB5FA6 /* libsqlite3.tbd */; };
 		62A1C8E51DBFA2E900BB5FA6 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1C8E41DBFA2E900BB5FA6 /* libiconv.tbd */; };
-		62A9054C1DBFC5420045BEB1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62A9054B1DBFC5420045BEB1 /* Settings.bundle */; };
 		62A905511DBFC61F0045BEB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A905531DBFC61F0045BEB1 /* InfoPlist.strings */; };
-		62A905551DBFC6290045BEB1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62A905571DBFC6290045BEB1 /* Localizable.strings */; };
 		79939814D7A27087C758AF7A /* libPods-LZEasemob3UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56435C45020977F219B44C2C /* libPods-LZEasemob3UITests.a */; };
 		7E1AC9600538E3430768236B /* libPods-LZEasemob3Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A16C8A4084868AF8EF22756 /* libPods-LZEasemob3Tests.a */; };
 		DF030C02A567ED5A1761350D /* libPods-LZEasemob3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5EBA924A0F058D4D2A1FF0 /* libPods-LZEasemob3.a */; };
@@ -699,6 +699,9 @@
 		6205E3431DF54BD300E57FC9 /* YZHRedpacketBridgeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZHRedpacketBridgeProtocol.h; sourceTree = "<group>"; };
 		6205E3441DF54BD300E57FC9 /* 环信红包3.x接入文档(iOS).md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "环信红包3.x接入文档(iOS).md"; sourceTree = "<group>"; };
 		6205E3521DF550D000E57FC9 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		62172AD61DF6632900519CC0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		62172AD91DF663A000519CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		62172ADB1DF663A300519CC0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		62A1C3FC1DBF9A8F00BB5FA6 /* LZEasemob3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZEasemob3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A1C4001DBF9A8F00BB5FA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62A1C4021DBF9A8F00BB5FA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -925,11 +928,8 @@
 		62A1C8E01DBFA2DA00BB5FA6 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		62A1C8E21DBFA2E100BB5FA6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		62A1C8E41DBFA2E900BB5FA6 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		62A9054B1DBFC5420045BEB1 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		62A905521DBFC61F0045BEB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		62A905541DBFC6210045BEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		62A905561DBFC6290045BEB1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		62A905581DBFC62B0045BEB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		811CF240489F5F93C8A3FE77 /* Pods-LZEasemob3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3/Pods-LZEasemob3.debug.xcconfig"; sourceTree = "<group>"; };
 		8292FB8D6D8B09785ADB8715 /* Pods-LZEasemob3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3UITests/Pods-LZEasemob3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		C7755DC6E34DC61E7849AE8D /* Pods-LZEasemob3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemob3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZEasemob3Tests/Pods-LZEasemob3Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1921,9 +1921,9 @@
 				62A1C8CE1DBF9B8B00BB5FA6 /* LZNotificationWorkstation.h */,
 				62A1C8CF1DBF9B8B00BB5FA6 /* LZNotificationWorkstation.m */,
 				62A1C8D11DBF9B9200BB5FA6 /* PrefixHeader.pch */,
+				62172ADA1DF663A000519CC0 /* Localizable.strings */,
+				62172AD61DF6632900519CC0 /* Settings.bundle */,
 				62A905531DBFC61F0045BEB1 /* InfoPlist.strings */,
-				62A905571DBFC6290045BEB1 /* Localizable.strings */,
-				62A9054B1DBFC5420045BEB1 /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2599,6 +2599,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 62A1C3F31DBF9A8E00BB5FA6;
 			productRefGroup = 62A1C3FD1DBF9A8F00BB5FA6 /* Products */;
@@ -2617,9 +2618,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62A9054C1DBFC5420045BEB1 /* Settings.bundle in Resources */,
+				62172AD71DF6632900519CC0 /* Settings.bundle in Resources */,
 				62A1C7611DBF9AD900BB5FA6 /* photo_sel_photoPickerVc@2x.png in Resources */,
-				62A905551DBFC6290045BEB1 /* Localizable.strings in Resources */,
 				62A1C88A1DBF9ADA00BB5FA6 /* picture_download_icon@2x.png in Resources */,
 				6205E1E01DF5272300E57FC9 /* EaseUIResource.bundle in Resources */,
 				62A1C7631DBF9AD900BB5FA6 /* preview_number_icon@2x.png in Resources */,
@@ -2632,6 +2632,7 @@
 				62A1C7651DBF9AD900BB5FA6 /* TableViewArrow@2x.png in Resources */,
 				6205E3491DF54BD300E57FC9 /* RedpacketCellResource.bundle in Resources */,
 				6205E1B21DF5272300E57FC9 /* MWPhotoBrowser.bundle in Resources */,
+				62172AD81DF663A000519CC0 /* Localizable.strings in Resources */,
 				62A1C8BD1DBF9ADA00BB5FA6 /* shake_sound_male.wav in Resources */,
 				62A1C75F1DBF9AD900BB5FA6 /* photo_original_def@2x.png in Resources */,
 				62A1C8BB1DBF9ADA00BB5FA6 /* shake_match.wav in Resources */,
@@ -3098,6 +3099,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		62172ADA1DF663A000519CC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62172AD91DF663A000519CC0 /* en */,
+				62172ADB1DF663A300519CC0 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		62A905531DBFC61F0045BEB1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -3105,15 +3115,6 @@
 				62A905541DBFC6210045BEB1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		62A905571DBFC6290045BEB1 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62A905561DBFC6290045BEB1 /* zh-Hans */,
-				62A905581DBFC62B0045BEB1 /* en */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3159,7 +3160,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -3200,7 +3201,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
