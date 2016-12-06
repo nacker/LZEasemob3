@@ -52,7 +52,7 @@
     [self.loginBtn addTarget:self action:@selector(doLogin) forControlEvents:UIControlEventTouchUpInside];
     
     
-    _usernameTextField.text = @"nacker";
+    _usernameTextField.text = @"h18";
     _passwordTextField.text = @"123456";
 }
 

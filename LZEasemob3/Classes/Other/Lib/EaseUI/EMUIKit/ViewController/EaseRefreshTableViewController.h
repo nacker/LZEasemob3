@@ -29,7 +29,7 @@
 
 @property (nonatomic) BOOL showRefreshHeader;
 @property (nonatomic) BOOL showRefreshFooter;
-@property (nonatomic) BOOL showTableBlankView;
+@property (nonatomic) BOOL showTableBlankView;//是否显示无数据时默认背景
 
 - (instancetype)initWithStyle:(UITableViewStyle)style;
 

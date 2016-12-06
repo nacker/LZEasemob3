@@ -13,6 +13,7 @@
 #import "EaseMessageReadManager.h"
 #import "UIImageView+EMWebCache.h"
 #import "EMCDDeviceManager.h"
+#import "LZPictureBrowser.h"
 
 #define IMAGE_MAX_SIZE_5k 5120*2880
 
@@ -115,7 +116,7 @@ static EaseMessageReadManager *detailInstance = nil;
 
 
 #pragma mark - public
-
+#pragma mark - 显示图片浏览器
 - (void)showBrowserWithImages:(NSArray *)imageArray
 {
     if (imageArray && [imageArray count] > 0) {
@@ -143,9 +144,12 @@ static EaseMessageReadManager *detailInstance = nil;
         
         self.photos = photoArray;
     }
-    
-    UIViewController *rootController = [self.keyWindow rootViewController];
-    [rootController presentViewController:self.photoNavigationController animated:YES completion:nil];
+    NSMutableArray *pArray = [NSMutableArray array];
+    for (MWPhoto *p in self.photos) {
+        [pArray addObject:p.image];
+    }
+    LZPictureBrowser *mvc = [[LZPictureBrowser alloc] init];
+    [mvc showWithPictureURLs:pArray atIndex:0];
 }
 
 - (BOOL)prepareMessageAudioModel:(EaseMessageModel *)messageModel
