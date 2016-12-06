@@ -42,7 +42,7 @@ static MLLinkLabel * kProtypeLabel() {
         _protypeLabel = [MLLinkLabel new];
         _protypeLabel.font = [UIFont systemFontOfSize:14.0f];
         _protypeLabel.numberOfLines = 0;
-        //        _protypeLabel.textInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+//        _protypeLabel.textInsets = UIEdgeInsetsMake(1, 1, 1, 1);
         _protypeLabel.lineHeightMultiple = 1.1f;
         UIColor *highLightColor = [UIColor blueColor];
         _protypeLabel.linkTextAttributes = @{NSForegroundColorAttributeName : highLightColor};

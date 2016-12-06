@@ -31,13 +31,6 @@
     // 回复的tableView
     LZMomentsCellCommentBgView *_commentBgView;
     
-    // 回复的tableView的高度
-    MASConstraint *_commentViewHeightConstraint;
-    
-    /// 底部视图顶部约束
-    MASConstraint *_dividerTopConstraint;
-    
-    
     LZOperationMenu *_operationMenu;
 }
 
@@ -56,9 +49,8 @@
 {
     // 原创微博
     _originalView = [[LZMomentsOriginalView alloc] init];
-    _originalView.backgroundColor = KRandomColor;
     
-    _timeLabel =  [UILabel labelWithTitle:@"" color:[UIColor lightGrayColor] fontSize:13 alignment:NSTextAlignmentRight];
+    _timeLabel =  [UILabel labelWithTitle:@"" color:[UIColor lightGrayColor] fontSize:13 alignment:NSTextAlignmentLeft];
     
     _operationButton = [UIButton new];
     [_operationButton setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
@@ -87,64 +79,20 @@
     _divider.backgroundColor = [UIColor grayColor];
 
     [self.contentView addSubview:_originalView];
-//    [self.contentView addSubview:_timeLabel];
-//    [self.contentView addSubview:_operationButton];
-//    [self.contentView addSubview:_divider];
-//    [self.contentView addSubview:_commentBgView];
-//    [self.contentView addSubview:_operationMenu];
+    [self.contentView addSubview:_timeLabel];
+    [self.contentView addSubview:_operationButton];
+    [self.contentView addSubview:_divider];
+    [self.contentView addSubview:_commentBgView];
+    [self.contentView addSubview:_operationMenu];
     
-//    // 设置约束
-//    CGFloat margin = 10;
-//    // 原创微博
-//    [_originalView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.contentView);
-//        make.left.equalTo(self.contentView);
-//        make.right.equalTo(self.contentView);
-//    }];
-//    
-//    // 点赞+回复按钮
-//    [_operationButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_originalView.mas_bottom).with.offset(0);
-//        make.right.equalTo(self.contentView.mas_right).offset(-margin);
-//        make.size.mas_equalTo(CGSizeMake(25, 25));
-//    }];
-//    
-//    // 时间
-//    [_timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.contentView.mas_left).offset(2 * margin + 40);
-//        make.centerY.equalTo(_operationButton);
-//    }];
-//    
-//    // 回复的tableView
-//    [_commentBgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_timeLabel.mas_bottom).offset(10);
-//        make.left.equalTo(self.contentView.mas_left).offset(60);
-//        make.right.equalTo(self.contentView.mas_right).offset(-margin);
-//        make.size.mas_equalTo(CGSizeMake(90, 90));
-//    }];
-//
-//    // 分割线
-//    [_divider mas_makeConstraints:^(MASConstraintMaker *make) {
-//        _dividerTopConstraint = make.top.equalTo(_commentBgView.mas_bottom).offset(margin);
-//        make.left.right.equalTo(self.contentView);
-//        make.height.mas_equalTo(1);
-//    }];
-//    
+  
 //    // 展开点赞+回复按钮
-//    [_operationMenu mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.right.equalTo(_operationButton.mas_left).offset(0);
-//        make.centerY.equalTo(_operationButton);
-//        make.height.equalTo(@36);
-//        make.width.equalTo(@0);
-//        //        make.width.equalTo(@180);
-//    }];
-//
-//    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.equalTo(_divider);
-//        make.top.equalTo(self);
-//        make.leading.equalTo(self);
-//        make.trailing.equalTo(self);
-//    }];
+    [_operationMenu mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(_operationButton.mas_left).offset(0);
+        make.centerY.equalTo(_operationButton);
+        make.height.equalTo(@36);
+        make.width.equalTo(@0);
+    }];
 }
 
 - (void)setFrame:(CGRect)frame
@@ -162,24 +110,20 @@
     _originalView.frame = viewModel.originalViewF;
     _originalView.indexPath = self.indexPath;
     
-    
     _timeLabel.text = viewModel.time;
-
-//    CGFloat margin = 10;
-//    
-//    [_dividerTopConstraint uninstall];
-//    if (!viewModel.status.commentItemsArray.count && !viewModel.status.likeItemsArray.count) {
-//        _commentBgView.hidden = YES;
-//        [_divider mas_makeConstraints:^(MASConstraintMaker *make) {
-//            _dividerTopConstraint = make.top.equalTo(_timeLabel.mas_bottom).offset(margin);
-//        }];
-//    }else {
-//        _commentBgView.hidden = NO;
-//        _commentBgView.viewModel = viewModel;
-//        [_divider mas_makeConstraints:^(MASConstraintMaker *make) {
-//            _dividerTopConstraint = make.top.equalTo(_commentBgView.mas_bottom).offset(margin);
-//        }];
-//    }
+    _timeLabel.frame = viewModel.timeLabelF;
+    
+    _operationButton.frame = viewModel.operationButtonF;
+    
+    if (!viewModel.status.commentItemsArray.count && !viewModel.status.likeItemsArray.count) {
+        _commentBgView.hidden = YES;
+    }else {
+        _commentBgView.hidden = NO;
+        _commentBgView.viewModel = viewModel;
+        _commentBgView.frame = viewModel.commentBgViewF;
+    }
+    
+    _divider.frame = viewModel.dividerF;
 }
 
 - (void)operationButtonClicked:(UIButton *)btn

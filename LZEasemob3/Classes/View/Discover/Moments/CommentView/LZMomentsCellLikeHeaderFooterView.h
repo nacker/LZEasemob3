@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LZMomentsCellLikeViewCell : UITableViewHeaderFooterView
+@interface LZMomentsCellLikeHeaderFooterView : UITableViewHeaderFooterView
 
 + (instancetype)cellWithTable:(UITableView *)tableView;
 

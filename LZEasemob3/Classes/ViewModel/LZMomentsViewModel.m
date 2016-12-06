@@ -7,13 +7,13 @@
 //
 
 #import "LZMomentsViewModel.h"
+#import "MLLinkLabel.h"
 
 extern CGFloat maxContentLabelHeight;
 
 @implementation LZMomentsViewModel
 {
     CGFloat _lastContentWidth;
-    CGFloat _y;
 }
 
 + (instancetype)viewModelWithStatus:(LZMoments *)status {
@@ -88,7 +88,7 @@ extern CGFloat maxContentLabelHeight;
     CGFloat margin = 10;
     CGFloat cellW = [UIScreen mainScreen].bounds.size.width;
     CGFloat cellHeight;
-    CGFloat contentW = cellW;
+    CGFloat commentViewWidth = cellW - 70;
     
     CGFloat iconViewX = margin;
     CGFloat iconViewY = margin;
@@ -98,13 +98,14 @@ extern CGFloat maxContentLabelHeight;
     
     CGFloat nameLableX = CGRectGetMaxX(_iconViewF) + margin;
     CGFloat nameLableY = margin;
-    _nameLableF = CGRectMake(nameLableX, nameLableY, cellW - nameLableX - margin, 20);
     
+    
+    _nameLableF = CGRectMake(nameLableX, nameLableY, commentViewWidth, 20);
     
     if (self.msgContent.length) {  // 有文字
         CGFloat contentLabelX = nameLableX;
         CGFloat contentLabelY = CGRectGetMaxY(_nameLableF) + margin * 0.5;
-        CGSize msgContentSize = [self.msgContent sizeWithFont:[UIFont systemFontOfSize:15] maxW:cellW - nameLableX - margin];
+        CGSize msgContentSize = [self.msgContent sizeWithFont:[UIFont systemFontOfSize:15] maxW:commentViewWidth];
         if (self.shouldShowMoreButton) { // 如果文字高度超过60
 
             if (self.isOpening) { // 如果需要展开
@@ -115,18 +116,9 @@ extern CGFloat maxContentLabelHeight;
             _moreButtonF = CGRectMake(nameLableX, CGRectGetMaxY(_contentLabelF) + margin * 0.2, 30, 15);
             
             cellHeight = CGRectGetMaxY(_moreButtonF) + margin * 0.5;
-            
-//            [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//                _topConstraint = make.top.equalTo(_moreButton.mas_bottom).offset(margin);
-//            }];
         }else {  // 没有超过60
             _contentLabelF = CGRectMake(contentLabelX, contentLabelY, msgContentSize.width, msgContentSize.height);
-            
             cellHeight = CGRectGetMaxY(_contentLabelF) + margin * 0.5;
-            
-//            [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//                _topConstraint = make.top.equalTo(_contentLabel.mas_bottom).offset(margin);
-//            }];
         }
     }else {
         cellHeight = CGRectGetMaxY(_nameLableF) + margin * 0.5;
@@ -146,31 +138,82 @@ extern CGFloat maxContentLabelHeight;
         cellHeight = CGRectGetMaxY(_photoContainerViewF) + margin * 0.5;
     }
     
-    _originalViewF = CGRectMake(0, 0, contentW, cellHeight);
+    _originalViewF = CGRectMake(0, 0, cellW, cellHeight);
     
-//    //    _answerViewF = CGRectMake(margin, cellHeight, cellW - 2 * margin, 30);
-//    
-//    
-//    if (self.replies.count) {
-//        CGFloat commentBgViewX = margin;
-//        CGFloat commentBgViewY = cellHeight;
-//        CGFloat commentBgViewW = cellW - 2 * margin;
-//        CGFloat commentBgViewH = [self getCommentViewHeight];
-//        _commentBgViewF = CGRectMake(commentBgViewX, commentBgViewY, commentBgViewW, commentBgViewH);
-//        cellHeight = CGRectGetMaxY(_commentBgViewF) + 0.5 * margin;
-//    }
-//    
-//    NSString *comment = NSLocalizedString(@"home.Comment", @"评论");
-//    CGSize size = [comment sizeWithFont:[UIFont systemFontOfSize:11]];
-//    _answerViewF = CGRectMake(cellW - 2 * margin - size.width, cellHeight, size.width, 30);
-//    
-//    _bgViewF = CGRectMake(0, 15, cellW , CGRectGetMaxY(_answerViewF));
-//    
-//    cellHeight = CGRectGetMaxY(_bgViewF) + margin;
+    CGSize timeLabelSize = [self.time sizeWithFont:[UIFont systemFontOfSize:13] maxW:cellW - nameLableX - margin];
+    CGFloat timeLabelY = CGRectGetMaxY(_originalViewF) + margin * 0.5;
+    _timeLabelF = CGRectMake(nameLableX, timeLabelY, timeLabelSize.width, timeLabelSize.height);
     
-    cellHeight = CGRectGetMaxY(_originalViewF) + margin;
+    
+    CGFloat operationButtonWH = 25;
+    CGFloat operationButtonX = cellW - operationButtonWH - margin;
+    CGFloat operationButtonY = timeLabelY - margin * 0.5;
+    _operationButtonF = CGRectMake(operationButtonX, operationButtonY, operationButtonWH, operationButtonWH);
+    
+
+    if (!self.status.commentItemsArray.count && !self.status.likeItemsArray.count) {
+        cellHeight = CGRectGetMaxY(_timeLabelF) + margin * 0.5;
+    }else {
+        CGSize commentViewSize = [self getCommentViewSize];
+        _commentBgViewF = CGRectMake(nameLableX, cellHeight, commentViewSize.width, commentViewSize.height);
+        cellHeight = CGRectGetMaxY(_commentBgViewF) + margin * 0.5;
+    }
+    _dividerF = CGRectMake(0, cellHeight, cellW, 1);
+    
+    cellHeight = CGRectGetMaxY(_dividerF) + margin;
     
     return cellHeight;
     
+}
+
+- (CGSize)getCommentViewSize
+{
+    CGFloat tableViewHeight = 0;
+    CGFloat contentW = [UIScreen mainScreen].bounds.size.width - 70;
+    
+    if (self.status.likeItemsArray.count) {
+        
+        CGFloat h = [UILabel heightForExpressionText:self.status.likesStr width:contentW];
+        
+        tableViewHeight = h + 2;
+    }
+    if (self.status.commentItemsArray.count) {
+        for (int i = 0; i < self.status.commentItemsArray.count; i++) {
+            LZMomentsCellCommentItemModel *model = self.status.commentItemsArray[i];
+            NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithAttributedString:[self generateAttributedStringWithCommentItemModel:model]];
+            
+            
+            MLLinkLabel *label = [MLLinkLabel new];
+            label.attributedText = text;
+            label.numberOfLines = 0;
+            label.lineHeightMultiple = 1.1f;
+            label.font = [UIFont systemFontOfSize:14];
+            UIColor *highLightColor = [UIColor blueColor];
+            label.linkTextAttributes = @{NSForegroundColorAttributeName : highLightColor};
+            label.activeLinkTextAttributes = @{NSForegroundColorAttributeName:[UIColor blueColor],NSBackgroundColorAttributeName:kDefaultActiveLinkBackgroundColorForMLLinkLabel};
+            CGFloat h = [label preferredSizeWithMaxWidth:contentW].height;
+            label = nil;
+//            CGFloat h = [UILabel heightForExpressionText:text width:contentW];
+            
+            tableViewHeight += h;
+        }
+    }
+    return CGSizeMake(contentW, tableViewHeight);
+}
+
+- (NSMutableAttributedString *)generateAttributedStringWithCommentItemModel:(LZMomentsCellCommentItemModel *)model
+{
+    NSString *text = model.firstUserName;
+    if (model.secondUserName.length) {
+        text = [text stringByAppendingString:[NSString stringWithFormat:@"回复%@", model.secondUserName]];
+    }
+    text = [text stringByAppendingString:[NSString stringWithFormat:@"：%@", model.commentString]];
+    NSMutableAttributedString *attString = [[NSMutableAttributedString alloc] initWithString:text];
+    UIColor *highLightColor = [UIColor blueColor];
+    [attString setAttributes:@{NSForegroundColorAttributeName : highLightColor, NSLinkAttributeName : model.firstUserId} range:[text rangeOfString:model.firstUserName]];
+    if (model.secondUserName) {
+        [attString setAttributes:@{NSForegroundColorAttributeName : highLightColor, NSLinkAttributeName : model.secondUserId} range:[text rangeOfString:model.secondUserName]];
+    }
+    return attString;
 }
 @end

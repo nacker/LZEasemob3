@@ -9,7 +9,7 @@
 #import "LZMomentsCellCommentTableView.h"
 #import "LZMomentsViewModel.h"
 #import "LZMomentsCellCommentViewCell.h"
-#import "LZMomentsCellLikeViewCell.h"
+#import "LZMomentsCellLikeHeaderFooterView.h"
 #import "MLLinkLabel.h"
 
 @interface LZMomentsCellCommentTableView()<UITableViewDelegate,UITableViewDataSource>

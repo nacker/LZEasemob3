@@ -14,11 +14,6 @@
 // 根据具体font而定
 CGFloat maxContentLabelHeight = 60;
 
-//@interface LZMomentsOriginalView()
-////@property (nonatomic, strong) MASConstraint *contentLabelBottomConstraint;
-//
-//@end
-
 @implementation LZMomentsOriginalView
 {
     UIImageView *_iconView;
@@ -69,47 +64,6 @@ CGFloat maxContentLabelHeight = 60;
     [self addSubview:_contentLabel];
     [self addSubview:_moreButton];
     [self addSubview:_photoContainerView];
-   
-//    CGFloat margin = 10;
-//    // 头像
-//    [_iconView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.mas_equalTo(CGSizeMake(40, 40));
-//        make.left.equalTo(self).with.offset(margin);
-//        make.top.equalTo(self.mas_top).with.offset(margin);
-//    }];
-//    
-//    // 名字
-//    [_nameLable mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(_iconView);
-//        make.left.equalTo(_iconView.mas_right).with.offset(margin);
-//        make.right.equalTo(self.mas_right).with.offset(-margin);
-//    }];
-//    
-//    // 内容
-//    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(_nameLable);
-//        make.right.equalTo(self.mas_right).with.offset(-margin);
-//        make.top.equalTo(_nameLable.mas_bottom).with.offset(margin);
-//        _contentLabelHeightConstraint = make.height.equalTo(@20);
-//    }];
-//
-//    // 更多(展开按钮)
-//    [_moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(_nameLable);
-//        make.top.equalTo(_contentLabel.mas_bottom).offset(0);
-//        make.height.equalTo(@30);
-//    }];
-//
-//    // 图片
-//    [_photoContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(_nameLable);
-//        _topConstraint = make.top.equalTo(_moreButton.mas_bottom).offset(margin);
-//        make.size.mas_equalTo(CGSizeMake(90, 90));
-//    }];
-//  
-//    [self mas_makeConstraints:^(MASConstraintMaker *make) {
-//        _bottomConstraint = make.bottom.equalTo(_photoContainerView).offset(margin);
-//    }];
 }
 
 - (void)setViewModel:(LZMomentsViewModel *)viewModel

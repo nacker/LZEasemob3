@@ -26,7 +26,7 @@
 /// 配图
 @property (nonatomic, strong) NSArray *picNamesArray;
 
-/// 配图
+/// 时间
 @property (nonatomic, readonly) NSString *time;
 
 + (instancetype)viewModelWithStatus:(LZMoments *)status;
@@ -46,9 +46,11 @@
 
 @property (nonatomic, assign, readonly) CGRect timeLabelF;
 @property (nonatomic, assign, readonly) CGRect operationButtonF;
-@property (nonatomic, assign, readonly) CGRect dividerF;
 @property (nonatomic, assign, readonly) CGRect commentBgViewF;
+@property (nonatomic, assign, readonly) CGRect dividerF;
 
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
+
+- (CGSize)getCommentViewSize;
 
 @end

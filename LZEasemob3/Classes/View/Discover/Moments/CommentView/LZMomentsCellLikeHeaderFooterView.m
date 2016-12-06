@@ -8,7 +8,7 @@
 
 #define SHOW_SIMPLE_TIPS(m) [[[UIAlertView alloc] initWithTitle:@"" message:(m) delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]show];
 
-#import "LZMomentsCellLikeViewCell.h"
+#import "LZMomentsCellLikeHeaderFooterView.h"
 #import "MLLinkLabel.h"
 #import "LZMomentsViewModel.h"
 

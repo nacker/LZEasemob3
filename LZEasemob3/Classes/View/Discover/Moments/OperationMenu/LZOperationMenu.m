@@ -99,7 +99,7 @@
     
 //    [self setNeedsUpdateConstraints];
 // 调用此方法告诉self.view检测是否需要更新约束，若需要则更新，下面添加动画效果才起作用
-//    [self updateConstraintsIfNeeded];
+    [self updateConstraintsIfNeeded];
     
     [UIView animateWithDuration:0.2 animations:^{
         if (!show) {

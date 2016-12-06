@@ -57,7 +57,7 @@
         [self.contentView addGestureRecognizer:tapG];
         
         [_likeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.top.bottom.equalTo(self.contentView);
+            make.left.right.bottom.top.equalTo(self.contentView);
         }];
         
     }
@@ -98,5 +98,12 @@
 - (void)didClickLink:(MLLink *)link linkText:(NSString *)linkText linkLabel:(MLLinkLabel *)linkLabel
 {
     NSLog(@"%@", link.linkValue);
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+//    _likeLabel.frame = CGRectMake(0, 5, self.width, self.height);
 }
 @end
