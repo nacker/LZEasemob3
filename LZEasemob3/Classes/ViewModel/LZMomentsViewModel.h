@@ -49,7 +49,10 @@
 @property (nonatomic, assign, readonly) CGRect commentBgViewF;
 @property (nonatomic, assign, readonly) CGRect dividerF;
 
-@property (nonatomic, assign, readonly) CGFloat cellHeight;
+/* 此次cell最新高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/* 上一次高度 */
+@property (nonatomic, assign) CGFloat lastCellHeight;
 
 - (CGSize)getCommentViewSize;
 
