@@ -27,11 +27,10 @@
 - (void)addChildViewControllers{
     // 创建选项卡的数据 想怎么写看自己，这块我就写笨点了
     NSArray <NSDictionary *>*VCArray =
-    @[@{@"vc":[LZHomeViewController new],@"normalImg":@"tabbar_home",@"selectImg":@"tabbar_home_select",@"itemTitle":@"门店管管理"},
-      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_statistical",@"selectImg":@"tabbar_statistical_select",@"itemTitle":@"数据统计"},
-      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_em",@"selectImg":@"tabbar_em_select",@"itemTitle":@"评价管理"},
-//      @{@"vc":[UIViewController new],@"normalImg":@"",@"selectImg":@"",@"itemTitle":@" "},
-      @{@"vc":[LZMeViewController new],@"normalImg":@"tabbar_me",@"selectImg":@"tabbar_me_select",@"itemTitle":@"我"}];
+    @[@{@"vc":[LZHomeViewController new],@"normalImg":@"tabbar_mainframe",@"selectImg":@"tabbar_mainframeHL",@"itemTitle":@"微信"},
+      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_contacts",@"selectImg":@"tabbar_contactsHL",@"itemTitle":@"通讯录"},
+      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_discover",@"selectImg":@"tabbar_discoverHL",@"itemTitle":@"发现"},
+      @{@"vc":[LZMeViewController new],@"normalImg":@"tabbar_me",@"selectImg":@"tabbar_meHL",@"itemTitle":@"我"}];
     // 1.遍历这个集合
     // 1.1 设置一个保存构造器的数组
     NSMutableArray *tabBarConfs = @[].mutableCopy;
@@ -46,7 +45,7 @@
         model.normalImageName = [obj objectForKey:@"normalImg"];
         // 4.设置单个选中item标题状态下的颜色
         model.normalColor = KCustomAdjustColor(@"#9F9F9F", @"#9F9F9F");
-        model.selectColor = KCustomAdjustColor(@"#0095FF", @"#0095FF");
+        model.selectColor = KColor(14, 180, 0);
        
 
         /***********************************/

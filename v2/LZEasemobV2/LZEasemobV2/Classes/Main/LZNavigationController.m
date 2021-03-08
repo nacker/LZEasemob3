@@ -29,7 +29,7 @@
     {
         viewController.hidesBottomBarWhenPushed = YES;
         
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:UIImageMake(@"nav_ic_back") target:self action:@selector(back)];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem qmui_itemWithImage:UIImageMake(@"back") target:self action:@selector(back)];
     }
     
     [super pushViewController:viewController animated:animated];
