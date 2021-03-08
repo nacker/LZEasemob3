@@ -1,0 +1,981 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A1BF044345E7B248BF6A24F /* libPods-LZEasemobV2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6442B4E36A2F310D2B5153 /* libPods-LZEasemobV2Tests.a */; };
+		628A23F725F5CE0E00AEDF25 /* LZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A23F625F5CE0E00AEDF25 /* LZMeViewController.m */; };
+		628A23FD25F5CE1A00AEDF25 /* LZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A23FC25F5CE1A00AEDF25 /* LZHomeViewController.m */; };
+		628A242625F5D8BC00AEDF25 /* LZLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 628A242225F5D8BC00AEDF25 /* LZLoginViewController.xib */; };
+		628A242725F5D8BC00AEDF25 /* LoginBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 628A242325F5D8BC00AEDF25 /* LoginBackground@2x.png */; };
+		628A242825F5D8BC00AEDF25 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A242525F5D8BC00AEDF25 /* LZLoginViewController.m */; };
+		62A78F0825E885DE00F752A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78F0725E885DE00F752A5 /* AppDelegate.m */; };
+		62A78F1325E885E000F752A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A78F1225E885E000F752A5 /* Assets.xcassets */; };
+		62A78F1625E885E000F752A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A78F1425E885E000F752A5 /* LaunchScreen.storyboard */; };
+		62A78F1925E885E000F752A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78F1825E885E000F752A5 /* main.m */; };
+		62A78F2325E885E100F752A5 /* LZEasemobV2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78F2225E885E100F752A5 /* LZEasemobV2Tests.m */; };
+		62A78F2E25E885E100F752A5 /* LZEasemobV2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A78F2D25E885E100F752A5 /* LZEasemobV2UITests.m */; };
+		62F0755925E8A3600088DC19 /* LZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0755825E8A3600088DC19 /* LZTabBarController.m */; };
+		62F0756225E8A3CC0088DC19 /* LZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0756125E8A3CC0088DC19 /* LZNavigationController.m */; };
+		62F0759725E8A6130088DC19 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0756825E8A6120088DC19 /* NSDate+Extension.m */; };
+		62F0759825E8A6130088DC19 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0756A25E8A6120088DC19 /* UIViewController+Extension.m */; };
+		62F0759925E8A6130088DC19 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0756C25E8A6120088DC19 /* NSString+Extension.m */; };
+		62F0759A25E8A6130088DC19 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0756E25E8A6120088DC19 /* UIColor+Extension.m */; };
+		62F0759B25E8A6130088DC19 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757025E8A6120088DC19 /* NSObject+Parse.m */; };
+		62F0759C25E8A6130088DC19 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757125E8A6120088DC19 /* UIBarButtonItem+Extension.m */; };
+		62F0759D25E8A6130088DC19 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757325E8A6120088DC19 /* UIButton+Extension.m */; };
+		62F0759E25E8A6130088DC19 /* AlertAction+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757725E8A6120088DC19 /* AlertAction+Extension.m */; };
+		62F0759F25E8A6130088DC19 /* RootViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757925E8A6120088DC19 /* RootViewController+Extension.m */; };
+		62F075A025E8A6130088DC19 /* FontCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757A25E8A6120088DC19 /* FontCategory.m */; };
+		62F075A125E8A6130088DC19 /* UIView+gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0757E25E8A6120088DC19 /* UIView+gesture.m */; };
+		62F075A225E8A6130088DC19 /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758025E8A6120088DC19 /* UIImageView+Extension.m */; };
+		62F075A325E8A6130088DC19 /* UIViewController+CBPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758325E8A6120088DC19 /* UIViewController+CBPopup.m */; };
+		62F075A425E8A6130088DC19 /* AlertController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758525E8A6120088DC19 /* AlertController+Extension.m */; };
+		62F075A525E8A6130088DC19 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758725E8A6130088DC19 /* UIScrollView+MJExtension.m */; };
+		62F075A625E8A6130088DC19 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758925E8A6130088DC19 /* UIImage+Extension.m */; };
+		62F075A725E8A6130088DC19 /* UIAlertView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758A25E8A6130088DC19 /* UIAlertView+Extension.m */; };
+		62F075A825E8A6130088DC19 /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758B25E8A6130088DC19 /* UIFont+Extension.m */; };
+		62F075A925E8A6130088DC19 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758C25E8A6130088DC19 /* UIView+Extension.m */; };
+		62F075AA25E8A6130088DC19 /* DateTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758D25E8A6130088DC19 /* DateTimeHelper.m */; };
+		62F075AB25E8A6130088DC19 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758F25E8A6130088DC19 /* UILabel+Extension.m */; };
+		62F075AC25E8A6130088DC19 /* NSArray+Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0759125E8A6130088DC19 /* NSArray+Sudoku.m */; };
+		62F075AD25E8A6130088DC19 /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0759625E8A6130088DC19 /* UIAlertController+Color.m */; };
+		B4BC7010C3245703B424B6A2 /* libPods-LZEasemobV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C48E373BC86514FAAC34318 /* libPods-LZEasemobV2.a */; };
+		C8C0074492036484E728CB5E /* libPods-LZEasemobV2-LZEasemobV2UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E18A932DDFAC5AD4E62BE32 /* libPods-LZEasemobV2-LZEasemobV2UITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62A78F1F25E885E100F752A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62A78EFB25E885DE00F752A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A78F0225E885DE00F752A5;
+			remoteInfo = LZEasemobV2;
+		};
+		62A78F2A25E885E100F752A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62A78EFB25E885DE00F752A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62A78F0225E885DE00F752A5;
+			remoteInfo = LZEasemobV2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18BCA14A9F0CBBE1B5F7F413 /* Pods-LZEasemobV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2Tests.release.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2Tests/Pods-LZEasemobV2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		26A0F634C8B202B105D43B27 /* Pods-LZEasemobV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2.debug.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2.debug.xcconfig"; sourceTree = "<group>"; };
+		3C48E373BC86514FAAC34318 /* libPods-LZEasemobV2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZEasemobV2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44D9ED7E1C439FDF08C3D682 /* Pods-LZEasemobV2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2Tests.debug.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2Tests/Pods-LZEasemobV2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		46D91ECCB47161195C2CACD6 /* Pods-LZEasemobV2-LZEasemobV2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2-LZEasemobV2UITests.release.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E18A932DDFAC5AD4E62BE32 /* libPods-LZEasemobV2-LZEasemobV2UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZEasemobV2-LZEasemobV2UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		628A23F525F5CE0E00AEDF25 /* LZMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZMeViewController.h; sourceTree = "<group>"; };
+		628A23F625F5CE0E00AEDF25 /* LZMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZMeViewController.m; sourceTree = "<group>"; };
+		628A23FB25F5CE1A00AEDF25 /* LZHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZHomeViewController.h; sourceTree = "<group>"; };
+		628A23FC25F5CE1A00AEDF25 /* LZHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZHomeViewController.m; sourceTree = "<group>"; };
+		628A242225F5D8BC00AEDF25 /* LZLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LZLoginViewController.xib; sourceTree = "<group>"; };
+		628A242325F5D8BC00AEDF25 /* LoginBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginBackground@2x.png"; sourceTree = "<group>"; };
+		628A242425F5D8BC00AEDF25 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginViewController.h; sourceTree = "<group>"; };
+		628A242525F5D8BC00AEDF25 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginViewController.m; sourceTree = "<group>"; };
+		62A78F0325E885DE00F752A5 /* LZEasemobV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZEasemobV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A78F0625E885DE00F752A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62A78F0725E885DE00F752A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62A78F1225E885E000F752A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62A78F1525E885E000F752A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62A78F1725E885E000F752A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A78F1825E885E000F752A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62A78F1E25E885E100F752A5 /* LZEasemobV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZEasemobV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A78F2225E885E100F752A5 /* LZEasemobV2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZEasemobV2Tests.m; sourceTree = "<group>"; };
+		62A78F2425E885E100F752A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A78F2925E885E100F752A5 /* LZEasemobV2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZEasemobV2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62A78F2D25E885E100F752A5 /* LZEasemobV2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZEasemobV2UITests.m; sourceTree = "<group>"; };
+		62A78F2F25E885E100F752A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A78F7D25E88F0000F752A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		62F0755725E8A3600088DC19 /* LZTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZTabBarController.h; sourceTree = "<group>"; };
+		62F0755825E8A3600088DC19 /* LZTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTabBarController.m; sourceTree = "<group>"; };
+		62F0756025E8A3CC0088DC19 /* LZNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZNavigationController.h; sourceTree = "<group>"; };
+		62F0756125E8A3CC0088DC19 /* LZNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZNavigationController.m; sourceTree = "<group>"; };
+		62F0756825E8A6120088DC19 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		62F0756925E8A6120088DC19 /* FontCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontCategory.h; sourceTree = "<group>"; };
+		62F0756A25E8A6120088DC19 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		62F0756B25E8A6120088DC19 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
+		62F0756C25E8A6120088DC19 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		62F0756D25E8A6120088DC19 /* RootViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootViewController+Extension.h"; sourceTree = "<group>"; };
+		62F0756E25E8A6120088DC19 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		62F0756F25E8A6120088DC19 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		62F0757025E8A6120088DC19 /* NSObject+Parse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Parse.m"; sourceTree = "<group>"; };
+		62F0757125E8A6120088DC19 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		62F0757225E8A6120088DC19 /* UIView+gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+gesture.h"; sourceTree = "<group>"; };
+		62F0757325E8A6120088DC19 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		62F0757425E8A6120088DC19 /* AlertController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AlertController+Extension.h"; sourceTree = "<group>"; };
+		62F0757525E8A6120088DC19 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		62F0757625E8A6120088DC19 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		62F0757725E8A6120088DC19 /* AlertAction+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AlertAction+Extension.m"; sourceTree = "<group>"; };
+		62F0757825E8A6120088DC19 /* DateTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimeHelper.h; sourceTree = "<group>"; };
+		62F0757925E8A6120088DC19 /* RootViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootViewController+Extension.m"; sourceTree = "<group>"; };
+		62F0757A25E8A6120088DC19 /* FontCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontCategory.m; sourceTree = "<group>"; };
+		62F0757B25E8A6120088DC19 /* UIFont+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
+		62F0757C25E8A6120088DC19 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		62F0757D25E8A6120088DC19 /* LZCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCategory.h; sourceTree = "<group>"; };
+		62F0757E25E8A6120088DC19 /* UIView+gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+gesture.m"; sourceTree = "<group>"; };
+		62F0757F25E8A6120088DC19 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		62F0758025E8A6120088DC19 /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
+		62F0758125E8A6120088DC19 /* UIViewController+CBPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CBPopup.h"; sourceTree = "<group>"; };
+		62F0758225E8A6120088DC19 /* UIAlertView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extension.h"; sourceTree = "<group>"; };
+		62F0758325E8A6120088DC19 /* UIViewController+CBPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CBPopup.m"; sourceTree = "<group>"; };
+		62F0758425E8A6120088DC19 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		62F0758525E8A6120088DC19 /* AlertController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AlertController+Extension.m"; sourceTree = "<group>"; };
+		62F0758625E8A6130088DC19 /* NSArray+Sudoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sudoku.h"; sourceTree = "<group>"; };
+		62F0758725E8A6130088DC19 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		62F0758825E8A6130088DC19 /* UIAlertController+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Color.h"; sourceTree = "<group>"; };
+		62F0758925E8A6130088DC19 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		62F0758A25E8A6130088DC19 /* UIAlertView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extension.m"; sourceTree = "<group>"; };
+		62F0758B25E8A6130088DC19 /* UIFont+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
+		62F0758C25E8A6130088DC19 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		62F0758D25E8A6130088DC19 /* DateTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelper.m; sourceTree = "<group>"; };
+		62F0758E25E8A6130088DC19 /* UILabel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extension.h"; sourceTree = "<group>"; };
+		62F0758F25E8A6130088DC19 /* UILabel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extension.m"; sourceTree = "<group>"; };
+		62F0759025E8A6130088DC19 /* AlertAction+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AlertAction+Extension.h"; sourceTree = "<group>"; };
+		62F0759125E8A6130088DC19 /* NSArray+Sudoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sudoku.m"; sourceTree = "<group>"; };
+		62F0759225E8A6130088DC19 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		62F0759325E8A6130088DC19 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		62F0759425E8A6130088DC19 /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		62F0759525E8A6130088DC19 /* NSObject+Parse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Parse.h"; sourceTree = "<group>"; };
+		62F0759625E8A6130088DC19 /* UIAlertController+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Color.m"; sourceTree = "<group>"; };
+		62F07C4225E8D2F00088DC19 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		62F07C4325E8D3160088DC19 /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		6AD66ECB892FF0DC06F4D542 /* Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB6442B4E36A2F310D2B5153 /* libPods-LZEasemobV2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZEasemobV2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA96E9DD8195545D317C8C4 /* Pods-LZEasemobV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2.release.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62A78F0025E885DE00F752A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4BC7010C3245703B424B6A2 /* libPods-LZEasemobV2.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F1B25E885E100F752A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A1BF044345E7B248BF6A24F /* libPods-LZEasemobV2Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F2625E885E100F752A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8C0074492036484E728CB5E /* libPods-LZEasemobV2-LZEasemobV2UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62A78EFA25E885DE00F752A5 = {
+			isa = PBXGroup;
+			children = (
+				62A78F0525E885DE00F752A5 /* LZEasemobV2 */,
+				62A78F2125E885E100F752A5 /* LZEasemobV2Tests */,
+				62A78F2C25E885E100F752A5 /* LZEasemobV2UITests */,
+				62A78F0425E885DE00F752A5 /* Products */,
+				E3B08A575FC51EE4722BE290 /* Pods */,
+				D1DF630426953EA98FB945BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		62A78F0425E885DE00F752A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62A78F0325E885DE00F752A5 /* LZEasemobV2.app */,
+				62A78F1E25E885E100F752A5 /* LZEasemobV2Tests.xctest */,
+				62A78F2925E885E100F752A5 /* LZEasemobV2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62A78F0525E885DE00F752A5 /* LZEasemobV2 */ = {
+			isa = PBXGroup;
+			children = (
+				62A78F7B25E88EA400F752A5 /* Classes */,
+				62A78F0625E885DE00F752A5 /* AppDelegate.h */,
+				62A78F0725E885DE00F752A5 /* AppDelegate.m */,
+				62A78F1225E885E000F752A5 /* Assets.xcassets */,
+				62A78F1425E885E000F752A5 /* LaunchScreen.storyboard */,
+				62A78F1725E885E000F752A5 /* Info.plist */,
+				62A78F1825E885E000F752A5 /* main.m */,
+				62A78F7D25E88F0000F752A5 /* PrefixHeader.pch */,
+			);
+			path = LZEasemobV2;
+			sourceTree = "<group>";
+		};
+		62A78F2125E885E100F752A5 /* LZEasemobV2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				62A78F2225E885E100F752A5 /* LZEasemobV2Tests.m */,
+				62A78F2425E885E100F752A5 /* Info.plist */,
+			);
+			path = LZEasemobV2Tests;
+			sourceTree = "<group>";
+		};
+		62A78F2C25E885E100F752A5 /* LZEasemobV2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				62A78F2D25E885E100F752A5 /* LZEasemobV2UITests.m */,
+				62A78F2F25E885E100F752A5 /* Info.plist */,
+			);
+			path = LZEasemobV2UITests;
+			sourceTree = "<group>";
+		};
+		62A78F7B25E88EA400F752A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				62F0783825E8D0BA0088DC19 /* IM */,
+				62F0755625E8A2D10088DC19 /* Main */,
+				62F0755325E8A2D10088DC19 /* Home */,
+				62F0755225E8A2D10088DC19 /* Login */,
+				62F0755425E8A2D10088DC19 /* Me */,
+				62F0755525E8A2D10088DC19 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		62F0755225E8A2D10088DC19 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				628A242325F5D8BC00AEDF25 /* LoginBackground@2x.png */,
+				628A242425F5D8BC00AEDF25 /* LZLoginViewController.h */,
+				628A242525F5D8BC00AEDF25 /* LZLoginViewController.m */,
+				628A242225F5D8BC00AEDF25 /* LZLoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		62F0755325E8A2D10088DC19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				628A23FB25F5CE1A00AEDF25 /* LZHomeViewController.h */,
+				628A23FC25F5CE1A00AEDF25 /* LZHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		62F0755425E8A2D10088DC19 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				628A23F525F5CE0E00AEDF25 /* LZMeViewController.h */,
+				628A23F625F5CE0E00AEDF25 /* LZMeViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		62F0755525E8A2D10088DC19 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				62F07C4125E8D2E20088DC19 /* Constant */,
+				62F0756725E8A6060088DC19 /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		62F0755625E8A2D10088DC19 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				62F0755725E8A3600088DC19 /* LZTabBarController.h */,
+				62F0755825E8A3600088DC19 /* LZTabBarController.m */,
+				62F0756025E8A3CC0088DC19 /* LZNavigationController.h */,
+				62F0756125E8A3CC0088DC19 /* LZNavigationController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		62F0756725E8A6060088DC19 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				62F0757D25E8A6120088DC19 /* LZCategory.h */,
+				62F0759025E8A6130088DC19 /* AlertAction+Extension.h */,
+				62F0757725E8A6120088DC19 /* AlertAction+Extension.m */,
+				62F0757425E8A6120088DC19 /* AlertController+Extension.h */,
+				62F0758525E8A6120088DC19 /* AlertController+Extension.m */,
+				62F0757825E8A6120088DC19 /* DateTimeHelper.h */,
+				62F0758D25E8A6130088DC19 /* DateTimeHelper.m */,
+				62F0756925E8A6120088DC19 /* FontCategory.h */,
+				62F0757A25E8A6120088DC19 /* FontCategory.m */,
+				62F0758625E8A6130088DC19 /* NSArray+Sudoku.h */,
+				62F0759125E8A6130088DC19 /* NSArray+Sudoku.m */,
+				62F0757525E8A6120088DC19 /* NSDate+Extension.h */,
+				62F0756825E8A6120088DC19 /* NSDate+Extension.m */,
+				62F0759525E8A6130088DC19 /* NSObject+Parse.h */,
+				62F0757025E8A6120088DC19 /* NSObject+Parse.m */,
+				62F0758425E8A6120088DC19 /* NSString+Extension.h */,
+				62F0756C25E8A6120088DC19 /* NSString+Extension.m */,
+				62F0756D25E8A6120088DC19 /* RootViewController+Extension.h */,
+				62F0757925E8A6120088DC19 /* RootViewController+Extension.m */,
+				62F0758825E8A6130088DC19 /* UIAlertController+Color.h */,
+				62F0759625E8A6130088DC19 /* UIAlertController+Color.m */,
+				62F0758225E8A6120088DC19 /* UIAlertView+Extension.h */,
+				62F0758A25E8A6130088DC19 /* UIAlertView+Extension.m */,
+				62F0757F25E8A6120088DC19 /* UIBarButtonItem+Extension.h */,
+				62F0757125E8A6120088DC19 /* UIBarButtonItem+Extension.m */,
+				62F0757625E8A6120088DC19 /* UIButton+Extension.h */,
+				62F0757325E8A6120088DC19 /* UIButton+Extension.m */,
+				62F0759325E8A6130088DC19 /* UIColor+Extension.h */,
+				62F0756E25E8A6120088DC19 /* UIColor+Extension.m */,
+				62F0757B25E8A6120088DC19 /* UIFont+Extension.h */,
+				62F0758B25E8A6130088DC19 /* UIFont+Extension.m */,
+				62F0757C25E8A6120088DC19 /* UIImage+Extension.h */,
+				62F0758925E8A6130088DC19 /* UIImage+Extension.m */,
+				62F0759425E8A6130088DC19 /* UIImageView+Extension.h */,
+				62F0758025E8A6120088DC19 /* UIImageView+Extension.m */,
+				62F0758E25E8A6130088DC19 /* UILabel+Extension.h */,
+				62F0758F25E8A6130088DC19 /* UILabel+Extension.m */,
+				62F0759225E8A6130088DC19 /* UIScrollView+MJExtension.h */,
+				62F0758725E8A6130088DC19 /* UIScrollView+MJExtension.m */,
+				62F0756F25E8A6120088DC19 /* UIView+Extension.h */,
+				62F0758C25E8A6130088DC19 /* UIView+Extension.m */,
+				62F0757225E8A6120088DC19 /* UIView+gesture.h */,
+				62F0757E25E8A6120088DC19 /* UIView+gesture.m */,
+				62F0758125E8A6120088DC19 /* UIViewController+CBPopup.h */,
+				62F0758325E8A6120088DC19 /* UIViewController+CBPopup.m */,
+				62F0756B25E8A6120088DC19 /* UIViewController+Extension.h */,
+				62F0756A25E8A6120088DC19 /* UIViewController+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		62F0783825E8D0BA0088DC19 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		62F07C4125E8D2E20088DC19 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				62F07C4225E8D2F00088DC19 /* Color.h */,
+				62F07C4325E8D3160088DC19 /* UtilsMacros.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		D1DF630426953EA98FB945BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C48E373BC86514FAAC34318 /* libPods-LZEasemobV2.a */,
+				5E18A932DDFAC5AD4E62BE32 /* libPods-LZEasemobV2-LZEasemobV2UITests.a */,
+				CB6442B4E36A2F310D2B5153 /* libPods-LZEasemobV2Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3B08A575FC51EE4722BE290 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26A0F634C8B202B105D43B27 /* Pods-LZEasemobV2.debug.xcconfig */,
+				EBA96E9DD8195545D317C8C4 /* Pods-LZEasemobV2.release.xcconfig */,
+				6AD66ECB892FF0DC06F4D542 /* Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig */,
+				46D91ECCB47161195C2CACD6 /* Pods-LZEasemobV2-LZEasemobV2UITests.release.xcconfig */,
+				44D9ED7E1C439FDF08C3D682 /* Pods-LZEasemobV2Tests.debug.xcconfig */,
+				18BCA14A9F0CBBE1B5F7F413 /* Pods-LZEasemobV2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62A78F0225E885DE00F752A5 /* LZEasemobV2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A78F3225E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2" */;
+			buildPhases = (
+				726115DC59E32EC31D74C22C /* [CP] Check Pods Manifest.lock */,
+				62A78EFF25E885DE00F752A5 /* Sources */,
+				62A78F0025E885DE00F752A5 /* Frameworks */,
+				62A78F0125E885DE00F752A5 /* Resources */,
+				E198B79E65C20A796A67CA1E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZEasemobV2;
+			productName = LZEasemobV2;
+			productReference = 62A78F0325E885DE00F752A5 /* LZEasemobV2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62A78F1D25E885E100F752A5 /* LZEasemobV2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A78F3525E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2Tests" */;
+			buildPhases = (
+				E8A4F7135EE6E95322BD1045 /* [CP] Check Pods Manifest.lock */,
+				62A78F1A25E885E100F752A5 /* Sources */,
+				62A78F1B25E885E100F752A5 /* Frameworks */,
+				62A78F1C25E885E100F752A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62A78F2025E885E100F752A5 /* PBXTargetDependency */,
+			);
+			name = LZEasemobV2Tests;
+			productName = LZEasemobV2Tests;
+			productReference = 62A78F1E25E885E100F752A5 /* LZEasemobV2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		62A78F2825E885E100F752A5 /* LZEasemobV2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62A78F3825E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2UITests" */;
+			buildPhases = (
+				E7D75994CBEC6D0CC19E3FE2 /* [CP] Check Pods Manifest.lock */,
+				62A78F2525E885E100F752A5 /* Sources */,
+				62A78F2625E885E100F752A5 /* Frameworks */,
+				62A78F2725E885E100F752A5 /* Resources */,
+				77788BAC62BD01FA5003225D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62A78F2B25E885E100F752A5 /* PBXTargetDependency */,
+			);
+			name = LZEasemobV2UITests;
+			productName = LZEasemobV2UITests;
+			productReference = 62A78F2925E885E100F752A5 /* LZEasemobV2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62A78EFB25E885DE00F752A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					62A78F0225E885DE00F752A5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					62A78F1D25E885E100F752A5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 62A78F0225E885DE00F752A5;
+					};
+					62A78F2825E885E100F752A5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 62A78F0225E885DE00F752A5;
+					};
+				};
+			};
+			buildConfigurationList = 62A78EFE25E885DE00F752A5 /* Build configuration list for PBXProject "LZEasemobV2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62A78EFA25E885DE00F752A5;
+			productRefGroup = 62A78F0425E885DE00F752A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62A78F0225E885DE00F752A5 /* LZEasemobV2 */,
+				62A78F1D25E885E100F752A5 /* LZEasemobV2Tests */,
+				62A78F2825E885E100F752A5 /* LZEasemobV2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62A78F0125E885DE00F752A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628A242725F5D8BC00AEDF25 /* LoginBackground@2x.png in Resources */,
+				628A242625F5D8BC00AEDF25 /* LZLoginViewController.xib in Resources */,
+				62A78F1625E885E000F752A5 /* LaunchScreen.storyboard in Resources */,
+				62A78F1325E885E000F752A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F1C25E885E100F752A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F2725E885E100F752A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		726115DC59E32EC31D74C22C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZEasemobV2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77788BAC62BD01FA5003225D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E198B79E65C20A796A67CA1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7D75994CBEC6D0CC19E3FE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZEasemobV2-LZEasemobV2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A4F7135EE6E95322BD1045 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LZEasemobV2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62A78EFF25E885DE00F752A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62F075A425E8A6130088DC19 /* AlertController+Extension.m in Sources */,
+				62F0759D25E8A6130088DC19 /* UIButton+Extension.m in Sources */,
+				628A23FD25F5CE1A00AEDF25 /* LZHomeViewController.m in Sources */,
+				62F075A825E8A6130088DC19 /* UIFont+Extension.m in Sources */,
+				62F0755925E8A3600088DC19 /* LZTabBarController.m in Sources */,
+				62F075A525E8A6130088DC19 /* UIScrollView+MJExtension.m in Sources */,
+				62F075A925E8A6130088DC19 /* UIView+Extension.m in Sources */,
+				62F075A725E8A6130088DC19 /* UIAlertView+Extension.m in Sources */,
+				62F075AB25E8A6130088DC19 /* UILabel+Extension.m in Sources */,
+				62F075A025E8A6130088DC19 /* FontCategory.m in Sources */,
+				62F0759825E8A6130088DC19 /* UIViewController+Extension.m in Sources */,
+				62F0759725E8A6130088DC19 /* NSDate+Extension.m in Sources */,
+				62F0759A25E8A6130088DC19 /* UIColor+Extension.m in Sources */,
+				62F0759F25E8A6130088DC19 /* RootViewController+Extension.m in Sources */,
+				62F075A325E8A6130088DC19 /* UIViewController+CBPopup.m in Sources */,
+				62A78F0825E885DE00F752A5 /* AppDelegate.m in Sources */,
+				62F0759C25E8A6130088DC19 /* UIBarButtonItem+Extension.m in Sources */,
+				62A78F1925E885E000F752A5 /* main.m in Sources */,
+				62F0759B25E8A6130088DC19 /* NSObject+Parse.m in Sources */,
+				62F075A625E8A6130088DC19 /* UIImage+Extension.m in Sources */,
+				628A242825F5D8BC00AEDF25 /* LZLoginViewController.m in Sources */,
+				62F075AD25E8A6130088DC19 /* UIAlertController+Color.m in Sources */,
+				62F075A225E8A6130088DC19 /* UIImageView+Extension.m in Sources */,
+				62F0756225E8A3CC0088DC19 /* LZNavigationController.m in Sources */,
+				628A23F725F5CE0E00AEDF25 /* LZMeViewController.m in Sources */,
+				62F0759E25E8A6130088DC19 /* AlertAction+Extension.m in Sources */,
+				62F075AC25E8A6130088DC19 /* NSArray+Sudoku.m in Sources */,
+				62F075A125E8A6130088DC19 /* UIView+gesture.m in Sources */,
+				62F075AA25E8A6130088DC19 /* DateTimeHelper.m in Sources */,
+				62F0759925E8A6130088DC19 /* NSString+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F1A25E885E100F752A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A78F2325E885E100F752A5 /* LZEasemobV2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A78F2525E885E100F752A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A78F2E25E885E100F752A5 /* LZEasemobV2UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62A78F2025E885E100F752A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62A78F0225E885DE00F752A5 /* LZEasemobV2 */;
+			targetProxy = 62A78F1F25E885E100F752A5 /* PBXContainerItemProxy */;
+		};
+		62A78F2B25E885E100F752A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62A78F0225E885DE00F752A5 /* LZEasemobV2 */;
+			targetProxy = 62A78F2A25E885E100F752A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62A78F1425E885E000F752A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62A78F1525E885E000F752A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62A78F3025E885E100F752A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		62A78F3125E885E100F752A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62A78F3325E885E100F752A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A0F634C8B202B105D43B27 /* Pods-LZEasemobV2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = LZEasemobV2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62A78F3425E885E100F752A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBA96E9DD8195545D317C8C4 /* Pods-LZEasemobV2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = LZEasemobV2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		62A78F3625E885E100F752A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44D9ED7E1C439FDF08C3D682 /* Pods-LZEasemobV2Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				INFOPLIST_FILE = LZEasemobV2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZEasemobV2.app/LZEasemobV2";
+			};
+			name = Debug;
+		};
+		62A78F3725E885E100F752A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BCA14A9F0CBBE1B5F7F413 /* Pods-LZEasemobV2Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				INFOPLIST_FILE = LZEasemobV2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LZEasemobV2.app/LZEasemobV2";
+			};
+			name = Release;
+		};
+		62A78F3925E885E100F752A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AD66ECB892FF0DC06F4D542 /* Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				INFOPLIST_FILE = LZEasemobV2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LZEasemobV2;
+			};
+			name = Debug;
+		};
+		62A78F3A25E885E100F752A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46D91ECCB47161195C2CACD6 /* Pods-LZEasemobV2-LZEasemobV2UITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DUA8DF5DNN;
+				INFOPLIST_FILE = LZEasemobV2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devlei.LZEasemobV2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LZEasemobV2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62A78EFE25E885DE00F752A5 /* Build configuration list for PBXProject "LZEasemobV2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A78F3025E885E100F752A5 /* Debug */,
+				62A78F3125E885E100F752A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A78F3225E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A78F3325E885E100F752A5 /* Debug */,
+				62A78F3425E885E100F752A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A78F3525E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A78F3625E885E100F752A5 /* Debug */,
+				62A78F3725E885E100F752A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62A78F3825E885E100F752A5 /* Build configuration list for PBXNativeTarget "LZEasemobV2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62A78F3925E885E100F752A5 /* Debug */,
+				62A78F3A25E885E100F752A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62A78EFB25E885DE00F752A5 /* Project object */;
+}
