@@ -8,7 +8,13 @@
 #import "LZTabBarController.h"
 #import "LZNavigationController.h"
 
+// 首页
 #import "LZHomeViewController.h"
+// 通讯录
+#import "LZContactsViewController.h"
+// 发现
+#import "LZDiscoverViewController.h"
+// 我
 #import "LZMeViewController.h"
 
 @interface LZTabBarController ()<AxcAE_TabBarDelegate>
@@ -28,8 +34,8 @@
     // 创建选项卡的数据 想怎么写看自己，这块我就写笨点了
     NSArray <NSDictionary *>*VCArray =
     @[@{@"vc":[LZHomeViewController new],@"normalImg":@"tabbar_mainframe",@"selectImg":@"tabbar_mainframeHL",@"itemTitle":@"微信"},
-      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_contacts",@"selectImg":@"tabbar_contactsHL",@"itemTitle":@"通讯录"},
-      @{@"vc":[UIViewController new],@"normalImg":@"tabbar_discover",@"selectImg":@"tabbar_discoverHL",@"itemTitle":@"发现"},
+      @{@"vc":[LZContactsViewController new],@"normalImg":@"tabbar_contacts",@"selectImg":@"tabbar_contactsHL",@"itemTitle":@"通讯录"},
+      @{@"vc":[LZDiscoverViewController new],@"normalImg":@"tabbar_discover",@"selectImg":@"tabbar_discoverHL",@"itemTitle":@"发现"},
       @{@"vc":[LZMeViewController new],@"normalImg":@"tabbar_me",@"selectImg":@"tabbar_meHL",@"itemTitle":@"我"}];
     // 1.遍历这个集合
     // 1.1 设置一个保存构造器的数组
@@ -46,32 +52,6 @@
         // 4.设置单个选中item标题状态下的颜色
         model.normalColor = KCustomAdjustColor(@"#9F9F9F", @"#9F9F9F");
         model.selectColor = KColor(14, 180, 0);
-       
-
-        /***********************************/
-//        if (idx == 2 ) { // 如果是中间的
-//            // 设置凸出
-//            model.bulgeStyle = AxcAE_TabBarConfigBulgeStyleSquare;
-//            // 设置凸出高度
-//            model.bulgeHeight = -5;
-//            model.bulgeRoundedCorners = 2; // 修角
-//            // 设置成纯文字展示
-//            model.itemLayoutStyle = AxcAE_TabBarItemLayoutStyleTitle;
-//            // 文字为加号
-//            model.itemTitle = @"+";
-//            // 字号大小
-//            model.titleLabel.font = [UIFont systemFontOfSize:40];
-//            model.normalColor = [UIColor whiteColor]; // 未选中
-//            model.selectColor = [UIColor whiteColor];   // 选中后一致
-//            // 让Label上下左右全边距
-//            model.componentMargin = UIEdgeInsetsMake(-5, 0, 0, 0 );
-//            // 未选中选中为橘里橘气
-//            model.normalBackgroundColor = [UIColor orangeColor];
-//            model.selectBackgroundColor = [UIColor orangeColor];
-//            // 设置大小/边长
-//            model.itemSize = CGSizeMake(self.tabBar.frame.size.width / 5 - 35.0 ,self.tabBar.frame.size.height - 10);
-//        }
-        
         
         // 备注 如果一步设置的VC的背景颜色，VC就会提前绘制驻留，优化这方面的话最好不要这么写
         // 示例中为了方便就在这写了
@@ -107,23 +87,6 @@ static NSInteger lastIdx = 0;
     // 通知 切换视图控制器
     [self setSelectedIndex:index];
     lastIdx = index;
-    
-//    if (index != 2) { // 不是中间的就切换
-//        // 通知 切换视图控制器
-//        [self setSelectedIndex:index];
-//        lastIdx = index;
-//    }
-//    else{ // 点击了中间的
-//        [self.axcTabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
-//        // 或者
-////        self.axcTabBar.selectIndex = lastIdx; // 不去切换TabBar的选中状态
-//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
-//                                                                          preferredStyle:UIAlertControllerStyleAlert];
-//        [alertController addAction:([UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            NSLog(@"好的！！！！");
-//        }])];
-//        [self presentViewController:alertController animated:YES completion:nil];
-//    }
 }
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     [super setSelectedIndex:selectedIndex];

@@ -1,6 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+install! 'cocoapods', :disable_input_output_paths => true
 
 target 'LZEasemobV2' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -17,13 +18,13 @@ target 'LZEasemobV2' do
 #install! 'cocoapods', :disable_input_output_paths => true
 #// 集成聊天，关系链，群组功能，默认依赖 TXLiteAVSDK_TRTC 音视频库
 
-#pod 'TXIMSDK_TUIKit_iOS'
+pod 'TXIMSDK_TUIKit_iOS' , '5.1.56'
 
 #// 集成聊天，关系链，群组功能，默认依赖 TXLiteAVSDK_Professional 音视频库
 #// pod 'TXIMSDK_TUIKit_iOS_Professional'
 #// 集成群直播，直播广场，默认依赖 TXLiteAVSDK_TRTC 音视频库
 
-#pod 'TXIMSDK_TUIKit_live_iOS'
+pod 'TXIMSDK_TUIKit_live_iOS' , '5.1.56'
 
 #// 集成群直播，直播广场，默认依赖 TXLiteAVSDK_Professional 音视频库
 #// pod 'TXIMSDK_TUIKit_live_iOS_Professional'

@@ -13,6 +13,11 @@
 //2. 对于默认的约束参数自动装箱
 #define MAS_SHORTHAND_GLOBALS
 
+//1. 对于约束参数可以省去"mas_"
+#define MAS_SHORTHAND
+//2. 对于默认的约束参数自动装箱
+#define MAS_SHORTHAND_GLOBALS
+
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
@@ -29,6 +34,9 @@
 #import "SDWebImage.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 //#import <AFNetworking/AFNetworking-umbrella.h>
+
+// IM
+#import <ImSDK/ImSDK.h>
 
 // tabBar
 #import <AxcAE_TabBar/AxcAE_TabBar.h>

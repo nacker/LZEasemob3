@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,14 @@
 		62F075AB25E8A6130088DC19 /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0758F25E8A6130088DC19 /* UILabel+Extension.m */; };
 		62F075AC25E8A6130088DC19 /* NSArray+Sudoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0759125E8A6130088DC19 /* NSArray+Sudoku.m */; };
 		62F075AD25E8A6130088DC19 /* UIAlertController+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F0759625E8A6130088DC19 /* UIAlertController+Color.m */; };
+		62FF331125F72EBC00183482 /* LZDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF331025F72EBC00183482 /* LZDiscoverViewController.m */; };
+		62FF334D25F72ED600183482 /* shake_match.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62FF331625F72ED600183482 /* shake_match.wav */; };
+		62FF334E25F72ED600183482 /* shake_sound_male.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62FF331725F72ED600183482 /* shake_sound_male.wav */; };
+		62FF334F25F72ED600183482 /* AlbumHeaderBackgrounImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62FF331825F72ED600183482 /* AlbumHeaderBackgrounImage.jpg */; };
+		62FF335025F72ED600183482 /* LZShakeBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF331A25F72ED600183482 /* LZShakeBottomView.m */; };
+		62FF335125F72ED600183482 /* shake_nomatch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62FF331C25F72ED600183482 /* shake_nomatch.wav */; };
+		62FF335225F72ED600183482 /* LZShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF331E25F72ED600183482 /* LZShakeViewController.m */; };
+		62FF336C25F72F2200183482 /* LZContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FF336B25F72F2200183482 /* LZContactsViewController.m */; };
 		B4BC7010C3245703B424B6A2 /* libPods-LZEasemobV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C48E373BC86514FAAC34318 /* libPods-LZEasemobV2.a */; };
 		C8C0074492036484E728CB5E /* libPods-LZEasemobV2-LZEasemobV2UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E18A932DDFAC5AD4E62BE32 /* libPods-LZEasemobV2-LZEasemobV2UITests.a */; };
 /* End PBXBuildFile section */
@@ -147,6 +155,19 @@
 		62F0759625E8A6130088DC19 /* UIAlertController+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Color.m"; sourceTree = "<group>"; };
 		62F07C4225E8D2F00088DC19 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		62F07C4325E8D3160088DC19 /* UtilsMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		62FF330F25F72EBC00183482 /* LZDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZDiscoverViewController.h; path = ../../../../../v1/LZEasemob3/LZEasemob3/Classes/View/Discover/LZDiscoverViewController.h; sourceTree = "<group>"; };
+		62FF331025F72EBC00183482 /* LZDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZDiscoverViewController.m; path = ../../../../../v1/LZEasemob3/LZEasemob3/Classes/View/Discover/LZDiscoverViewController.m; sourceTree = "<group>"; };
+		62FF331625F72ED600183482 /* shake_match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_match.wav; sourceTree = "<group>"; };
+		62FF331725F72ED600183482 /* shake_sound_male.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_sound_male.wav; sourceTree = "<group>"; };
+		62FF331825F72ED600183482 /* AlbumHeaderBackgrounImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlbumHeaderBackgrounImage.jpg; sourceTree = "<group>"; };
+		62FF331925F72ED600183482 /* LZShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZShakeViewController.h; sourceTree = "<group>"; };
+		62FF331A25F72ED600183482 /* LZShakeBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZShakeBottomView.m; sourceTree = "<group>"; };
+		62FF331B25F72ED600183482 /* LZFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFoundationMacro.h; sourceTree = "<group>"; };
+		62FF331C25F72ED600183482 /* shake_nomatch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_nomatch.wav; sourceTree = "<group>"; };
+		62FF331D25F72ED600183482 /* LZShakeBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZShakeBottomView.h; sourceTree = "<group>"; };
+		62FF331E25F72ED600183482 /* LZShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZShakeViewController.m; sourceTree = "<group>"; };
+		62FF336A25F72F2200183482 /* LZContactsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZContactsViewController.h; sourceTree = "<group>"; };
+		62FF336B25F72F2200183482 /* LZContactsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZContactsViewController.m; sourceTree = "<group>"; };
 		6AD66ECB892FF0DC06F4D542 /* Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB6442B4E36A2F310D2B5153 /* libPods-LZEasemobV2Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZEasemobV2Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA96E9DD8195545D317C8C4 /* Pods-LZEasemobV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZEasemobV2.release.xcconfig"; path = "Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,9 +260,11 @@
 			isa = PBXGroup;
 			children = (
 				62F0783825E8D0BA0088DC19 /* IM */,
+				62F0755225E8A2D10088DC19 /* Login */,
 				62F0755625E8A2D10088DC19 /* Main */,
 				62F0755325E8A2D10088DC19 /* Home */,
-				62F0755225E8A2D10088DC19 /* Login */,
+				62FF336925F72F0D00183482 /* Contacts */,
+				62FF330E25F72EA000183482 /* Discover */,
 				62F0755425E8A2D10088DC19 /* Me */,
 				62F0755525E8A2D10088DC19 /* Other */,
 			);
@@ -367,6 +390,42 @@
 			path = Constant;
 			sourceTree = "<group>";
 		};
+		62FF330E25F72EA000183482 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				62FF330F25F72EBC00183482 /* LZDiscoverViewController.h */,
+				62FF331025F72EBC00183482 /* LZDiscoverViewController.m */,
+				62FF331525F72ED600183482 /* Shake */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		62FF331525F72ED600183482 /* Shake */ = {
+			isa = PBXGroup;
+			children = (
+				62FF331625F72ED600183482 /* shake_match.wav */,
+				62FF331725F72ED600183482 /* shake_sound_male.wav */,
+				62FF331C25F72ED600183482 /* shake_nomatch.wav */,
+				62FF331825F72ED600183482 /* AlbumHeaderBackgrounImage.jpg */,
+				62FF331925F72ED600183482 /* LZShakeViewController.h */,
+				62FF331E25F72ED600183482 /* LZShakeViewController.m */,
+				62FF331D25F72ED600183482 /* LZShakeBottomView.h */,
+				62FF331A25F72ED600183482 /* LZShakeBottomView.m */,
+				62FF331B25F72ED600183482 /* LZFoundationMacro.h */,
+			);
+			name = Shake;
+			path = ../../../../../v1/LZEasemob3/LZEasemob3/Classes/View/Discover/Shake;
+			sourceTree = "<group>";
+		};
+		62FF336925F72F0D00183482 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				62FF336A25F72F2200183482 /* LZContactsViewController.h */,
+				62FF336B25F72F2200183482 /* LZContactsViewController.m */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
 		D1DF630426953EA98FB945BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +461,7 @@
 				62A78F0025E885DE00F752A5 /* Frameworks */,
 				62A78F0125E885DE00F752A5 /* Resources */,
 				E198B79E65C20A796A67CA1E /* [CP] Copy Pods Resources */,
+				5D3A4D0DB5A31F79371C47E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,6 +500,7 @@
 				62A78F2625E885E100F752A5 /* Frameworks */,
 				62A78F2725E885E100F752A5 /* Resources */,
 				77788BAC62BD01FA5003225D /* [CP] Copy Pods Resources */,
+				3EC353D0281FCA0CDAD8A7FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -498,8 +559,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				628A242725F5D8BC00AEDF25 /* LoginBackground@2x.png in Resources */,
+				62FF334D25F72ED600183482 /* shake_match.wav in Resources */,
+				62FF335125F72ED600183482 /* shake_nomatch.wav in Resources */,
 				628A242625F5D8BC00AEDF25 /* LZLoginViewController.xib in Resources */,
 				62A78F1625E885E000F752A5 /* LaunchScreen.storyboard in Resources */,
+				62FF334F25F72ED600183482 /* AlbumHeaderBackgrounImage.jpg in Resources */,
+				62FF334E25F72ED600183482 /* shake_sound_male.wav in Resources */,
 				62A78F1325E885E000F752A5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +586,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3EC353D0281FCA0CDAD8A7FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D3A4D0DB5A31F79371C47E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		726115DC59E32EC31D74C22C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,11 +644,9 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2-LZEasemobV2UITests/Pods-LZEasemobV2-LZEasemobV2UITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -566,11 +659,9 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LZEasemobV2/Pods-LZEasemobV2-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -639,11 +730,13 @@
 				62F075AB25E8A6130088DC19 /* UILabel+Extension.m in Sources */,
 				62F075A025E8A6130088DC19 /* FontCategory.m in Sources */,
 				62F0759825E8A6130088DC19 /* UIViewController+Extension.m in Sources */,
+				62FF335225F72ED600183482 /* LZShakeViewController.m in Sources */,
 				62F0759725E8A6130088DC19 /* NSDate+Extension.m in Sources */,
 				62F0759A25E8A6130088DC19 /* UIColor+Extension.m in Sources */,
 				62F0759F25E8A6130088DC19 /* RootViewController+Extension.m in Sources */,
 				62F075A325E8A6130088DC19 /* UIViewController+CBPopup.m in Sources */,
 				62A78F0825E885DE00F752A5 /* AppDelegate.m in Sources */,
+				62FF335025F72ED600183482 /* LZShakeBottomView.m in Sources */,
 				62F0759C25E8A6130088DC19 /* UIBarButtonItem+Extension.m in Sources */,
 				62A78F1925E885E000F752A5 /* main.m in Sources */,
 				62F0759B25E8A6130088DC19 /* NSObject+Parse.m in Sources */,
@@ -651,9 +744,11 @@
 				628A242825F5D8BC00AEDF25 /* LZLoginViewController.m in Sources */,
 				62F075AD25E8A6130088DC19 /* UIAlertController+Color.m in Sources */,
 				62F075A225E8A6130088DC19 /* UIImageView+Extension.m in Sources */,
+				62FF336C25F72F2200183482 /* LZContactsViewController.m in Sources */,
 				62F0756225E8A3CC0088DC19 /* LZNavigationController.m in Sources */,
 				628A23F725F5CE0E00AEDF25 /* LZMeViewController.m in Sources */,
 				62F0759E25E8A6130088DC19 /* AlertAction+Extension.m in Sources */,
+				62FF331125F72EBC00183482 /* LZDiscoverViewController.m in Sources */,
 				62F075AC25E8A6130088DC19 /* NSArray+Sudoku.m in Sources */,
 				62F075A125E8A6130088DC19 /* UIView+gesture.m in Sources */,
 				62F075AA25E8A6130088DC19 /* DateTimeHelper.m in Sources */,
