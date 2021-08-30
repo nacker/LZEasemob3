@@ -1,0 +1,52 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+install! 'cocoapods', :disable_input_output_paths => true
+
+target 'LZEasemobV2' do
+  # Comment the next line if you don't want to use dynamic frameworks
+#  TUIKit 使用到了第三方静态库，这个设置需要屏蔽
+#  use_frameworks!
+
+  # Pods for LZEasemobV2
+#  环信
+#  pod 'Hyphenate'  , '3.7.4.1'
+#  pod 'EaseIMKit', '3.7.4.1'
+
+
+#// TXIMSDK_TUIKit_live_iOS 使用了 *.xcassets 资源文件，需要加上这条语句防止与项目中资源文件冲突。
+#install! 'cocoapods', :disable_input_output_paths => true
+#// 集成聊天，关系链，群组功能，默认依赖 TXLiteAVSDK_TRTC 音视频库
+pod 'TXIMSDK_TUIKit_iOS'
+#pod 'TXIMSDK_TUIKit_iOS' , '5.1.56'
+
+#// 集成聊天，关系链，群组功能，默认依赖 TXLiteAVSDK_Professional 音视频库
+#// pod 'TXIMSDK_TUIKit_iOS_Professional'
+#// 集成群直播，直播广场，默认依赖 TXLiteAVSDK_TRTC 音视频库
+
+#pod 'TXIMSDK_TUIKit_live_iOS' , '5.1.56'
+pod 'TXIMSDK_TUIKit_live_iOS'
+
+#// 集成群直播，直播广场，默认依赖 TXLiteAVSDK_Professional 音视频库
+#// pod 'TXIMSDK_TUIKit_live_iOS_Professional'
+  
+  pod 'MJRefresh' , '3.4.3'
+  pod 'MJExtension' , '3.2.2'
+  pod 'SDWebImage', '5.9.0'
+  pod 'QMUIKit', '4.2.1'
+  pod 'Masonry', '1.1.0'
+  pod 'AFNetworking', '4.0.1'
+  pod 'AxcAE_TabBar'
+  pod 'MBProgressHUD', '1.2.0'
+  
+
+  target 'LZEasemobV2Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'LZEasemobV2UITests' do
+    # Pods for testing
+  end
+
+end
